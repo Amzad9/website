@@ -11,6 +11,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+     zIndex: {
+        '30': '30',
+        '40': '40',
+        '50': '50',
+      }
     },
   },
   plugins: [],
