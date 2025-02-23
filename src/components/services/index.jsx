@@ -1,5 +1,5 @@
 import Head from "next/head";
-
+import {InfiniteMovingCardsDemo} from '@/components/Card'
 export default function Services() {
   return (
     <section className="min-h-screen flex flex-col">
@@ -7,46 +7,9 @@ export default function Services() {
         <title>Top Quality Software & Apps</title>
         <meta name="description" content="Building top-quality software and apps for over fifteen years." />
       </Head>
-
       {/* Top Section: Device Screenshots */}
-      <section className="bg-gray-950 pt-5 pb-4">
-        <div className="xl:container mx-auto px-4 flex overflow-hidden">
-          {/* Device 1: Laptop with yellow background */}
-          <div className="w-full p-2">
-            <img
-              src="https://cdn.prod.website-files.com/6443d6d96a788f6942166567/64e51cecd781cb33a14cc2a6_Thumbnail-p-800.png" // Replace with your image path
-              alt="Laptop Screenshot"
-              className="w-full h-auto object-contain"
-            />
-          </div>
-
-          {/* Device 2: Tablet with white background */}
-          <div className="w-full p-2">
-            <img
-              src="https://cdn.prod.website-files.com/6443d6d96a788f6942166567/665df90dd6ff4b22f7eb30e0_Thumbnail.png" // Replace with your image path
-              alt="Tablet Screenshot"
-              className="w-full h-auto object-contain"
-            />
-          </div>
-
-          {/* Device 3: Laptop with blue background */}
-          <div className="w-full p-2">
-            <img
-              src="https://cdn.prod.website-files.com/6443d6d96a788f6942166567/6491be6afc6d39159e1159e0_Thumbnail.jpg" // Replace with your image path
-              alt="Laptop Screenshot"
-              className="w-full h-auto object-contain"
-            />
-          </div>
-
-
-          <div className="w-full p-2">
-            <img
-              src="https://cdn.prod.website-files.com/6443d6d96a788f6942166567/66707454b6076bcc0554b985_Thumbnail-p-800.png" // Replace with your image path
-              alt="Laptop Screenshot"
-              className="w-full h-auto object-contain"
-            />
-          </div>
-        </div>
+      <section className="bg-gray-950 pt-4 pb-4"> 
+         <InfiniteMovingCardsDemo />
       </section>
 
       {/* Bottom Section: Black Background with Text and Buttons */}
