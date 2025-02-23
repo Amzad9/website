@@ -94,120 +94,141 @@ export default function Home() {
           </div>
         </main>
       </div>
-   
-
-    
-    <section className="bg-blue-900 text-white py-20">
-        <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Custom Software Development</h1>
-            <p className="text-xl mb-8">Building practical mobile and web applications since 2008</p>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg">
-                Get a Free Quote
-            </button>
-        </div>
-    </section>
-
-   
-    <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-                <div className="bg-white p-6 rounded-lg shadow">
-                    <h3 className="text-xl font-semibold mb-4">Mobile Apps</h3>
-                    <p className="text-gray-600">iOS and Android app development with modern technologies</p>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow">
-                    <h3 className="text-xl font-semibold mb-4">Web Apps</h3>
-                    <p className="text-gray-600">Custom web applications tailored to your needs</p>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow">
-                    <h3 className="text-xl font-semibold mb-4">UI/UX Design</h3>
-                    <p className="text-gray-600">User-focused design for optimal experience</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <section className="py-16">
-        <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Portfolio</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-                <div className="bg-gray-100 p-6 rounded-lg">
-                    <div className="h-40 bg-gray-300 mb-4 rounded"></div>
-                    <h3 className="text-xl font-semibold mb-2">Project One</h3>
-                    <p className="text-gray-600">Brief description of the project</p>
-                </div>
-                <div className="bg-gray-100 p-6 rounded-lg">
-                    <div className="h-40 bg-gray-300 mb-4 rounded"></div>
-                    <h3 className="text-xl font-semibold mb-2">Project Two</h3>
-                    <p className="text-gray-600">Brief description of the project</p>
-                </div>
-                <div className="bg-gray-100 p-6 rounded-lg">
-                    <div className="h-40 bg-gray-300 mb-4 rounded"></div>
-                    <h3 className="text-xl font-semibold mb-2">Project Three</h3>
-                    <p className="text-gray-600">Brief description of the project</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <section className="py-16 bg-blue-900 text-white">
-        <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-blue-800 p-6 rounded-lg">
-                    <p className="mb-4">"Essential Designs delivered beyond our expectations!"</p>
-                    <p className="font-semibold">John Doe, Company X</p>
-                </div>
-                <div className="bg-blue-800 p-6 rounded-lg">
-                    <p className="mb-4">"Their team is professional and highly skilled."</p>
-                    <p className="font-semibold">Jane Smith, Company Y</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section className="py-16">
-        <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Start Your Project?</h2>
-            <p className="text-gray-600 mb-8">Contact us today for a free consultation</p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg">
-                Contact Us
-            </button>
-        </div>
-    </section>
-
-  
-    <footer className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto px-6">
-            <div className="grid md:grid-cols-3 gap-8">
-                <div>
-                    <h3 className="text-lg font-semibold mb-4">Essential Designs</h3>
-                    <p className="text-gray-400">Custom software solutions since 2008</p>
-                </div>
-                <div>
-                    <h3 className="text-lg font-semibold mb-4">Locations</h3>
-                    <p className="text-gray-400">Vancouver • Toronto • Calgary</p>
-                </div>
-                <div>
-                    <h3 className="text-lg font-semibold mb-4">Connect</h3>
-                    <div className="flex space-x-4">
-                        <a href="#" className="text-gray-400 hover:text-white">LinkedIn</a>
-                        <a href="#" className="text-gray-400 hover:text-white">Twitter</a>
-                        <a href="#" className="text-gray-400 hover:text-white">Facebook</a>
-                    </div>
-                </div>
-            </div>
-            <p className="text-center text-gray-400 mt-8">© 2025 Essential Designs. All rights reserved.</p>
-        </div>
-    </footer>
       <Services />
-      <div className="h-screen"></div>
-      <div className="h-screen"></div>
-      <div className="h-screen"></div>
-      <div className="h-screen"></div>
+      <section className="bg-blue-900 text-white py-20">
+        <div className="container mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Custom Software Development
+          </h1>
+          <p className="text-xl mb-8">
+            Building practical mobile and web applications since 2008
+          </p>
+          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg">
+            Get a Free Quote
+          </button>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-semibold mb-4">Mobile Apps</h3>
+              <p className="text-gray-600">
+                iOS and Android app development with modern technologies
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-semibold mb-4">Web Apps</h3>
+              <p className="text-gray-600">
+                Custom web applications tailored to your needs
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-semibold mb-4">UI/UX Design</h3>
+              <p className="text-gray-600">
+                User-focused design for optimal experience
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Our Portfolio
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gray-100 p-6 rounded-lg">
+              <div className="h-40 bg-gray-300 mb-4 rounded"></div>
+              <h3 className="text-xl font-semibold mb-2">Project One</h3>
+              <p className="text-gray-600">Brief description of the project</p>
+            </div>
+            <div className="bg-gray-100 p-6 rounded-lg">
+              <div className="h-40 bg-gray-300 mb-4 rounded"></div>
+              <h3 className="text-xl font-semibold mb-2">Project Two</h3>
+              <p className="text-gray-600">Brief description of the project</p>
+            </div>
+            <div className="bg-gray-100 p-6 rounded-lg">
+              <div className="h-40 bg-gray-300 mb-4 rounded"></div>
+              <h3 className="text-xl font-semibold mb-2">Project Three</h3>
+              <p className="text-gray-600">Brief description of the project</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-blue-900 text-white">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            What Our Clients Say
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-blue-800 p-6 rounded-lg">
+              <p className="mb-4">
+                "Essential Designs delivered beyond our expectations!"
+              </p>
+              <p className="font-semibold">John Doe, Company X</p>
+            </div>
+            <div className="bg-blue-800 p-6 rounded-lg">
+              <p className="mb-4">
+                "Their team is professional and highly skilled."
+              </p>
+              <p className="font-semibold">Jane Smith, Company Y</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold mb-6">
+            Ready to Start Your Project?
+          </h2>
+          <p className="text-gray-600 mb-8">
+            Contact us today for a free consultation
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg">
+            Contact Us
+          </button>
+        </div>
+      </section>
+
+      <footer className="bg-gray-800 text-white py-8">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Essential Designs</h3>
+              <p className="text-gray-400">
+                Custom software solutions since 2008
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Locations</h3>
+              <p className="text-gray-400">Vancouver • Toronto • Calgary</p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Connect</h3>
+              <div className="flex space-x-4">
+                <a href="#" className="text-gray-400 hover:text-white">
+                  LinkedIn
+                </a>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  Twitter
+                </a>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  Facebook
+                </a>
+              </div>
+            </div>
+          </div>
+          <p className="text-center text-gray-400 mt-8">
+            © 2025 Essential Designs. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </>
   );
 }
