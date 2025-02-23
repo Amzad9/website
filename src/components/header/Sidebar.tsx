@@ -1,29 +1,77 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react"; // Added useEffect for overlay click handling
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Sidebar({ isOpen, setIsOpen }) {
-  //   const [isOpen, setIsOpen] = useState(false);
-
   const handleClose = () => {
     setIsOpen(false);
   };
-  // Animation variants for the sidebar
+
+  // Animation variants for the sidebar (smooth transition instead of spring)
   const sidebarVariants = {
     open: {
       x: 0,
       opacity: 1,
-      transition: { type: "spring", stiffness: 300, damping: 30 },
+      transition: { type: "tween", duration: 0.3, ease: "easeInOut" },
     },
     closed: {
       x: "100%",
       opacity: 0,
-      transition: { type: "spring", stiffness: 300, damping: 30 },
+      transition: { type: "tween", duration: 0.3, ease: "easeInOut" },
     },
   };
 
+  // Animation variants for navigation menu items (smooth transition)
+  const navItemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.1, // Staggered delay for each item
+        type: "tween", // Smooth transition instead of spring
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    }),
+  };
+
+  // Handle outside clicks to close the sidebar
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (isOpen) {
+        const sidebar = document.querySelector(".sidebar-motion");
+        if (sidebar && !sidebar.contains(e.target)) {
+          setIsOpen(false);
+        }
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [isOpen, setIsOpen]);
+
   return (
     <>
+      {/* Overlay for outside clicks */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.5 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="fixed inset-0 bg-black z-30"
+            onClick={handleClose}
+          />
+        )}
+      </AnimatePresence>
+
       {/* Sidebar with Framer Motion Animation */}
       <AnimatePresence>
         {isOpen && (
@@ -32,37 +80,35 @@ export default function Sidebar({ isOpen, setIsOpen }) {
             animate="open"
             exit="closed"
             variants={sidebarVariants}
-            className="fixed top-0 right-0 h-screen w-64 bg-white text-black p-4 shadow-lg z-40"
+            className="fixed top-0 right-0 h-screen w-[450px] bg-white text-black p-4 shadow-lg z-40 sidebar-motion"
           >
-            {/* Start a Project Button (Top Right, Closeable) */}
-            <div className="flex justify-end mb-6">
-              <button
-                className="bg-gray-200 text-gray-800 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-300 transition flex items-center"
-                onClick={() => handleClose()} // Close sidebar when clicked
-              >
-                Start a Project
-                <span className="ml-2 text-xl">×</span>
-              </button>
-            </div>
-
-            {/* Navigation Menu */}
-            <nav className="space-y-4">
-              {[
-                "Home",
-                "About us",
-                "Services",
-                "Technology",
-                "Team",
-                "Clients",
-              ].map((item) => (
-                <Link
+            {/* Navigation Menu with Animation and Hover Underline */}
+            <nav className="space-y-3 mt-10 pb-10 border-b-2 border-gray-200">
+              {["Home", "About us", "Services", "Technology", "Team", "Clients"].map((item, index) => (
+                <motion.div
                   key={item}
-                  href={`#${item.toLowerCase()}`}
-                  onClick={() => handleClose()}
-                  className="block px-4 py-2 hover:bg-gray-500 rounded transition"
+                  custom={index} // Pass index for staggered animation
+                  initial="hidden"
+                  animate="visible"
+                  variants={navItemVariants}
                 >
-                  {item}
-                </Link>
+                  <Link
+                    href={`#${item.toLowerCase().replace(" ", "-")}`}
+                    onClick={handleClose}
+                    className="block px-4 text-3xl font-semibold text-right py-2 rounded transition"
+                  >
+                    <motion.span
+                      whileHover={{ 
+                        scale: 1.05, // Slight scale on hover for interactivity
+                        textDecoration: "underline", // Underline on hover
+                      }}
+                      transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
+                      className="inline-block hover:text-primary"
+                    >
+                      {item}
+                    </motion.span>
+                  </Link>
+                </motion.div>
               ))}
             </nav>
           </motion.div>

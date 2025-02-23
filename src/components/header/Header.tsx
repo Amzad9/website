@@ -5,14 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Sidebar from "./Sidebar";
-// import localFont from "next/font/local";
-// import ContactUsModal from "./ContactUsModal";
-
-// Font files can be colocated inside of `app`
-// const BankGothic = localFont({
-//   src: "../../../public/font/BankGothic_Md_BT.ttf",
-//   display: "swap",
-// });
+import { motion } from "framer-motion";
 
 const Header = () => {
   // const router = useRouter()
@@ -76,45 +69,55 @@ const Header = () => {
                 src={Logo}
                 alt="Logo"
                 className={styles.logoImage}
-                width={200}
+                width={160}
                 // height={63}
               />
               {/* Weblibron */}
             </Link>
 
-            {/* <nav className={styles.menu}>
-              {[
-                "Home",
-                "About us",
-                "Services",
-                "Technology",
-                "Team",
-                "Clients",
-              ].map((item) => (
-                <Link
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className={`${styles.menuItem} text-black ${
-                    pathname === "/solution" ? styles.active : ""
-                  }`}
-                >
-                  {item}
-                </Link>
-              ))}
-            </nav> */}
-
             <div className={styles.group_btn}>
-              <button
-                className={`${styles.contactButton}`}
+              <motion.button
+                className={`${styles.contactButton} hover:bg-gradient-to-b `} // Keep your existing styling
                 onClick={handleContactUS}
+                // whileHover={{
+                //   scale: 1.1, // Slightly scale up on hover
+                //   // rotate: 5, // Slight rotation for interactivity
+                // }}
+                whileTap={{
+                  scale: 0.95, // Slightly shrink on click
+                }}
+                animate={{
+                  scale: [1, 1.02, 1], // Subtle pulse effect
+                  transition: {
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    duration: 1.5,
+                    ease: "easeInOut",
+                  },
+                }}
               >
-                Contact Us
-              </button>
-              <button className={styles.humberger} onClick={handleNavbar}>
+                Start a Project
+              </motion.button>
+              <motion.button
+                whileTap={{
+                  scale: 0.95, // Slightly shrink on click
+                }}
+                animate={{
+                  scale: [1, 1.02, 1], // Subtle pulse effect
+                  transition: {
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    duration: 1.5,
+                    ease: "easeInOut",
+                  },
+                }}
+                className={styles.humberger}
+                onClick={handleNavbar}
+              >
                 <span></span>
                 <span></span>
                 <span></span>
-              </button>
+              </motion.button>
             </div>
           </div>
         </header>
