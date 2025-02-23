@@ -72,7 +72,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-opacity-40 bg-green-950"></div>
         </div>
 
-        <Header isOpenNavbar={isOpenNavbar} setIsOpenNavbar={setIsOpenNavbar} />
+        <Header />
 
         {/* Hero Content */}
         <main
