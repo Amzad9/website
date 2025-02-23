@@ -4,6 +4,7 @@ import Logo from "@/assets/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Sidebar from "./Sidebar";
 // import localFont from "next/font/local";
 // import ContactUsModal from "./ContactUsModal";
 
@@ -13,8 +14,9 @@ import { usePathname } from "next/navigation";
 //   display: "swap",
 // });
 
-const Header = ({ isOpenNavbar, setIsOpenNavbar }) => {
+const Header = () => {
   // const router = useRouter()
+  const [isOpenNavbar, setIsOpenNavbar] = useState(false);
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [isModal, setIsModal] = useState(false);
@@ -118,6 +120,7 @@ const Header = ({ isOpenNavbar, setIsOpenNavbar }) => {
         </header>
       </div>
 
+      <Sidebar isOpen={isOpenNavbar} setIsOpen={setIsOpenNavbar} />
       {/* <ContactUsModal isModal={isModal} onClose={handleContactUSClose} /> */}
     </>
   );
