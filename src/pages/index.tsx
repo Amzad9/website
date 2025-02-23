@@ -69,7 +69,7 @@ export default function Home() {
             className="h-full w-full object-cover"
           ></video>
           {/* Overlay */}
-          <div className="absolute inset-0 bg-opacity-60 bg-green-950"></div>
+          <div className="absolute inset-0 bg-opacity-40 bg-green-950"></div>
         </div>
 
         <Header isOpenNavbar={isOpenNavbar} setIsOpenNavbar={setIsOpenNavbar} />
@@ -106,32 +106,6 @@ export default function Home() {
           <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg">
             Get a Free Quote
           </button>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow">
-              <h3 className="text-xl font-semibold mb-4">Mobile Apps</h3>
-              <p className="text-gray-600">
-                iOS and Android app development with modern technologies
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow">
-              <h3 className="text-xl font-semibold mb-4">Web Apps</h3>
-              <p className="text-gray-600">
-                Custom web applications tailored to your needs
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow">
-              <h3 className="text-xl font-semibold mb-4">UI/UX Design</h3>
-              <p className="text-gray-600">
-                User-focused design for optimal experience
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 

@@ -80,7 +80,7 @@ const Header = ({ isOpenNavbar, setIsOpenNavbar }) => {
               {/* Weblibron */}
             </Link>
 
-            <nav className={styles.menu}>
+            {/* <nav className={styles.menu}>
               {[
                 "Home",
                 "About us",
@@ -99,7 +99,7 @@ const Header = ({ isOpenNavbar, setIsOpenNavbar }) => {
                   {item}
                 </Link>
               ))}
-            </nav>
+            </nav> */}
 
             <div className={styles.group_btn}>
               <button

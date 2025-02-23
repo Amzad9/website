@@ -9,8 +9,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'black': 'var(--black)',    // Custom black color
+        'primary': 'var(--primary)',  // Custom primary color (bright green)
+      },
+      fontFamily: {
+        'inter': ['Inter', 'sans-serif'], // Add Inter font
+        'poppins': ['Poppins', 'sans-serif'], // Add Poppins font
       },
     },
   },
