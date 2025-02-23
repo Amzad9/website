@@ -1,19 +1,20 @@
 import Image from "next/image";
-// import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Header from "@/components/header/Header";
+import Services from "@/components/services/index";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // Register ScrollTrigger plugin
 // import videoFile from "../../public/video.mp4";
@@ -22,9 +23,8 @@ if (typeof window !== "undefined") {
 }
 
 export default function Home() {
-  // const videoRef = useRef(null);
   const contentRef = useRef(null);
-  const headerRef = useRef(null);
+  const [isOpenNavbar, setIsOpenNavbar] = useState(false);
 
   useEffect(() => {
     // GSAP animations
@@ -57,22 +57,11 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative min-h-screen overflow-hidden">
+      <div className={`relative min-h-screen overflow-hidden ${geistSans}`}>
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
-          {/* <video
-          ref={videoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          classNameName="object-cover w-full h-full"
-        >
-          <source src="./assets/video.mp4" type="video/mp4" />
-        </video> */}
           <video
             src="/video.mp4"
-            // src="https://videocdn.cdnpk.net/videos/d124675e-e8ad-510d-98e3-6e701ff747b7/horizontal/previews/watermarked/large.mp4"
             autoPlay
             loop
             muted
@@ -83,34 +72,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-opacity-60 bg-green-950"></div>
         </div>
 
-        {/* Navigation */}
-        {/* <header ref={headerRef} classNameName="relative z-10">
-        <nav classNameName="container mx-auto px-6 py-6">
-          <div classNameName="flex items-center justify-between">
-            <div classNameName="text-white text-2xl font-bold">weblibron</div>
-            <div classNameName="hidden md:flex space-x-8">
-              {[
-                "Home",
-                "About us",
-                "Services",
-                "Technology",
-                "Team",
-                "Clients",
-              ].map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  classNameName="nav-item text-white hover:text-emerald-200 transition-colors"
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
-          </div>
-        </nav>
-      </header> */}
-
-        <Header isOpenNavbar={undefined} setIsOpenNavbar={undefined} />
+        <Header isOpenNavbar={isOpenNavbar} setIsOpenNavbar={setIsOpenNavbar} />
 
         {/* Hero Content */}
         <main
@@ -241,6 +203,11 @@ export default function Home() {
             <p className="text-center text-gray-400 mt-8">© 2025 Essential Designs. All rights reserved.</p>
         </div>
     </footer>
+      <Services />
+      <div className="h-screen"></div>
+      <div className="h-screen"></div>
+      <div className="h-screen"></div>
+      <div className="h-screen"></div>
     </>
   );
 }
