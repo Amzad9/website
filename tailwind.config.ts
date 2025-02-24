@@ -16,6 +16,7 @@ export default {
       colors: {
         'black': 'var(--black)',    // Custom black color
         'primary': 'var(--primary)',  // Custom primary color (bright green)
+        'secondary': 'var(--secondary)',
       },
       fontFamily: {
         'inter': ['Inter', 'sans-serif'], // Add Inter font

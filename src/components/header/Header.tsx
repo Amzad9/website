@@ -77,7 +77,7 @@ const Header = () => {
 
             <div className={styles.group_btn}>
               <motion.button
-                className={`${styles.contactButton} hover:bg-gradient-to-b `} // Keep your existing styling
+                className={`${styles.contactButton} font-inter font-light hover:bg-gradient-to-b `} // Keep your existing styling
                 onClick={handleContactUS}
                 // whileHover={{
                 //   scale: 1.1, // Slightly scale up on hover

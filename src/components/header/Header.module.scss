@@ -62,16 +62,16 @@
             gap: 20px;
 
             .contactButton {
-                border-radius: 40px;
+                border-radius: 50px;
                 box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.15);
                 display: flex;
-                padding: 8px 16px;
+                padding: 10px 16px;
                 min-width: 120px;
                 justify-content: center;
                 align-items: center;
-                background: var(--primary);
+                background: var(--button);
                 border: none;
-                color: #fff;
+                color: var(--black);
                 text-align: center;
                 font-size: 14px;
                 font-weight: 500;
