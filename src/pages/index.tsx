@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
+import Logo from "@/assets/logo.png";
+
 import { motion } from "framer-motion";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +18,7 @@ import gsap from "gsap";
 import Header from "@/components/header/Header";
 import Services from "@/components/services/index";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Link from "next/link";
 // Register ScrollTrigger plugin
 // import videoFile from "../../public/video.mp4";
 if (typeof window !== "undefined") {
@@ -225,37 +228,54 @@ Developing reliable mobile and web experiences.          </p>
         </div>
       </section>
 
-      <footer className="bg-gray-800 text-white py-8">
+      <footer className="bg-black text-white py-12">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Essential Designs</h3>
+          <div className="grid md:grid-cols-12 gap-8 items-end">
+            <div className="col-span-3 text-start">
+<Link href="/" className="logo">
+              <Image
+                src={Logo}
+                alt="Logo"
+                className='w-72'
+                width={160}
+                // height={63}
+              />
+              {/* Weblibron */}
+            </Link>
+              {/* <h3 className="text-lg font-semibold mb-4">Essential Designs</h3>
               <p className="text-gray-400">
                 Custom software solutions since 2008
-              </p>
+              </p> */}
             </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Locations</h3>
-              <p className="text-gray-400">Vancouver • Toronto • Calgary</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Connect</h3>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-white">
-                  LinkedIn
+            <div className="col-span-7">
+              {/* <h3 className="text-lg font-semibold mb-4">Connect</h3> */}
+              <div className="flex space-x-10 items-end">
+                <a href="#" className="text-gray-400 text-xl font-inter text-primary hover:text-white">
+                  Home
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Twitter
+                <a href="#"className="text-gray-400 text-xl font-inter text-primary hover:text-white">
+                  About
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Facebook
+                <a href="#" className="text-gray-400 text-xl font-inter text-primary hover:text-white">
+                  Services
+                </a>
+                <a href="#" className="text-gray-400 text-xl font-inter text-primary hover:text-white">
+                  Portfolio
+                </a>
+                <a href="#" className="text-gray-400 text-xl font-inter text-primary hover:text-white">
+                  Contact Us
                 </a>
               </div>
             </div>
+            <div className="col-span-2">
+ 
+            </div>
           </div>
-          <p className="text-center text-gray-400 mt-8">
-            © 2025 Essential Designs. All rights reserved.
+         <div className="text-left w-full">
+ <p className="text-left text-gray-400 mt-8">
+            © 2025 Weblibron. All rights reserved.
           </p>
+            </div>
         </div>
       </footer>
     </>
