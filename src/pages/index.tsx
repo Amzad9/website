@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import Logo from "@/assets/logo.png";
-
 import { motion } from "framer-motion";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +18,8 @@ import Header from "@/components/header/Header";
 import Services from "@/components/services/index";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
+import Footer from "@/components/footer/Footer";
+import Contact from "@/components/contact/Contact";
 // Register ScrollTrigger plugin
 // import videoFile from "../../public/video.mp4";
 if (typeof window !== "undefined") {
@@ -150,31 +151,22 @@ export default function Home() {
         </main>
       </div>
       <Services />
-      <section className="bg-white text-black py-20">
-        <div className="container mx-auto px-6 text-start">
-          <div className="relative">
-            <h1 className="text-7xl relative z-10 font-semibold mb-12 font-poppins">
-              Let’s <span className="text-primary italic font-inter">Work</span>{" "}
-              Together!
-            </h1>
-            <span className="absolute h-5 w-[60%] rounded-xl bg-slate-50 opacity-50 blur-lg top-10 backdrop-blur-sm  left-0 transform -translate-y-1/2"></span>
-          </div>
-          <p className="text-xl mb-8">
-Developing reliable mobile and web experiences.          </p>
-          <button className="bg-transparant border hover:bg-green-600 text-black font-semibold py-3 px-6 rounded-full">
-            Get a Free Quote
-          </button>
-        </div>
-      </section>
+      <Contact />
 
-      <section className="py-16">
+      <section className="py-16 bg-black">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">
             Our Portfolio
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-100 p-6 rounded-lg">
-              <div className="h-40 bg-gray-300 mb-4 rounded"></div>
+            <div className=" p-6 rounded-lg">
+               <Image
+                src={Logo}
+                alt="Logo"
+                className='w-72'
+                width={160}
+                // height={63}
+              />
               <h3 className="text-xl font-semibold mb-2">Project One</h3>
               <p className="text-gray-600">Brief description of the project</p>
             </div>
@@ -213,71 +205,7 @@ Developing reliable mobile and web experiences.          </p>
           </div>
         </div>
       </section>
-
-      <section className="py-16">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Ready to Start Your Project?
-          </h2>
-          <p className="text-gray-600 mb-8">
-            Contact us today for a free consultation
-          </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg">
-            Contact Us
-          </button>
-        </div>
-      </section>
-
-      <footer className="bg-black text-white py-12">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-12 gap-8 items-end">
-            <div className="col-span-3 text-start">
-<Link href="/" className="logo">
-              <Image
-                src={Logo}
-                alt="Logo"
-                className='w-72'
-                width={160}
-                // height={63}
-              />
-              {/* Weblibron */}
-            </Link>
-              {/* <h3 className="text-lg font-semibold mb-4">Essential Designs</h3>
-              <p className="text-gray-400">
-                Custom software solutions since 2008
-              </p> */}
-            </div>
-            <div className="col-span-7">
-              {/* <h3 className="text-lg font-semibold mb-4">Connect</h3> */}
-              <div className="flex space-x-10 items-end">
-                <a href="#" className="text-gray-400 text-xl font-inter text-primary hover:text-white">
-                  Home
-                </a>
-                <a href="#"className="text-gray-400 text-xl font-inter text-primary hover:text-white">
-                  About
-                </a>
-                <a href="#" className="text-gray-400 text-xl font-inter text-primary hover:text-white">
-                  Services
-                </a>
-                <a href="#" className="text-gray-400 text-xl font-inter text-primary hover:text-white">
-                  Portfolio
-                </a>
-                <a href="#" className="text-gray-400 text-xl font-inter text-primary hover:text-white">
-                  Contact Us
-                </a>
-              </div>
-            </div>
-            <div className="col-span-2">
- 
-            </div>
-          </div>
-         <div className="text-left w-full">
- <p className="text-left text-gray-400 mt-8">
-            © 2025 Weblibron. All rights reserved.
-          </p>
-            </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
