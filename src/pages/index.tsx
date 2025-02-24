@@ -147,15 +147,18 @@ export default function Home() {
         </main>
       </div>
       <Services />
-      <section className="bg-blue-900 text-white py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Custom Software Development
-          </h1>
+      <section className="bg-white text-black py-20">
+        <div className="container mx-auto px-6 text-start">
+          <div className="relative">
+            <h1 className="text-7xl relative z-10 font-semibold mb-12 font-poppins">
+              Let’s <span className="text-primary italic font-inter">Work</span>{" "}
+              Together!
+            </h1>
+            <span className="absolute h-5 w-[60%] rounded-xl bg-slate-50 opacity-50 blur-lg top-10 backdrop-blur-sm  left-0 transform -translate-y-1/2"></span>
+          </div>
           <p className="text-xl mb-8">
-            Building practical mobile and web applications since 2008
-          </p>
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg">
+Developing reliable mobile and web experiences.          </p>
+          <button className="bg-transparant border hover:bg-green-600 text-black font-semibold py-3 px-6 rounded-full">
             Get a Free Quote
           </button>
         </div>
