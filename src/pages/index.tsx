@@ -20,6 +20,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import Footer from "@/components/footer/Footer";
 import Contact from "@/components/contact/Contact";
+import { TimelineDemo} from '@/components/TimeLine'
 // Register ScrollTrigger plugin
 // import videoFile from "../../public/video.mp4";
 if (typeof window !== "undefined") {
@@ -151,6 +152,7 @@ export default function Home() {
         </main>
       </div>
       <Services />
+      <TimelineDemo />
       <Contact />
 
       <section className="py-16 bg-black">
