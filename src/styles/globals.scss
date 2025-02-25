@@ -13,3 +13,15 @@
   --poppins: "Poppins", serif,
   --inter: "Inter", serif,
 }
+
+
+.gradient-section {
+  background-image: 
+    linear-gradient(to bottom, rgb(0, 0, 0), #000000d4 50%, rgb(0, 0, 0)),
+    url('./../assets/contact.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-top: 10rem; /* Matches Tailwind's py-40 (40 * 0.25rem = 10rem) */
+  padding-bottom: 10rem;
+  color: #000; /* Matches text-black */
+}

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Logo from "@/assets/logof.svg";
 import Link from "next/link";
-import { Map } from "lucide-react";
+import { Map } from 'lucide-react';
 
 const Footer = ()=>{
  return(
-    <footer className="bg-[#131117] text-white py-12">
+    <footer className="bg-[#000000] text-white py-12">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-12 gap-8 items-start">
             <div className="col-span-4 text-start">
@@ -16,7 +16,7 @@ const Footer = ()=>{
                 width={150}
               />
             </Link>
-              
+              <Link href="#">Icon</Link>
             </div>
             <div className="col-span-3">
               {/* <h3 className="text-lg font-semibold mb-4">Connect</h3> */}

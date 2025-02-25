@@ -153,7 +153,6 @@ export default function Home() {
       </div>
       <Services />
       <TimelineDemo />
-      <Contact />
 
       <section className="py-16 bg-black">
         <div className="container mx-auto px-6">
@@ -186,7 +185,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-white text-white">
+      <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">
             What Our Clients Say
@@ -207,6 +206,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+       <Contact />
       <Footer />
     </>
   );
