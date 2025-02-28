@@ -91,7 +91,7 @@ export const InfiniteMovingCards = ({
             className="w-[350px] max-w-full relative rounded-0  md:w-[300px]"
             key={item.image}
           >
-<img src={item.image} alt=""/>
+          <img src={item.image} alt=""/>
            
           </div>
         ))}
