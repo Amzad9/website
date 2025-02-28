@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
@@ -14,7 +15,7 @@ export const InfiniteMovingCards = ({
     // quote: string;
     // name: string;
     // title: string;
-    image: string
+    image: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -62,7 +63,7 @@ export const InfiniteMovingCards = ({
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
+        containerRef.current.style.setProperty("--animation-duration", "15s");
       } else if (speed === "normal") {
         containerRef.current.style.setProperty("--animation-duration", "40s");
       } else {
@@ -91,8 +92,7 @@ export const InfiniteMovingCards = ({
             className="w-[350px] max-w-full relative rounded-0  md:w-[300px]"
             key={item.image}
           >
-<img src={item.image} alt=""/>
-           
+            <Image src={item.image} alt="" width={350} height={600} layout=""/>
           </div>
         ))}
       </div>

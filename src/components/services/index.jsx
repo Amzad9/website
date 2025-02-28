@@ -3,7 +3,7 @@ import { InfiniteMovingCardsDemo } from "@/components/Card";
 
 export default function Services() {
   return (
-    <section className="min-h-screen flex flex-col">
+    <section className="flex flex-col">
       <Head>
         <title>Top Quality Software & Apps</title>
         <meta

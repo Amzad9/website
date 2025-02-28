@@ -20,7 +20,8 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import Footer from "@/components/footer/Footer";
 import Contact from "@/components/contact/Contact";
-import { TimelineDemo} from '@/components/TimeLine'
+import { TimelineDemo } from "@/components/TimeLine";
+import { TestimonialsSection } from "@/components/Testimonials/TestimonialsSection";
 // Register ScrollTrigger plugin
 // import videoFile from "../../public/video.mp4";
 if (typeof window !== "undefined") {
@@ -29,7 +30,6 @@ if (typeof window !== "undefined") {
 
 export default function Home() {
   const contentRef = useRef(null);
-  const [isOpenNavbar, setIsOpenNavbar] = useState(false);
 
   useEffect(() => {
     // GSAP animations
@@ -62,7 +62,7 @@ export default function Home() {
 
   return (
     <>
-      <div className={`relative min-h-screen overflow-hidden ${geistSans}`}>
+      <div className={`relative overflow-hidden ${geistSans}`}>
         <Header />
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
@@ -152,8 +152,8 @@ export default function Home() {
         </main>
       </div>
       <Services />
-      <TimelineDemo />
-
+      {/* <TimelineDemo /> */}
+      <TestimonialsSection />
       <section className="py-16 bg-black">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">
@@ -161,10 +161,10 @@ export default function Home() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className=" p-6 rounded-lg">
-               <Image
+              <Image
                 src={Logo}
                 alt="Logo"
-                className='w-72'
+                className="w-72"
                 width={160}
                 // height={63}
               />
@@ -206,7 +206,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-       <Contact />
+      <Contact />
       <Footer />
     </>
   );

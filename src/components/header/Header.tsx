@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "@/components/header/Header.module.scss";
-import Logo from "@/assets/logo.png";
+import Logo from "@/assets/logof.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -42,18 +42,6 @@ const Header = () => {
   const handleContactUS = () => {
     setIsModal(true);
   };
-  const handleContactUSClose = () => {
-    setIsModal(false);
-  };
-
-  const isRoutes = [
-    "/service",
-    "/AI-Ml",
-    "/web3",
-    "/blockchain",
-    "/software",
-    "/internet-of-things",
-  ];
 
   return (
     <>
@@ -69,10 +57,9 @@ const Header = () => {
                 src={Logo}
                 alt="Logo"
                 className={styles.logoImage}
-                width={160}
+                width={130}
                 // height={63}
               />
-              {/* Weblibron */}
             </Link>
 
             <div className={styles.group_btn}>
