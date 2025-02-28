@@ -30,6 +30,6 @@ const testimonials = [
   },
   {
     image:
-      "/p1.png",
+      "/p5.png",
   },
 ];
