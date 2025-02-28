@@ -21,6 +21,7 @@ import Link from "next/link";
 import Footer from "@/components/footer/Footer";
 import Contact from "@/components/contact/Contact";
 import { TimelineDemo} from '@/components/TimeLine'
+import AboutUs from "@/components/about/About";
 // Register ScrollTrigger plugin
 // import videoFile from "../../public/video.mp4";
 if (typeof window !== "undefined") {
@@ -151,6 +152,7 @@ export default function Home() {
           </div>
         </main>
       </div>
+      <AboutUs />
       <Services />
       <TimelineDemo />
 
@@ -193,7 +195,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-blue-800 p-6 rounded-lg">
               <p className="mb-4">
-                "Essential Designs delivered beyond our expectations!"
+                &quot;Essential Designs delivered beyond our expectations!&quot;
               </p>
               <p className="font-semibold">John Doe, Company X</p>
             </div>
@@ -207,7 +209,7 @@ export default function Home() {
         </div>
       </section>
        <Contact />
-      <Footer />
+       <Footer />
     </>
   );
 }
