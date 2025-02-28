@@ -14,22 +14,22 @@ export function InfiniteMovingCardsDemo() {
 const testimonials = [
   {
     image:
-       "/mobile.png",
+       "/p1.png",
   },
   {
     image:
-      "/mobile.png",
+      "/p2.png",
   },
   {
     image:
-      "/mobile.png",
+      "/p3.png",
   },
   {
     image:
-      "/mobile.png",
+      "/p4.png",
   },
   {
     image:
-      "/mobile.png",
+      "/p1.png",
   },
 ];

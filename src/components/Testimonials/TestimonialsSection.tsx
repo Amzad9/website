@@ -113,7 +113,7 @@ export const TestimonialsSection = ({
     }
   };
   return (
-    <div className="container mx-auto bg-black">
+    <section className="container mx-auto bg-black">
       <div
         ref={containerRef}
         className={cn(
@@ -142,7 +142,7 @@ export const TestimonialsSection = ({
                     </span>
                   ))}
                 </div>
-                <p class="text-sm text-left">{item.quote}</p>
+                <p className="text-sm text-left">{item.quote}</p>
               </div>
               <div className="flex justify-start w-full items-center my-4">
                 <div className="flex-shrink-0">
@@ -165,6 +165,6 @@ export const TestimonialsSection = ({
           ))}
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
