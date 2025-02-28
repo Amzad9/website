@@ -7,23 +7,16 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Header from "@/components/header/Header";
 import Services from "@/components/services/index";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
 import Footer from "@/components/footer/Footer";
 import Contact from "@/components/contact/Contact";
-import { TimelineDemo } from "@/components/TimeLine";
 import { TestimonialsSection } from "@/components/Testimonials/TestimonialsSection";
-// Register ScrollTrigger plugin
-// import videoFile from "../../public/video.mp4";
+import AboutUs from "@/components/about/About";
+
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
@@ -151,6 +144,7 @@ export default function Home() {
           </div>
         </main>
       </div>
+      <AboutUs />
       <Services />
       {/* <TimelineDemo /> */}
       <TestimonialsSection />
@@ -193,13 +187,13 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-blue-800 p-6 rounded-lg">
               <p className="mb-4">
-                "Essential Designs delivered beyond our expectations!"
+                &quot;Essential Designs delivered beyond our expectations!&quot;
               </p>
               <p className="font-semibold">John Doe, Company X</p>
             </div>
             <div className="bg-blue-800 p-6 rounded-lg">
               <p className="mb-4">
-                "Their team is professional and highly skilled."
+                Their team is professional and highly skilled.
               </p>
               <p className="font-semibold">Jane Smith, Company Y</p>
             </div>
