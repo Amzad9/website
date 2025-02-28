@@ -6,7 +6,7 @@ import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 export function InfiniteMovingCardsDemo() {
   return (
     <div className="h-[18rem] rounded-md flex flex-col antialiased bg-gary items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards items={testimonials} direction="left" speed="slow" />
+      <InfiniteMovingCards items={testimonials} direction="right" speed="fast" />
     </div>
   );
 }

@@ -80,10 +80,10 @@ export default function Sidebar({ isOpen, setIsOpen }) {
             animate="open"
             exit="closed"
             variants={sidebarVariants}
-            className="fixed top-0 right-0 h-screen w-[450px] bg-white text-black p-4 shadow-lg z-40 sidebar-motion"
+            className="fixed rounded-l-3xl top-0 right-0 h-screen w-[400px] bg-black text-white p-4 shadow-lg z-40 sidebar-motion"
           >
             {/* Navigation Menu with Animation and Hover Underline */}
-            <nav className="space-y-3 mt-10 pb-10 border-b-2 border-gray-200">
+            <nav className="space-y-3 mt-10 pb-10 border-b border-gray-800">
               {["Home", "About us", "Services", "Technology", "Team", "Clients"].map((item, index) => (
                 <motion.div
                   key={item}
@@ -99,7 +99,7 @@ export default function Sidebar({ isOpen, setIsOpen }) {
                   >
                     <motion.span
                       whileHover={{ 
-                        scale: 1.05, // Slight scale on hover for interactivity
+                        // scale: 1.05, // Slight scale on hover for interactivity
                         textDecoration: "underline", // Underline on hover
                       }}
                       transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
