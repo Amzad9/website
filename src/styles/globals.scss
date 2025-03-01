@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --black: #000000;
   --white: #ffffff;
@@ -20,10 +19,14 @@
     url("./../assets/contact.jpg");
   background-size: cover;
   background-position: center;
-  padding-top: 10rem; /* Matches Tailwind's py-40 (40 * 0.25rem = 10rem) */
-  padding-bottom: 10rem;
+  padding-top: 5rem; /* Matches Tailwind's py-40 (40 * 0.25rem = 10rem) */
+  padding-bottom: 3rem;
   color: #000; /* Matches text-black */
 }
-body{
+
+body {
   background: var(--black);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
