@@ -92,7 +92,7 @@ export const InfiniteMovingCards = ({
             className="w-[350px] max-w-full relative rounded-0  md:w-[300px]"
             key={item.image}
           >
-            <Image src={item.image} alt="" width={350} height={600} layout="" />
+            <Image className="rounded-xl" src={item.image} alt="" width={350} height={600} layout="" />
           </div>
         ))}
       </div>

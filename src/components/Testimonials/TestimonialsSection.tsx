@@ -22,7 +22,8 @@ const testimonials = [
       "https://images.pexels.com/photos/375880/pexels-photo-375880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
-    quote: "All that we see or seem is but a dream within a dream.  Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
+    quote:
+      "All that we see or seem is but a dream within a dream.  Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
     name: "Edgar Allan Poe",
     title: "A Dream Within a Dream",
     image:
@@ -117,7 +118,7 @@ export const TestimonialsSection = ({
       <div
         ref={containerRef}
         className={cn(
-          "scroller bg-black relative z-20  max-w-7xl overflow-hidden",
+          "scroller bg-black relative z-20 mx-auto  max-w-7xl overflow-hidden",
           className
         )}
       >
@@ -131,8 +132,8 @@ export const TestimonialsSection = ({
         >
           {testimonials.map((item) => (
             <div
-              key={item.author}
-              className="inline-flex items-center px-6 py-4 bg-black border-t-0 border-2 border-primary text-white rounded-[24px] shadow-lg mx-3 w-[350px] h-[300px] flex-col justify-between"
+              key={item.name}
+              className="inline-flex items-center px-6 py-4 bg-black border-t-0 border-2 border-[#292929] hover:border-primary transition-border ease-in-out duration-300 text-white rounded-[24px] shadow-lg mx-3 w-[350px] h-[300px] flex-col justify-between"
             >
               <div className="flex flex-col items-start">
                 <div className="flex text-primary mb-2">
@@ -149,7 +150,7 @@ export const TestimonialsSection = ({
                   <Image
                     className="w-12 h-12 rounded-xl mr-4"
                     src={item.image}
-                    alt={item.author}
+                    alt={item.name}
                     width={50}
                     height={50}
                   />
