@@ -5,7 +5,7 @@ import { Map } from 'lucide-react';
 
 const Footer = ()=>{
  return(
-    <footer className="bg-[#000000] text-white py-12">
+    <footer className="bg-[#000000] text-white py-12 relative z-10">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-12 gap-8 items-start">
             <div className="col-span-4 text-start">

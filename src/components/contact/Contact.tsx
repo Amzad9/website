@@ -1,9 +1,7 @@
 import { PlusCircle } from "lucide-react";
-import Image from "next/image";
-
 const Contact = () => {
 return(
-   <section className="text-black py-40 gradient-section">
+   <section className="text-black py-40 relative z-10">
         <div className="container mx-auto px-6 text-start">
           <div className="relative">
             <h1 className="text-7xl flex item-center text-white relative z-10 font-semibold mb-12 font-poppins">
