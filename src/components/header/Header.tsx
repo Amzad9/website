@@ -45,7 +45,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="container relative z-50">
+      <div className="container relative z-40">
         <header
           className={`${styles.headerWrapper} ${
             scrolled ? styles.stickyActive : ""

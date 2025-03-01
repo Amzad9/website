@@ -22,7 +22,8 @@ const testimonials = [
       "https://images.pexels.com/photos/375880/pexels-photo-375880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
-    quote: "All that we see or seem is but a dream within a dream.  Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
+    quote:
+      "All that we see or seem is but a dream within a dream.  Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
     name: "Edgar Allan Poe",
     title: "A Dream Within a Dream",
     image:
@@ -117,7 +118,7 @@ export const TestimonialsSection = ({
       <div
         ref={containerRef}
         className={cn(
-          "scroller bg-black relative z-20  max-w-7xl overflow-hidden",
+          "scroller bg-black relative z-20 mx-auto  max-w-7xl overflow-hidden",
           className
         )}
       >
