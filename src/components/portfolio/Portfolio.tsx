@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { motion, useAnimation, Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 // Define project interface
@@ -12,7 +12,7 @@ interface Project {
 }
 
 const Portfolio: React.FC = () => {
-  const controls = useAnimation();
+  // const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -109,7 +109,7 @@ const Portfolio: React.FC = () => {
     index: number;
   }
 
-  const ProjectItem: React.FC<ProjectItemProps> = ({ project, index }) => (
+  const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => (
     <motion.div
       variants={itemVariants}
       className="relative bg-gray-900 rounded-xl overflow-hidden shadow-lg will-change-transform"
@@ -129,7 +129,7 @@ const Portfolio: React.FC = () => {
   );
 
   return (
-    <div className="relative z-20 p-6 py-20 text-white">
+    <section id="showcase" className="relative z-20 p-6 py-20 text-white">
       <motion.div
         ref={ref}
         initial="hidden"
@@ -153,7 +153,7 @@ const Portfolio: React.FC = () => {
           ))}
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

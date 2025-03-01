@@ -3,7 +3,7 @@ import { InfiniteMovingCardsDemo } from "@/components/Card";
 
 export default function Services() {
   return (
-    <section className="flex flex-col">
+    <section id="service" className="flex flex-col">
       <Head>
         <title>Top Quality Software & Apps</title>
         <meta
@@ -27,24 +27,24 @@ export default function Services() {
             <span className="absolute h-5 w-full rounded-xl bg-slate-50 opacity-50 blur-lg top-10 backdrop-blur-sm  left-0 transform -translate-y-1/2"></span>
           </div>
           <div className="flex flex-col flex-wrap w-1/2 mx-auto md:flex-row justify-center gap-4 mb-12">
-            <button className="bg-transparent text-gray-500 border-2 border-gray-600 px-6 py-1.5 rounded-full  hover:text-primary hover:border-primary transition font-poppins font-medium">
+            <button className="bg-transparent text-gray-300 border-2 border-gray-300 px-6 py-1.5 rounded-full  hover:text-primary hover:border-primary transition font-poppins font-medium">
               Web Applications
             </button>
-            <button className="bg-transparent text-gray-500 border-2 border-gray-600 px-6 py-1.5 rounded-full font-medium hover:text-primary hover:border-primary transition font-poppins">
+            <button className="bg-transparent text-gray-300 border-2 border-gray-300 px-6 py-1.5 rounded-full font-medium hover:text-primary hover:border-primary transition font-poppins">
               Mobile Applications
             </button>
-            <button className="bg-transparent text-gray-500 border-2 border-gray-600 px-6 py-1.5 rounded-full font-medium hover:text-primary hover:border-primary transition font-poppins">
+            <button className="bg-transparent text-gray-300 border-2 border-gray-300 px-6 py-1.5 rounded-full font-medium hover:text-primary hover:border-primary transition font-poppins">
               UI/UX Dessign
             </button>
-            <button className="bg-transparent text-gray-500 border-2 border-gray-600 px-6 py-1.5 rounded-full font-medium hover:text-primary hover:border-primary transition font-poppins">
+            <button className="bg-transparent text-gray-300 border-2 border-gray-300 px-6 py-1.5 rounded-full font-medium hover:text-primary hover:border-primary transition font-poppins">
               Business Platforms
             </button>
-            <button className="bg-transparent text-gray-500 border-2 border-gray-600 px-6 py-1.5 rounded-full font-medium hover:text-primary hover:border-primary transition font-poppins">
+            <button className="bg-transparent text-gray-300 border-2 border-gray-300 px-6 py-1.5 rounded-full font-medium hover:text-primary hover:border-primary transition font-poppins">
               Software Support
             </button>
           </div>
           <div className="mb-6">
-            <p className="text-md w-full md:w-2/4 mx-auto text-gray-400 font-poppins font-light">
+            <p className="text-lg w-full md:w-2/3 mx-auto text-gray-300 font-inter font-light">
               Revolutionize your business with our mobile app and software
               development expertise, delivering innovative solutions to elevate
               your brand and boost your bottom line.

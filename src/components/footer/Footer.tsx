@@ -66,7 +66,9 @@ const Footer: React.FC = () => {
 
           {/* Company Section */}
           <div className="">
-            <h4 className="text-lg font-semibold text-white mb-2">Connect</h4>
+            <h4 className="text-lg font-semibold text-white mb-2">
+              Quick Link
+            </h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
@@ -86,7 +88,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="#service"
                   className="hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
                 >
                   Service
@@ -94,10 +96,10 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="#technology"
+                  href="#showcase"
                   className="hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
                 >
-                  Technology
+                  Showcase
                 </a>
               </li>
             </ul>
@@ -105,22 +107,14 @@ const Footer: React.FC = () => {
 
           {/* Support Section */}
           <div className="">
-            <h4 className="text-lg font-semibold text-white mb-2">Support</h4>
+            <h4 className="text-lg font-semibold text-white mb-2">Contact</h4>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  href="#support"
-                  className="hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
-                >
-                  Customer Support
-                </a>
-              </li>
               <li>
                 <a
                   href="#terms"
                   className="hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
                 >
-                  Terms & Conditions
+                  hello@weblibron.com
                 </a>
               </li>
               <li>
@@ -128,7 +122,7 @@ const Footer: React.FC = () => {
                   href="#privacy"
                   className="hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
                 >
-                  Privacy Policy
+                  +91 8178 61 4811
                 </a>
               </li>
             </ul>

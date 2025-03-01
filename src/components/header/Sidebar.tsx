@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState, useEffect } from "react"; // Added useEffect for overlay click handling
+import { useEffect } from "react"; // Added useEffect for overlay click handling
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Sidebar({ isOpen, setIsOpen }) {
@@ -20,6 +20,25 @@ export default function Sidebar({ isOpen, setIsOpen }) {
       transition: { type: "tween", duration: 0.3, ease: "easeInOut" },
     },
   };
+
+  const NavData = [
+    {
+      name: "Home",
+      url: "#home",
+    },
+    {
+      name: "About Us",
+      url: "#about",
+    },
+    {
+      name: "Service",
+      url: "#service",
+    },
+    {
+      name: "Showcase",
+      url: "#showcase",
+    },
+  ];
 
   // Animation variants for navigation menu items (smooth transition)
   const navItemVariants = {
@@ -84,7 +103,7 @@ export default function Sidebar({ isOpen, setIsOpen }) {
           >
             {/* Navigation Menu with Animation and Hover Underline */}
             <nav className="space-y-3 mt-10 pb-10 border-b border-gray-800">
-              {["Home", "About us", "Services", "Technology", "Team", "Clients"].map((item, index) => (
+              {NavData.map((item, index) => (
                 <motion.div
                   key={item}
                   custom={index} // Pass index for staggered animation
@@ -93,19 +112,23 @@ export default function Sidebar({ isOpen, setIsOpen }) {
                   variants={navItemVariants}
                 >
                   <Link
-                    href={`#${item.toLowerCase().replace(" ", "-")}`}
+                    href={`${item.url}`}
                     onClick={handleClose}
                     className="block px-4 text-3xl font-semibold text-right py-2 rounded transition"
                   >
                     <motion.span
-                      whileHover={{ 
+                      whileHover={{
                         // scale: 1.05, // Slight scale on hover for interactivity
                         textDecoration: "underline", // Underline on hover
                       }}
-                      transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
+                      transition={{
+                        type: "tween",
+                        duration: 0.3,
+                        ease: "easeInOut",
+                      }}
                       className="inline-block hover:text-primary"
                     >
-                      {item}
+                      {item.name}
                     </motion.span>
                   </Link>
                 </motion.div>

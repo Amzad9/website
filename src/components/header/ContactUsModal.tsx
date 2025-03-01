@@ -24,12 +24,12 @@ const ContactUsModal = ({ isModal, onClose }) => {
         }));
     };
 
-    const handleFileChange = (e) => {
-        setFormData((prevData) => ({
-            ...prevData,
-            file: e.target.files[0],
-        }));
-    };
+    // const handleFileChange = (e) => {
+    //     setFormData((prevData) => ({
+    //         ...prevData,
+    //         file: e.target.files[0],
+    //     }));
+    // };
 
 
     return (

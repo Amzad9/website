@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <section className="py-16 bg-black relative overflow-hidden flex items-center">
+    <section id="about" className="py-16 bg-black relative overflow-hidden flex items-center">
       <section className="relative z-10 mx-auto">
         <div className="container md:container mx-auto">
           <div className="flex justify-center">
