@@ -13,7 +13,7 @@ const HeroSection = () => {
     <div className={`relative min-h-screen overflow-hidden ${geistSans}`}>
       <Header />
       {/* Video Background */}
-      <div className="absolute inset-0 z-20">
+      <div className="absolute inset-0 z-30">
         <video
           src="/video.mp4"
           autoPlay
