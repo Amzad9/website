@@ -113,7 +113,7 @@ export const TestimonialsSection = ({
     }
   };
   return (
-    <section className="container mx-auto bg-black">
+    <section className="container mx-auto bg-black py-16">
       <div
         ref={containerRef}
         className={cn(
@@ -124,42 +124,42 @@ export const TestimonialsSection = ({
         <ul
           ref={scrollerRef}
           className={cn(
-            " flex w-full shrink-0 gap-0 py-4 w-max flex-nowrap",
+            " flex shrink-0 gap-0 py-4 w-max flex-nowrap",
             start && "animate-scroll ",
             pauseOnHover && "hover:[animation-play-state:paused]"
           )}
         >
           {testimonials.map((item) => (
             <div
-              key={item.author}
-              className="inline-flex items-center px-6 py-4 bg-black border-t-0 border-2 border-primary text-white rounded-[24px] shadow-lg mx-3 w-[350px] h-[300px] flex-col justify-between"
+              key={item.name}
+              className="inline-flex items-center px-6 py-4 bg-black border-t-0 hover:border-t-0 border-2 hover:border-2 border-gray-800 hover:border-primary transition-all text-white rounded-[24px] shadow-lg mx-3 w-full md:w-[600px] h-[300px] flex-col justify-between hover:animate-border"
             >
               <div className="flex flex-col items-start">
-                <div className="flex text-primary mb-2">
-                  {"★★★★★".split("").map((star, i) => (
-                    <span key={i} className="text-xl">
-                      {star}
-                    </span>
-                  ))}
-                </div>
-                <p className="text-sm text-left">{item.quote}</p>
+              <div className="flex text-primary mb-2">
+                {"★★★★★".split("").map((star, i) => (
+                <span key={i} className="text-xl">
+                  {star}
+                </span>
+                ))}
+              </div>
+              <p className="text-[18px] text-left">{item.quote}</p>
               </div>
               <div className="flex justify-start w-full items-center my-4">
-                <div className="flex-shrink-0">
-                  <Image
-                    className="w-12 h-12 rounded-xl mr-4"
-                    src={item.image}
-                    alt={item.author}
-                    width={50}
-                    height={50}
-                  />
-                </div>
-                <div className="text-left">
-                  <p className="text-lg font-medium font-poppins">
-                    {item.name}
-                  </p>
-                  <p className="text-xs text-gray-400">{item.title}</p>
-                </div>
+              <div className="flex-shrink-0">
+                <Image
+                className="w-12 h-12 rounded-xl mr-4"
+                src={item.image}
+                alt={item.name}
+                width={50}
+                height={50}
+                />
+              </div>
+              <div className="text-left">
+                <p className="text-[20px] font-medium font-poppins">
+                {item.name}
+                </p>
+                <p className="text-xs text-gray-400">{item.title}</p>
+              </div>
               </div>
             </div>
           ))}

@@ -13,7 +13,7 @@ const HeroSection = () => {
     <div className={`relative min-h-screen overflow-hidden ${geistSans}`}>
       <Header />
       {/* Video Background */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-20">
         <video
           src="/video.mp4"
           autoPlay
@@ -28,7 +28,7 @@ const HeroSection = () => {
 
       {/* Hero Content */}
       <main
-        className="relative z-10 container mx-auto px-6 pt-44"
+        className="relative z-30 container mx-auto px-6 pt-44"
       >
         <div className="text-center text-white max-w-4xl mx-auto">
           <h1 className="hero-text text-4xl font-inter flex items-center flex-wrap justify-center gap-3 mt-16 md:text-6xl italic font-semibold mb-2 leading-tight">

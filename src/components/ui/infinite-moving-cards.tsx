@@ -89,10 +89,10 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <div
-            className="w-[350px] max-w-full relative rounded-0  md:w-[300px]"
+            className="w-[350px] max-w-full relative rounded-xl  md:w-[300px]"
             key={item.image}
           >
-            <Image src={item.image} alt="" width={350} height={600} layout="" />
+            <Image src={item.image} alt="" className="rounded-xl" width={350} height={600} layout="" />
           </div>
         ))}
       </div>

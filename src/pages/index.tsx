@@ -7,6 +7,7 @@ import Contact from "@/components/contact/Contact";
 import { TestimonialsSection } from "@/components/Testimonials/TestimonialsSection";
 import AboutUs from "@/components/about/About";
 import HeroSection from "@/components/hero";
+import Portfolio from "@/components/portfolio/Portfolio";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -16,9 +17,11 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <Services />
-      <TestimonialsSection />
       <AboutUs />
+      <Services />
+      <Portfolio />
+      <TestimonialsSection />
+    
       {/* <section className="py-16 bg-black">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">
