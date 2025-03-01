@@ -17,7 +17,7 @@ export default function Services() {
       </section>
 
       {/* Bottom Section: Black Background with Text and Buttons */}
-      <section className="bg-black text-white py-16">
+      <section className="bg-black text-white py-16 relative z-30">
         <div className="container mx-auto px-4 text-center">
           <div className="relative">
             <h1 className="text-7xl relative z-10 font-semibold mb-12 font-inter">
