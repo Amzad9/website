@@ -3,16 +3,15 @@ import styles from "@/components/header/Header.module.scss";
 import Logo from "@/assets/logof.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import Sidebar from "./Sidebar";
 import { motion } from "framer-motion";
 
 const Header = () => {
   // const router = useRouter()
   const [isOpenNavbar, setIsOpenNavbar] = useState(false);
-  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  const [isModal, setIsModal] = useState(false);
+  // const [isModal, setIsModal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,9 +38,9 @@ const Header = () => {
     setIsOpenNavbar(!isOpenNavbar);
   };
 
-  const handleContactUS = () => {
-    setIsModal(true);
-  };
+  // const handleContactUS = () => {
+  //   setIsModal(true);
+  // };
 
   return (
     <>
@@ -65,7 +64,7 @@ const Header = () => {
             <div className={styles.group_btn}>
               <motion.button
                 className={`${styles.contactButton} font-inter font-light hover:bg-gradient-to-b `} // Keep your existing styling
-                onClick={handleContactUS}
+                // onClick={handleContactUS}
                 // whileHover={{
                 //   scale: 1.1, // Slightly scale up on hover
                 //   // rotate: 5, // Slight rotation for interactivity

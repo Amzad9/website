@@ -10,7 +10,7 @@ const geistSans = Geist({
 
 const HeroSection = () => {
   return (
-    <div className={`relative min-h-screen overflow-hidden ${geistSans}`}>
+    <div id="home" className={`relative min-h-screen overflow-hidden ${geistSans}`}>
       <Header />
       {/* Video Background */}
       <div className="absolute inset-0 z-30">
