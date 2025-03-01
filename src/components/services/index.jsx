@@ -28,16 +28,16 @@ export default function Services() {
           </div>
           <div className="flex flex-col flex-wrap w-1/2 mx-auto md:flex-row justify-center gap-4 mb-12">
             <button className="bg-transparent text-gray-300 border-2 border-gray-300 px-6 py-1.5 rounded-full  hover:text-primary hover:border-primary transition font-poppins font-medium">
-              Web Applications
+              Web Development
             </button>
             <button className="bg-transparent text-gray-300 border-2 border-gray-300 px-6 py-1.5 rounded-full font-medium hover:text-primary hover:border-primary transition font-poppins">
-              Mobile Applications
+              Mobile App Development
             </button>
             <button className="bg-transparent text-gray-300 border-2 border-gray-300 px-6 py-1.5 rounded-full font-medium hover:text-primary hover:border-primary transition font-poppins">
-              UI/UX Dessign
+              UI/UX Design
             </button>
             <button className="bg-transparent text-gray-300 border-2 border-gray-300 px-6 py-1.5 rounded-full font-medium hover:text-primary hover:border-primary transition font-poppins">
-              Business Platforms
+              SEO & Digital Marketing
             </button>
             <button className="bg-transparent text-gray-300 border-2 border-gray-300 px-6 py-1.5 rounded-full font-medium hover:text-primary hover:border-primary transition font-poppins">
               Software Support
@@ -45,9 +45,7 @@ export default function Services() {
           </div>
           <div className="mb-6">
             <p className="text-lg w-full md:w-2/3 mx-auto text-gray-300 font-inter font-light">
-              Revolutionize your business with our mobile app and software
-              development expertise, delivering innovative solutions to elevate
-              your brand and boost your bottom line.
+              Transform your business with our cutting-edge mobile app and software development solutions. We craft innovative, high-performance digital experiences designed to elevate your brand, enhance user engagement, and drive revenue growth.
             </p>
           </div>
         </div>

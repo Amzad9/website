@@ -13,18 +13,10 @@ const AboutUs = () => {
               </h2>
 
               <p className="text-lg font-inter mb-3 text-center text-gray-300">
-                A team of passionate creators and coders specializing in digital
-                and UI crafting and building. We believe that combining bold
-                visuals with robust development is the foundation of exceptional
-                online journeys.
+                We are a team of passionate creators and expert developers dedicated to crafting exceptional digital experiences. Specializing in UI/UX design and robust development, we blend bold visuals with cutting-edge technology to build seamless, high-performance platforms
               </p>
               <p className="text-lg font-inter text-center text-gray-300">
-                Our mission is to empower businesses with custom platforms that
-                stand out and run smoothly. We focus on crafting people-first
-                layouts and seamless functionality to boost engagement, boost
-                speed, and elevate your brand. Whether you need a site or app,
-                or a full digital transformation, weblibron is here to craft and
-                code your vision into reality.
+                Our mission is to empower businesses with custom-built solutions that not only stand out but also deliver smooth, engaging, and high-speed user experiences. From websites and mobile apps to full-scale digital transformations, Weblibron is here to bring your vision to life with precision, innovation, and excellence.
               </p>
             </div>
           </div>

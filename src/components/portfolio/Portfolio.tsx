@@ -115,7 +115,7 @@ const Portfolio: React.FC = () => {
       className="relative bg-gray-900 rounded-xl overflow-hidden shadow-lg will-change-transform"
       style={{ transformPerspective: 1000 }}
     >
-      <div className="overflow-hidden h-96">
+      <div className="overflow-hidden">
         <motion.img
           src={project.src}
           alt={project.alt}
@@ -143,7 +143,7 @@ const Portfolio: React.FC = () => {
           </h2>
 
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Showcasing my creative work and professional projects
+            A curated showcase of my creative expertise and professional projects, demonstrating innovation, precision, and impact-driven design
           </p>
         </motion.div>
 

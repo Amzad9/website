@@ -21,19 +21,18 @@ const SocialMediaList = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#000000] text-white pt-12 relative z-10">
+    <footer className="bg-black text-white pt-12 relative z-10">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="col-start-1 col-end-3">
-            <div className="flex items-center space-x-2 mb-4">
+            <div className="flex items-center space-x-2 mb-3">
               <Link href="/" className="logo">
                 <Image src={Logo} alt="weblibron logo" width={150} />
               </Link>
             </div>
-            <p className="text-sm w-2/3">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
+            <p className="text-sm w-2/3 font-poppins">
+             At Weblibron, we strive to create innovative web and app solutions that meet your needs. Your success is our priority.
             </p>
             {/* Social Media Icons */}
             <ul className="flex w-full border-t-4 pt-5 pb-5 border-white border-opacity-5 gap-5 items-center">
@@ -66,14 +65,14 @@ const Footer: React.FC = () => {
 
           {/* Company Section */}
           <div className="">
-            <h4 className="text-lg font-semibold text-white mb-2">
+            <h4 className="text-xl font-semibold text-white mb-2">
               Quick Link
             </h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-3 text-sm">
               <li>
                 <a
                   href="#home"
-                  className="hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
+                  className="text-sm font-inter hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
                 >
                   Home
                 </a>
@@ -81,7 +80,7 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="#about"
-                  className="hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
+                  className="text-sm font-inter hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
                 >
                   About Us
                 </a>
@@ -89,7 +88,7 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="#service"
-                  className="hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
+                  className="text-sm font-inter hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
                 >
                   Service
                 </a>
@@ -97,7 +96,7 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="#showcase"
-                  className="hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
+                  className="text-sm font-inter hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
                 >
                   Showcase
                 </a>
@@ -107,54 +106,54 @@ const Footer: React.FC = () => {
 
           {/* Support Section */}
           <div className="">
-            <h4 className="text-lg font-semibold text-white mb-2">Contact</h4>
+            <h4 className="text-xl font-semibold text-white mb-2">Contact Us</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
-                  href="#terms"
-                  className="hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
-                >
-                  hello@weblibron.com
-                </a>
+               <Link
+                href="mailto:hello@weblibron.com"
+                className="hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out text-xl"
+              >
+                hello@weblibron.com
+              </Link>
               </li>
               <li>
-                <a
-                  href="#privacy"
-                  className="hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
+               <Link
+                  href="tel:+918178614811"
+                  className="hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out text-xl"
                 >
                   +91 8178 61 4811
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Location Section */}
           <div className="col-span-2 col-end-7">
-            <h4 className="text-lg font-semibold text-white mb-2">Location</h4>
+            <h4 className="text-xl font-semibold text-white mb-2">Location</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <h5 className="text-base text-white">Dubai Office</h5>
+                <h5 className="text-lg text-white">Dubai Office</h5>
                 <a
                   href="#dubai"
-                  className="hover:text-primary hover:underline duration-300 ease-in-out text-xs font-medium text-gray-400"
+                  className="hover:text-primary hover:underline duration-300 ease-in-out text-sm font-inter font-medium text-gray-400"
                 >
                   115, Al Ahmadi Building, Al Qusais, Dubai, U.A.E
                 </a>
               </li>
               <li>
-                <h5 className="text-base text-white">India Office</h5>
+                <h5 className="text-lg text-white">India Office</h5>
                 <a
                   href="#india1"
-                  className="hover:text-primary hover:underline duration-300 ease-in-out text-xs font-medium text-gray-400"
+                  className="hover:text-primary hover:underline duration-300 ease-in-out text-sm font-inter  font-medium text-gray-400"
                 >
                   Ajnara Gen X, Gaziabad, Uttar Pradesh, India
                 </a>
               </li>
               <li>
-                <h5 className="text-base text-white">India Office</h5>
+                <h5 className="text-lg text-white">India Office</h5>
                 <a
                   href="#india2"
-                  className="hover:text-primary hover:underline duration-300 ease-in-out text-xs font-medium text-gray-400"
+                  className="hover:text-primary hover:underline duration-300 ease-in-out text-sm font-inter  font-medium text-gray-400"
                 >
                   Kareli, Prayagraj, Uttar Pradesh, India
                 </a>

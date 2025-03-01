@@ -3,6 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Geist } from "next/font/google";
 import Header from "../header/Header";
+import NextLink from "next/link";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -11,6 +13,9 @@ const geistSans = Geist({
 const HeroSection = () => {
   return (
     <div id="home" className={`relative min-h-screen overflow-hidden ${geistSans}`}>
+       <NextLink className="fixed z-50 bottom-16 right-16" href="https://wa.me/918178614811?text=Thank%20you%20for%20reaching%20out.%20%F0%9F%9A%80%20We%20specialize%20in%20Web%20Development%2C%20App%20Development%2C%20and%20Design%20to%20help%20businesses%20grow%20online">
+    <Image src="/whatsapp.svg" width="60" height="60" alt="Description of the image" />
+</NextLink>
       <Header />
       {/* Video Background */}
       <div className="absolute inset-0 z-30">
@@ -91,9 +96,8 @@ const HeroSection = () => {
             </span>{" "}
             web solutions.
           </h1>
-          <p className="hero-text text-lg md:text-xl mb-4">
-            Revolutionize your online presence with our lightning-fast web
-            solutions.
+          <p className="hero-text text-lg md:text-xl mb-4 mt-5">
+            Supercharge your online presence with our lightning-fast, high-performance web solutions. Experience seamless design, speed, and innovation like never before.
           </p>
         </div>
       </main>
