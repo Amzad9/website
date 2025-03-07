@@ -16,10 +16,10 @@ const ShowCase: React.FC = () => {
   const projects: Project[] = useMemo(
     () => [
       { id: 1, src: "/p1.png", alt: "Project 1", category: "UI/UX" },
-      { id: 2, src: "/p2.png", alt: "Project 2", category: "Web Development" },
-      { id: 3, src: "/p3.png", alt: "Project 3", category: "Branding" },
-      { id: 4, src: "/p5.png", alt: "Project 4", category: "UI/UX" },
-      { id: 5, src: "/p1.png", alt: "Project 5", category: "Marketing" }],
+      { id: 2, src: "/p2.jpeg", alt: "Project 2", category: "UI/UX" },
+      { id: 3, src: "/p3.png", alt: "Project 3", category: "Web Development" },
+      { id: 4, src: "/p3.jpeg", alt: "Project 4", category: "UI/UX" },
+      { id: 5, src: "/p5.jpeg", alt: "Project 5", category: "Web Development" }],
     []
   );
 
