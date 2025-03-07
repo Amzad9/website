@@ -39,7 +39,7 @@ const testimonials = [
   },
   {
     quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
+      "Working with Managix Global has been a game-changer for my business. Shiraj and his team delivered exceptional service and innovative solutions tailored to my needs. I highly recommend their expertise to anyone seeking growth and success!",
     name: "Herman Melville",
     title: "Moby-Dick",
     image:

@@ -48,20 +48,6 @@ const Portfolio: React.FC = () => {
         title: "Dashboard Interface",
         description: "Analytics dashboard with data visualization",
       },
-      {
-        id: 5,
-        src: "/p4.png",
-        alt: "Project 5",
-        title: "Social Media Campaign",
-        description: "Digital marketing assets for product launch",
-      },
-      {
-        id: 6,
-        src: "/p2.png",
-        alt: "Project 6",
-        title: "Mobile Game UI",
-        description: "Interface design for a puzzle game",
-      },
     ],
     []
   );
