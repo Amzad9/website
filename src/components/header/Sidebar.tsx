@@ -2,7 +2,12 @@ import Link from "next/link";
 import { useEffect } from "react"; // Added useEffect for overlay click handling
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function Sidebar({ isOpen, setIsOpen }) {
+interface SidebarProps {
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
+}
+
+export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
   const handleClose = () => {
     setIsOpen(false);
   };
@@ -43,7 +48,7 @@ export default function Sidebar({ isOpen, setIsOpen }) {
   // Animation variants for navigation menu items (smooth transition)
   const navItemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: (i) => ({
+    visible: (i: number) => ({
       opacity: 1,
       y: 0,
       transition: {
@@ -57,10 +62,10 @@ export default function Sidebar({ isOpen, setIsOpen }) {
 
   // Handle outside clicks to close the sidebar
   useEffect(() => {
-    const handleOutsideClick = (e) => {
+    const handleOutsideClick = (e: MouseEvent) => {
       if (isOpen) {
         const sidebar = document.querySelector(".sidebar-motion");
-        if (sidebar && !sidebar.contains(e.target)) {
+        if (sidebar && !sidebar.contains(e.target as Node)) {
           setIsOpen(false);
         }
       }
@@ -105,7 +110,7 @@ export default function Sidebar({ isOpen, setIsOpen }) {
             <nav className="space-y-3 mt-10 pb-10 border-b border-gray-800">
               {NavData.map((item, index) => (
                 <motion.div
-                  key={item}
+                  key={index}
                   custom={index} // Pass index for staggered animation
                   initial="hidden"
                   animate="visible"

@@ -5,8 +5,10 @@ import Link from "next/link";
 import Sidebar from "./Sidebar";
 import { motion } from "framer-motion";
 
+import { StaticImageData } from 'next/image';
+
 interface HeaderProps {
-  logo: string;
+  logo: string | StaticImageData;
 }
 
 const Header = ({ logo }: HeaderProps) => {

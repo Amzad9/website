@@ -25,11 +25,9 @@ export const InfiniteMovingCards = ({
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
 
-  useEffect(() => {
-    addAnimation();
-  }, []);
   const [start, setStart] = useState(false);
-  function addAnimation() {
+
+  const addAnimation = React.useCallback(() => {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
 
@@ -44,7 +42,11 @@ export const InfiniteMovingCards = ({
       getSpeed();
       setStart(true);
     }
-  }
+  }, [direction, speed]);
+
+  useEffect(() => {
+    addAnimation();
+  }, [addAnimation]);
   const getDirection = () => {
     if (containerRef.current) {
       if (direction === "left") {
@@ -79,7 +81,7 @@ export const InfiniteMovingCards = ({
         className
       )}
     >
-      <div
+      <ul
         ref={scrollerRef}
         className={cn(
           " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
@@ -95,7 +97,7 @@ export const InfiniteMovingCards = ({
             <Image src={item.image} alt="" className="rounded-xl" width={350} height={600} layout="" />
           </div>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
