@@ -12,9 +12,6 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
-    // quote: string;
-    // name: string;
-    // title: string;
     image: string;
   }[];
   direction?: "left" | "right";
@@ -23,11 +20,32 @@ export const InfiniteMovingCards = ({
   className?: string;
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
-  const scrollerRef = React.useRef<HTMLUListElement>(null);
-
+  const scrollerRef = React.useRef<HTMLDivElement>(null); // Changed to HTMLDivElement since it's a <div>, not a <ul>
   const [start, setStart] = useState(false);
 
-  const addAnimation = React.useCallback(() => {
+  const getDirection = () => {
+    if (containerRef.current) {
+      if (direction === "left") {
+        containerRef.current.style.setProperty("--animation-direction", "forwards");
+      } else {
+        containerRef.current.style.setProperty("--animation-direction", "reverse");
+      }
+    }
+  };
+
+  const getSpeed = () => {
+    if (containerRef.current) {
+      if (speed === "fast") {
+        containerRef.current.style.setProperty("--animation-duration", "15s");
+      } else if (speed === "normal") {
+        containerRef.current.style.setProperty("--animation-duration", "40s");
+      } else {
+        containerRef.current.style.setProperty("--animation-duration", "80s");
+      }
+    }
+  };
+
+  useEffect(() => {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
 
@@ -42,62 +60,40 @@ export const InfiniteMovingCards = ({
       getSpeed();
       setStart(true);
     }
-  }, [direction, speed]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Empty dependency array is fine since this runs only once on mount
 
-  useEffect(() => {
-    addAnimation();
-  }, [addAnimation]);
-  const getDirection = () => {
-    if (containerRef.current) {
-      if (direction === "left") {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "forwards"
-        );
-      } else {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "reverse"
-        );
-      }
-    }
-  };
-  const getSpeed = () => {
-    if (containerRef.current) {
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "15s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
-      } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
-      }
-    }
-  };
   return (
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20  max-w-7xl overflow-hidden",
+        "scroller relative z-20 max-w-7xl overflow-hidden",
         className
       )}
     >
-      <ul
+      <div
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
-          start && "animate-scroll ",
+          "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
+          start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map((item, idx) => (
+        {items.map((item) => (
           <div
-            className="w-[350px] max-w-full relative rounded-xl  md:w-[300px]"
-            key={idx}
+            className="w-[350px] max-w-full relative rounded-xl md:w-[300px]"
+            key={item.image}
           >
-            <Image src={item.image} alt="" className="rounded-xl" width={350} height={600} layout="" />
+            <Image
+              src={item.image}
+              alt=""
+              className="rounded-xl"
+              width={350}
+              height={600}
+            />
           </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
