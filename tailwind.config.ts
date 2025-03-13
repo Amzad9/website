@@ -1,10 +1,4 @@
 import type { Config } from "tailwindcss";
-const defaultTheme = require("tailwindcss/defaultTheme");
- 
-const colors = require("tailwindcss/colors");
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,36 +8,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        'black': 'var(--black)',    // Custom black color
-        'primary': 'var(--primary)',  // Custom primary color (bright green)
-        'secondary': 'var(--secondary)',
-      },
-      fontFamily: {
-        'inter': ['Inter', 'sans-serif'], // Add Inter font
-        'poppins': ['Poppins', 'sans-serif'], // Add Poppins font
-      },
- animation: {
-        scroll:
-          "scroll var(--animation-duration, 20s) var(--animation-direction, forwards) linear infinite",
-      },
-      keyframes: {
-        scroll: {
-          to: {
-            transform: "translate(calc(-50% - 0.5rem))",
-          },
-        },
+        background: "var(--background)",
+        foreground: "var(--foreground)",
       },
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [],
 } satisfies Config;
-function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
- 
-  addBase({
-    ":root": newVars,
-  });
-}
