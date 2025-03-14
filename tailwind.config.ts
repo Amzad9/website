@@ -40,6 +40,6 @@ function addVariablesForColors({ addBase, theme }: { addBase: (base: Record<stri
   );
  
   addBase({
-    ":root": newVars,
+    ":root": Object.entries(newVars).map(([key, val]) => `${key}: ${val}`).join('; '),
   });
 }
