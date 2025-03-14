@@ -9,20 +9,23 @@
     width: 30px;
     height: 30px;
     -webkit-mask: url("../../assets/instagram.svg") center no-repeat;
+    mask: url("../../assets/instagram.svg") center no-repeat;
     mask-image: url("../../assets/instagram.svg") center no-repeat;
     background: var(--white);
 
     &:hover {
         background-color: var(--primary);
-    }
+    };
 }
 
 .twitter {
     -webkit-mask: url("../../assets/twitter.svg") center no-repeat;
+    mask: url("../../assets/twitter.svg") center no-repeat;
     mask-image: url("../../assets/twitter.svg") center no-repeat;
 }
 
 .linkedin {
     -webkit-mask: url("../../assets/linkedin.svg") center no-repeat;
+    mask: url("../../assets/linkedin.svg") center no-repeat;
     mask-image: url("../../assets/linkedin.svg") center no-repeat;
 }

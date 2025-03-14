@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -90,11 +91,13 @@ const ShowCase: React.FC = () => {
               variants={itemVariants}
               className="bg-gray-900 rounded-xl overflow-hidden shadow-lg"
             >
-              <img
+              <Image
                 src={project.src}
                 alt={project.alt}
                 className="w-full h-full object-cover"
-                loading="lazy"
+                layout="responsive"
+                width={500}
+                height={500}
               />
             </motion.div>
           ))}

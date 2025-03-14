@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import styles from "@/components/header/Header.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import Sidebar from "./Sidebar";
 import { motion } from "framer-motion";
-
 import { StaticImageData } from 'next/image';
 
 interface HeaderProps {
@@ -29,25 +27,24 @@ const Header = ({ logo }: HeaderProps) => {
   return (
     <div className="container relative z-40">
       <header
-        className={`${styles.headerWrapper} ${
-          scrolled ? styles.stickyActive : ""
-        }`}
+        className={`fixed top-2.5 left-1/2 w-full max-w-[1216px] bg-[var(--foreground)] z-30 transition-all duration-200 ease-in-out -translate-x-1/2 rounded-[40px] px-11 py-1.5
+          ${scrolled ? 'shadow-none bg-[rgba(179,179,179,0.2)] backdrop-blur-md max-w-[800px]' : ''}`}
       >
-        <div className={styles.header}>
-          <Link href="/" className={styles.logo}>
+        <div className="flex justify-between items-center">
+          <Link href="/" className="logo">
             <Image
               src={logo}
               alt="Company Logo"
-              className={styles.logoImage}
+              className="transition-[height] duration-200 ease-in-out max-[480px]:h-11 max-[480px]:w-full"
               width={130}
               height={63}
-              priority // Improves LCP (Largest Contentful Paint) for SEO
+              priority
             />
           </Link>
 
-          <div className={styles.group_btn}>
+          <div className="flex items-center gap-5">
             <motion.button
-              className={`${styles.contactButton} font-inter font-light`}
+              className="rounded-[50px] shadow-[0_10px_20px_0_rgba(192,192,192,0.15)] flex px-4 py-2.5 min-w-[120px] justify-center items-center bg-[var(--button)] border-none text-[var(--black)] text-center text-sm font-medium leading-4 transition-all duration-200 ease-in-out cursor-pointer tracking-wider font-inter font-light max-[767px]:hidden"
               whileTap={{ scale: 0.95 }}
               animate={{
                 scale: [1, 1.02, 1],
@@ -63,7 +60,7 @@ const Header = ({ logo }: HeaderProps) => {
             </motion.button>
 
             <motion.button
-              className={styles.humberger}
+              className="block w-7 border-none bg-transparent"
               onClick={handleNavbar}
               whileTap={{ scale: 0.95 }}
               animate={{
@@ -77,9 +74,9 @@ const Header = ({ logo }: HeaderProps) => {
               }}
               aria-label="Toggle navigation menu"
             >
-              <span></span>
-              <span></span>
-              <span></span>
+              <span className="h-[2px] rounded-[30px] bg-[var(--white)] w-full block mb-[7px]"></span>
+              <span className="h-[2px] rounded-[30px] bg-[var(--white)] w-full block mb-[7px]"></span>
+              <span className="h-[2px] rounded-[30px] bg-[var(--white)] w-full block"></span>
             </motion.button>
           </div>
         </div>
