@@ -20,7 +20,7 @@ export default function Services() {
       <section className="bg-black text-white py-16 relative z-30">
         <div className="container mx-auto px-4 text-center">
           <div className="relative">
-            <h3 className="text-7xl relative z-10 font-semibold mb-12 font-inter">
+            <h3 className="text-3xl md:text-7xl relative z-10 font-semibold mb-12 font-inter">
               Seamless <span className="text-primary italic">Digital</span>{" "}
               Solutions
             </h3>

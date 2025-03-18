@@ -25,9 +25,9 @@ const Header = ({ logo }: HeaderProps) => {
   const handleNavbar = () => setIsOpenNavbar((prev) => !prev);
 
   return (
-    <div className="container relative z-40">
+    <div className="md:container relative z-40">
       <header
-        className={`fixed top-2.5 left-1/2 w-full max-w-[1216px] bg-[var(--foreground)] z-30 transition-all duration-200 ease-in-out -translate-x-1/2 rounded-[40px] px-11 py-1.5
+        className={`fixed  top-0 md:top-2.5 left-1/2 w-full max-w-[1216px] bg-[var(--foreground)] z-30 transition-all duration-200 ease-in-out -translate-x-1/2 rounded-0  md:rounded-[40px] px-11 py-5 md:py-1.5
           ${scrolled ? 'shadow-none bg-[rgba(179,179,179,0.2)] backdrop-blur-md max-w-[800px]' : ''}`}
       >
         <div className="flex justify-between items-center">
@@ -35,16 +35,15 @@ const Header = ({ logo }: HeaderProps) => {
             <Image
               src={logo}
               alt="Company Logo"
-              className="transition-[height] duration-200 ease-in-out max-[480px]:h-11 max-[480px]:w-full"
-              width={130}
-              height={63}
+              className="transition-[height] duration-200 ease-in-out max-[480px] max-[480px]:w-full"
+              width={120}
               priority
             />
           </Link>
 
           <div className="flex items-center gap-5">
             <motion.button
-              className="rounded-[50px] shadow-[0_10px_20px_0_rgba(192,192,192,0.15)] flex px-4 py-2.5 min-w-[120px] justify-center items-center bg-[var(--button)] border-none text-[var(--black)] text-center text-sm font-medium leading-4 transition-all duration-200 ease-in-out cursor-pointer tracking-wider font-inter font-light max-[767px]:hidden"
+              className="rounded-[50px] shadow-[0_10px_20px_0_rgba(192,192,192,0.15)] flex px-4 py-2.5 min-w-[120px] justify-center items-center bg-[var(--button)] border-none text-[var(--black)] text-center text-sm font-medium leading-4 transition-all duration-200 ease-in-out cursor-pointer tracking-wider font-inter max-[767px]:hidden"
               whileTap={{ scale: 0.95 }}
               animate={{
                 scale: [1, 1.02, 1],
@@ -74,9 +73,9 @@ const Header = ({ logo }: HeaderProps) => {
               }}
               aria-label="Toggle navigation menu"
             >
-              <span className="h-[2px] rounded-[30px] bg-[var(--white)] w-full block mb-[7px]"></span>
-              <span className="h-[2px] rounded-[30px] bg-[var(--white)] w-full block mb-[7px]"></span>
-              <span className="h-[2px] rounded-[30px] bg-[var(--white)] w-full block"></span>
+              <span className="h-[2px] rounded-[30px] bg-[var(--primary)] w-full block mb-[7px]"></span>
+              <span className="h-[2px] rounded-[30px] bg-[var(--primary)] w-full block mb-[7px]"></span>
+              <span className="h-[2px] rounded-[30px] bg-[var(--primary)] w-full block"></span>
             </motion.button>
           </div>
         </div>

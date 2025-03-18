@@ -30,8 +30,16 @@ const Portfolio: React.FC = () => {
         description: "UI/UX design for a fitness tracking application",
         url : 'https://www.figma.com/design/18EsoTdBNiupd8YqHtu1rn/Mizaan?node-id=0-1&p=f&t=nWWwFNjxeSsMFCP7-0'
       },
-      {
+ {
         id: 2,
+        src: "/p5.jpeg",
+        alt: "web 3",
+        title: "E-commerce Website",
+        description: "Full-stack development for an online retail platform",
+        url: 'https://www.figma.com/design/eS6sjVE0zUGVAHamxB5MyS/Untitled?node-id=0-1&p=f&t=vyLjEkfMgqqTAZYZ-0'
+      },
+      {
+        id: 3,
         src: "/p2.png",
         alt: "Project 2",
         title: "E-commerce Website",
@@ -99,7 +107,6 @@ const Portfolio: React.FC = () => {
       className="relative bg-gray-900 rounded-xl overflow-hidden shadow-lg will-change-transform"
       style={{ transformPerspective: 1000 }}
     >
-        <Link href={project.url} target="_blank">
         <motion.img
           src={project.src}
           alt={project.alt}
@@ -108,7 +115,6 @@ const Portfolio: React.FC = () => {
           loading="lazy"
           decoding="async"
         />
-      </Link>
     </motion.div>
   );
 
@@ -122,7 +128,7 @@ const Portfolio: React.FC = () => {
         className="max-w-7xl mx-auto"
       >
         <motion.div className="text-center mb-12" variants={itemVariants}>
-          <h2 className="text-7xl relative z-10 font-semibold mb-4 font-inter">
+          <h2 className="text-3xl md:text-7xl relative z-10 font-semibold mb-4 font-inter">
             Showcase of <span className="text-primary italic">Innovation</span>{" "}
           </h2>
 

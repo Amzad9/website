@@ -3,17 +3,24 @@ import Header from "@/components/header/Header";
 import "@/styles/globals.scss";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import Logo from "@/assets/logoBlack.png";
+// import LogoBlack from "@/assets/logoBlack.png";
+import LogoWhite from "@/assets/whiteLogo.png";
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return(<>
+  const router = useRouter();
+  const logo = router.pathname === "/" ? LogoWhite : LogoWhite;
+
+  return (
+    <>
       <Head>
         <link rel="icon" href="/wl.jpg" />
         <title>Weblibron</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-     <Header logo={Logo} />
-       <Component {...pageProps} />
+      <Header logo={logo} />
+      <Component {...pageProps} />
       <Footer />
-</>)
+    </>
+  );
 }

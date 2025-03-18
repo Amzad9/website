@@ -3,11 +3,11 @@ import React from "react";
 const AboutUs = () => {
   return (
     <section id="about" className="py-16 bg-black relative overflow-hidden flex items-center">
-      <section className="relative z-10 mx-auto">
+      <section className="relative z-10 mx-auto px-5">
         <div className="container md:container mx-auto">
           <div className="flex justify-center">
             <div className="w-full md:w-[80%] mx-auto">
-              <h2 className="text-6xl relative text-center z-10 text-white font-semibold mb-4 font-inter">
+              <h2 className="text-3xl md:text-6xl relative text-center z-10 text-white font-semibold mb-4 font-poppins">
                 Hi. We&apos;re
                 <span className="text-primary italic ms-2">Weblibron</span>
               </h2>

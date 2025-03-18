@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const testimonials = [
@@ -10,8 +9,8 @@ const testimonials = [
       "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
     name: "Charles Dickens",
     title: "A Tale of Two Cities",
-    image:
-      "https://images.pexels.com/photos/375880/pexels-photo-375880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    // image:
+    //   "https://images.pexels.com/photos/375880/pexels-photo-375880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
 ];
 
@@ -115,13 +114,13 @@ export const TestimonialsSection = ({
               </div>
               <div className="flex justify-start w-full items-center my-4">
               <div className="flex-shrink-0">
-                <Image
+                {/* <Image
                 className="w-12 h-12 rounded-xl mr-4"
                 src={item.image}
                 alt={item.name}
                 width={50}
                 height={50}
-                />
+                /> */}
               </div>
               <div className="text-left">
                 <p className="text-[20px] font-medium font-poppins">

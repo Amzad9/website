@@ -1,10 +1,6 @@
-import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import { Geist } from "next/font/google";
-// import Header from "../header/Header";
-import Link from "next/link"; // Use standard Link instead of NextLink
-// import Logo from "@/assets/whiteLogo.png";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,27 +13,6 @@ const HeroSection = () => {
       id="home"
       className={`relative min-h-screen overflow-hidden ${geistSans.variable}`}
     >
-      {/* WhatsApp Link */}
-      <Link
-        href="https://wa.me/918178614811?text=Thank%20you%20for%20reaching%20out.%20%F0%9F%9A%80%20We%20specialize%20in%20Web%20Development%2C%20App%20Development%2C%20and%20Design%20to%20help%20businesses%20grow%20online"
-        className="fixed z-50 bottom-16 right-16"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Contact us on WhatsApp"
-      >
-        <Image
-          src="/whatsapp.svg"
-          width={60}
-          height={60}
-          alt="WhatsApp Contact"
-          priority
-        />
-      </Link>
-
-      {/* Header with Logo */}
-      {/* <Header logo={Logo.src} /> */}
-
-      {/* Video Background */}
       <div className="absolute inset-0 z-30">
         <video
           src="/video.mp4"

@@ -1,22 +1,58 @@
-import { PlusCircle } from "lucide-react";
+import { Phone, Mail, Map  } from "lucide-react";
 const Contact = () => {
   return (
     <section className="gradient-section text-black py-5 relative z-10">
       <div className="container mx-auto px-6 text-start">
-        <div className="relative">
-          <h1 className="text-7xl flex item-center text-white relative z-10 font-semibold mb-12 font-poppins">
-            Let’s {" "}
-            <span className="text-primary italic font-inter mx-3">Build </span>{" "}
-            Something Amazing!{" "}
-            <button className="ms-5 bg-transparant border-2 text-white hover:border-green-600 text-black font-semibold w-12 h-12 flex justify-center items-center rounded-full">
-              <PlusCircle />
-            </button>
-          </h1>
-          <span className="absolute h-5 w-[60%] rounded-xl bg-slate-50 opacity-50 blur-lg top-10 backdrop-blur-sm  left-0 transform -translate-y-1/2"></span>
+        <div className="grid grid-cols-12">
+          <div className="col-span-12 md:col-span-6">
+            <h1 className="text-2xl md:text-4xl  item-center text-white relative z-10 font-semibold mb-5 font-poppins">
+              Let’s{" "}
+              <span className="text-primary italic font-inter mx-3">
+                Build{" "}
+              </span>{" "}
+              Something Amazing!{" "}
+            </h1>
+
+            <p className="text-md w-full mb-8 text-white font-inter">
+              Ready to take your business to the next level? Contact us today to
+              discuss your project and create a digital experience that sets you
+              apart.{" "}
+            </p>
+<div className="bg-gray-900 bg-opacity-50 flex flex-col items-start justify-start shadow-none pt-5 rounded-[40px] mx-auto ps-10">
+             <div className="w-full flex justify-start mt-4 mb-5 text-left">
+                <div className="pt-1">
+                  <Phone color="#fff"  />
+                </div>
+                <div className="ms-10">
+                  <p className="mb-0 text-white">+91 8178614811</p>
+                  <p className="text-white">+91 88400002768</p>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="w-full flex items-start justify-start mb-5 text-left">
+                <div className="pt-1">
+                  <Mail color="#fff"  />
+                </div>
+                <div className="ms-10">
+                  <p className="mb-0 text-white">info@weblibron.com</p>
+                  <p className="text-white">hello@weblibron.com</p>
+                </div>
+              </div>
+
+              {/* Address */}
+              <div className="w-full flex justify-start mb-3 pb-5 text-left">
+                <div className="pt-1">
+                  <Map color="#fff" />
+                </div>
+                <div className="ms-10">
+                  <p className="mb-0 text-white">Ajnara Gen X, Gaziabad, Uttar Pradesh, India</p>
+                </div>
+              </div>
+</div>
+          </div>
+          
         </div>
-        <p className="text-xl w-full md:w-2/3 mb-8 text-white font-inter">
-          Ready to take your business to the next level? Contact us today to discuss your project and create a digital experience that sets you apart.{" "}
-        </p>
       </div>
     </section>
   );

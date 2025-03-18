@@ -14,6 +14,21 @@ const SocialMediaList = [
 const Footer: React.FC = () => {
   return (
     <footer className="bg-black text-white pt-12 relative z-10">
+     <Link
+        href="https://wa.me/918178614811?text=Thank%20you%20for%20reaching%20out.%20%F0%9F%9A%80%20We%20specialize%20in%20Web%20Development%2C%20App%20Development%2C%20and%20Design%20to%20help%20businesses%20grow%20online"
+        className="fixed z-50 bottom-10 right-8"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contact us on WhatsApp"
+      >
+        <Image
+          src="/whatsapp.svg"
+          width={60}
+          height={60}
+          alt="WhatsApp Contact"
+          priority
+        />
+      </Link>
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-12 md:grid-cols-12 gap-8">
           {/* Logo and Description */}
@@ -23,11 +38,11 @@ const Footer: React.FC = () => {
                 <Image src={Logo} alt="weblibron logo" width={150} />
               </Link>
             </div>
-            <p className="text-sm w-2/3 font-poppins">
+            <p className="text-sm w-full font-poppins">
              At Weblibron, we strive to create innovative web and app solutions that meet your needs. Your success is our priority.
             </p>
             {/* Social Media Icons */}
-            <ul className="flex w-full border-t-4 pt-5 pb-5 border-white border-opacity-5 gap-5 items-center">
+            <ul className="flex w-full border-t-2 pt-5 pb-5 mt-4 border-white border-opacity-5 gap-5 items-center">
               {SocialMediaList.map((item, key) => (
                 <motion.li
                   whileHover={{
@@ -141,7 +156,7 @@ const Footer: React.FC = () => {
                   Ajnara Gen X, Gaziabad, Uttar Pradesh, India
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <h5 className="text-lg text-white">India Office</h5>
                 <a
                   href="#india2"
@@ -149,7 +164,7 @@ const Footer: React.FC = () => {
                 >
                   Kareli, Prayagraj, Uttar Pradesh, India
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
