@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { useEffect } from "react"; // Added useEffect for overlay click handling
 import { motion, AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -11,8 +11,14 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
   const handleClose = () => {
     setIsOpen(false);
   };
-
-  // Animation variants for the sidebar (smooth transition instead of spring)
+useEffect(() => {
+  if (isOpen) {
+    document.body.classList.add("overflow-hidden");
+  } else {
+    document.body.classList.remove("overflow-hidden");
+  }
+}, [isOpen]);
+  // Animation variants for the sidebar
   const sidebarVariants = {
     open: {
       x: 0,
@@ -27,62 +33,30 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
   };
 
   const NavData = [
-    {
-      name: "Home",
-      url: "#home",
-    },
-    {
-      name: "About Us",
-      url: "#about",
-    },
-    {
-      name: "Service",
-      url: "#service",
-    },
-    {
-      name: "Showcase",
-      url: "#showcase",
-    },
+    { name: "Home", url: "#home" },
+    { name: "About Us", url: "#about" },
+    { name: "Service", url: "#service" },
+    { name: "Showcase", url: "#showcase" },
   ];
 
-  // Animation variants for navigation menu items (smooth transition)
+  // Animation variants for navigation menu items
   const navItemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.1, // Staggered delay for each item
-        type: "tween", // Smooth transition instead of spring
+        delay: i * 0.1,
+        type: "tween",
         duration: 0.3,
         ease: "easeInOut",
       },
     }),
   };
 
-  // Handle outside clicks to close the sidebar
-  useEffect(() => {
-    const handleOutsideClick = (e: MouseEvent) => {
-      if (isOpen) {
-        const sidebar = document.querySelector(".sidebar-motion");
-        if (sidebar && !sidebar.contains(e.target as Node)) {
-          setIsOpen(false);
-        }
-      }
-    };
-
-    if (isOpen) {
-      document.addEventListener("mousedown", handleOutsideClick);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [isOpen, setIsOpen]);
-
   return (
     <>
-      {/* Overlay for outside clicks */}
+      {/* Overlay - Clicking outside should close the sidebar */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -91,50 +65,37 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="fixed inset-0 bg-black z-30"
-            onClick={handleClose}
+            onClick={handleClose} // This will close sidebar when overlay is clicked
           />
         )}
       </AnimatePresence>
 
-      {/* Sidebar with Framer Motion Animation */}
+      {/* Sidebar */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial="closed"
-            animate="open"
+            animate={isOpen ? "open" : "closed"}
             exit="closed"
             variants={sidebarVariants}
-            className="fixed rounded-l-3xl top-0 right-0 h-screen w-[400px] bg-black text-white p-4 shadow-lg z-40 sidebar-motion"
+            className="fixed top-0 right-0 h-screen w-[300px] bg-black text-white p-4 shadow-lg z-50 rounded-l-3xl sidebar-motion"
           >
-            {/* Navigation Menu with Animation and Hover Underline */}
+            {/* Navigation Menu */}
             <nav className="space-y-3 mt-10 pb-10 border-b border-gray-800">
               {NavData.map((item, index) => (
                 <motion.div
                   key={index}
-                  custom={index} // Pass index for staggered animation
+                  custom={index}
                   initial="hidden"
                   animate="visible"
                   variants={navItemVariants}
                 >
                   <Link
-                    href={`${item.url}`}
-                    onClick={handleClose}
-                    className="block px-4 text-3xl font-semibold text-right py-2 rounded transition"
+                    href={item.url}
+                    onClick={handleClose} // Close sidebar when clicking a menu item
+                    className="block px-4 text-3xl font-semibold text-right py-2 rounded transition hover:text-primary"
                   >
-                    <motion.span
-                      whileHover={{
-                        // scale: 1.05, // Slight scale on hover for interactivity
-                        textDecoration: "underline", // Underline on hover
-                      }}
-                      transition={{
-                        type: "tween",
-                        duration: 0.3,
-                        ease: "easeInOut",
-                      }}
-                      className="inline-block hover:text-primary"
-                    >
-                      {item.name}
-                    </motion.span>
+                    {item.name}
                   </Link>
                 </motion.div>
               ))}

@@ -15,9 +15,9 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-black text-white pt-12 relative z-10">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-12 md:grid-cols-12 gap-8">
           {/* Logo and Description */}
-          <div className="col-start-1 col-end-3">
+          <div className="col-span-12 md:col-span-3">
             <div className="flex items-center space-x-2 mb-3">
               <Link href="/" className="logo">
                 <Image src={Logo} alt="weblibron logo" width={150} />
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Company Section */}
-          <div className="">
+          <div className="col-span-12 md:col-span-3">
             <h4 className="text-xl font-semibold text-white mb-2">
               Quick Link
             </h4>
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Support Section */}
-          <div className="">
+          <div className="col-span-12 md:col-span-3">
             <h4 className="text-xl font-semibold text-white mb-2">Contact Us</h4>
             <ul className="space-y-2 text-sm">
               <li>
@@ -120,7 +120,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Location Section */}
-          <div className="col-span-2 col-end-7">
+          <div className="col-span-12 md:col-span-3">
             <h4 className="text-xl font-semibold text-white mb-2">Location</h4>
             <ul className="space-y-2 text-sm">
               <li>

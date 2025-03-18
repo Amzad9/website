@@ -12,20 +12,6 @@ import Contact from "@/components/contact/Contact";
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
-
-export default function Home() {
-  return (
-    <>
-      <HeroSection />
-      <AboutUs />
-      <Services />
-      <Portfolio />
-      {/* <TestimonialsSection /> */}
-      <Contact />
-    </>
-  );
-}
-
 // Metadata for SEO with Weblibron branding
 export const metadata = {
   title: "Weblibron - Web Development & Design Solutions",
@@ -42,7 +28,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://weblibron.com/og-image.jpg", // Replace with your actual OG image URL
+        url: "https://weblibron.com/wl.jpg", // Replace with your actual OG image URL
         width: 1200,
         height: 630,
         alt: "Weblibron Web Solutions Preview",
@@ -51,3 +37,15 @@ export const metadata = {
   },
   robots: "index, follow",
 };
+
+export default function Home() {
+  return (
+    <>
+      <HeroSection />
+      <AboutUs />
+      <Services />
+      <Portfolio />
+      <Contact />
+    </>
+  );
+}
