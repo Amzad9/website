@@ -4,6 +4,7 @@ import Link from "next/link";
 import Sidebar from "./Sidebar";
 import { motion } from "framer-motion";
 import { StaticImageData } from 'next/image';
+import { Menu } from "lucide-react";
 
 interface HeaderProps {
   logo: string | StaticImageData;
@@ -73,9 +74,7 @@ const Header = ({ logo }: HeaderProps) => {
               }}
               aria-label="Toggle navigation menu"
             >
-              <span className="h-[2px] rounded-[30px] bg-[var(--primary)] w-full block mb-[7px]"></span>
-              <span className="h-[2px] rounded-[30px] bg-[var(--primary)] w-full block mb-[7px]"></span>
-              <span className="h-[2px] rounded-[30px] bg-[var(--primary)] w-full block"></span>
+             <Menu color="#f1f1f1" />
             </motion.button>
           </div>
         </div>
