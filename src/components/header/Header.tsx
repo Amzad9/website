@@ -43,39 +43,13 @@ const Header = ({ logo }: HeaderProps) => {
           </Link>
 
           <div className="flex items-center gap-5">
-            <motion.button
+            <button
               className="rounded-[50px] shadow-[0_10px_20px_0_rgba(192,192,192,0.15)] flex px-4 py-2.5 min-w-[120px] justify-center items-center bg-[var(--button)] border-none text-[var(--black)] text-center text-sm font-medium leading-4 transition-all duration-200 ease-in-out cursor-pointer tracking-wider font-inter max-[767px]:hidden"
-              whileTap={{ scale: 0.95 }}
-              animate={{
-                scale: [1, 1.02, 1],
-                transition: {
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  duration: 1.5,
-                  ease: "easeInOut",
-                },
-              }}
             >
               Start a Project
-            </motion.button>
-
-            <motion.button
-              className="block w-7 border-none bg-transparent"
-              onClick={handleNavbar}
-              whileTap={{ scale: 0.95 }}
-              animate={{
-                scale: [1, 1.02, 1],
-                transition: {
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  duration: 1.5,
-                  ease: "easeInOut",
-                },
-              }}
-              aria-label="Toggle navigation menu"
-            >
+            </button>
              <Menu color="#f1f1f1" />
-            </motion.button>
+          
           </div>
         </div>
       </header>

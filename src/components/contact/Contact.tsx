@@ -6,14 +6,14 @@ const Contact = () => {
         <div className="grid grid-cols-12">
           <div className="col-span-12 md:col-span-6">
             <h1 className="text-2xl md:text-4xl  item-center text-white relative z-10 font-semibold mb-5 font-poppins">
-              Let’s{" "}
+              Let’s{""}
               <span className="text-primary italic font-inter mx-3">
-                Build{" "}
-              </span>{" "}
+                Build
+              </span>{""}
               Something Amazing!{" "}
             </h1>
 
-            <p className="text-md w-full mb-8 text-white font-inter">
+            <p className="text-md w-full mb-8 text-white font-poppins">
               Ready to take your business to the next level? Contact us today to
               discuss your project and create a digital experience that sets you
               apart.{" "}
@@ -24,8 +24,8 @@ const Contact = () => {
                   <Phone color="#fff"  />
                 </div>
                 <div className="ms-10">
-                  <p className="mb-0 text-white">+91 8178614811</p>
-                  <p className="text-white">+91 88400002768</p>
+                  <p className="mb-0 text-white font-poppins">+91 8178614811</p>
+                  <p className="text-white font-poppins">+91 88400002768</p>
                 </div>
               </div>
 
@@ -35,8 +35,8 @@ const Contact = () => {
                   <Mail color="#fff"  />
                 </div>
                 <div className="ms-10">
-                  <p className="mb-0 text-white">info@weblibron.com</p>
-                  <p className="text-white">hello@weblibron.com</p>
+                  <p className="mb-0 text-white font-poppins">info@weblibron.com</p>
+                  <p className="text-white font-poppins">hello@weblibron.com</p>
                 </div>
               </div>
 
@@ -46,7 +46,7 @@ const Contact = () => {
                   <Map color="#fff" />
                 </div>
                 <div className="ms-10">
-                  <p className="mb-0 text-white">Ajnara Gen X, Gaziabad, Uttar Pradesh, India</p>
+                  <p className="mb-0 text-white font-poppins">Ajnara Gen X, Gaziabad, Uttar Pradesh, India</p>
                 </div>
               </div>
 </div>

@@ -7,6 +7,7 @@ import Head from "next/head";
 import LogoWhite from "@/assets/whiteLogo.png";
 import { useRouter } from "next/router";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Contact from "@/components/contact/Contact";
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const logo = router.pathname === "/" ? LogoWhite : LogoWhite;
@@ -21,6 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <SpeedInsights />
       <Header logo={logo} />
       <Component {...pageProps} />
+      <Contact />
       <Footer />
     </>
   );

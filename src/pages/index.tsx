@@ -45,7 +45,6 @@ export default function Home() {
       <AboutUs />
       <Services />
       <Portfolio />
-      <Contact />
     </>
   );
 }
