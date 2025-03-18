@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import { Geist } from "next/font/google";
-import Header from "../header/Header";
+// import Header from "../header/Header";
 import Link from "next/link"; // Use standard Link instead of NextLink
-import Logo from "@/assets/whiteLogo.png";
+// import Logo from "@/assets/whiteLogo.png";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,7 +35,7 @@ const HeroSection = () => {
       </Link>
 
       {/* Header with Logo */}
-      <Header logo={Logo.src} />
+      {/* <Header logo={Logo.src} /> */}
 
       {/* Video Background */}
       <div className="absolute inset-0 z-30">

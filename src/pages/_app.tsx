@@ -1,7 +1,9 @@
 import Footer from "@/components/footer/Footer";
+import Header from "@/components/header/Header";
 import "@/styles/globals.scss";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import Logo from "@/assets/logoBlack.png";
 
 export default function App({ Component, pageProps }: AppProps) {
   return(<>
@@ -10,7 +12,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>Weblibron</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-     <Component {...pageProps} />
+     <Header logo={Logo} />
+       <Component {...pageProps} />
       <Footer />
 </>)
 }

@@ -26,7 +26,7 @@ export default function Services() {
             </h3>
             <span className="absolute h-5 w-full rounded-xl bg-slate-50 opacity-50 blur-lg top-10 backdrop-blur-sm  left-0 transform -translate-y-1/2"></span>
           </div>
-          <div className="flex flex-col flex-wrap w-1/2 mx-auto md:flex-row justify-center gap-4 mb-12">
+          <div className="flex flex-col flex-wrap w-full md:w-1/2 mx-auto md:flex-row justify-center gap-4 mb-12">
             <button className="bg-transparent text-gray-300 border-2 border-gray-300 px-6 py-1.5 rounded-full  hover:text-primary hover:border-primary transition font-poppins font-medium">
               Web Development
             </button>
