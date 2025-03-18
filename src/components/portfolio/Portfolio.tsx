@@ -137,6 +137,12 @@ const Portfolio: React.FC = () => {
           ))}
         </div>
       </motion.div>
+     <div className="text-center mt-10">
+ <Link href='/showcase' legacyBehavior>
+        <a className="text-white font-poppins border rounded-full border-gray-600 px-8 py-3 inline-block">Browse Projects</a>
+      </Link>
+</div>
+     
     </section>
   );
 };

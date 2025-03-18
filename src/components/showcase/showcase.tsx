@@ -50,7 +50,7 @@ const ShowCase: React.FC = () => {
   };
 
   return (
-    <section id="showcase" className="py-20">
+    <section id="showcase" className="py-20 px-5">
       <motion.div
         ref={ref}
         initial="hidden"
