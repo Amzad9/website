@@ -2,12 +2,14 @@ import React, { useMemo, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Link from 'next/link';
 
 interface Project {
   id: number;
   src: string;
   alt: string;
   category: string;
+  url: string;
 }
 
 const ShowCase: React.FC = () => {
@@ -16,11 +18,11 @@ const ShowCase: React.FC = () => {
 
   const projects: Project[] = useMemo(
     () => [
-      { id: 1, src: "/p1.png", alt: "Project 1", category: "UI/UX" },
-      { id: 2, src: "/p2.jpeg", alt: "Project 2", category: "UI/UX" },
-      { id: 3, src: "/p3.png", alt: "Project 3", category: "Web Development" },
-      { id: 4, src: "/p3.jpeg", alt: "Project 4", category: "UI/UX" },
-      { id: 5, src: "/p5.jpeg", alt: "Project 5", category: "Web Development" }],
+      { id: 1, src: "/p1.png", alt: "Project 1", category: "UI/UX",url : 'https://www.figma.com/design/18EsoTdBNiupd8YqHtu1rn/Mizaan?node-id=0-1&p=f&t=nWWwFNjxeSsMFCP7-0' },
+      { id: 2, src: "/p2.jpeg", alt: "Project 2", category: "UI/UX", url: 'https://www.figma.com/design/yrwieRkdbTcBMFSoQNgxJz/Referral-Labs?node-id=12-2&p=f&t=l5Lldb0z4ivtTY8V-0' },
+      { id: 3, src: "/p3.png", alt: "Project 3", category: "Web Development", url: '#' },
+      { id: 4, src: "/p3.jpeg", alt: "Project 4", category: "UI/UX", url: 'https://www.figma.com/design/nHmjOBQpL5V64wv9Kx7LRs/Tharkarre?node-id=0-1&p=f&t=8QPgzQawja3U3U71-0' }
+    ],
     []
   );
 
@@ -86,8 +88,8 @@ const ShowCase: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           {filteredProjects.map((project) => (
+           <Link href={project.url} key={project.id} target="_blank">
             <motion.div
-              key={project.id}
               variants={itemVariants}
               className="bg-gray-900 rounded-xl overflow-hidden shadow-lg"
             >
@@ -100,6 +102,7 @@ const ShowCase: React.FC = () => {
                 height={500}
               />
             </motion.div>
+          </Link>
           ))}
         </div>
       </motion.div>

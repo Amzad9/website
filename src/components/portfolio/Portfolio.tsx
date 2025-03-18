@@ -1,9 +1,11 @@
 import React, { useMemo } from "react";
 import { motion, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Link from 'next/link';
 
 // Define project interface
 interface Project {
+  url: string;
   id: number;
   src: string;
   alt: string;
@@ -26,6 +28,7 @@ const Portfolio: React.FC = () => {
         alt: "Project 1",
         title: "Mobile App Design",
         description: "UI/UX design for a fitness tracking application",
+        url : 'https://www.figma.com/design/18EsoTdBNiupd8YqHtu1rn/Mizaan?node-id=0-1&p=f&t=nWWwFNjxeSsMFCP7-0'
       },
       {
         id: 2,
@@ -33,13 +36,7 @@ const Portfolio: React.FC = () => {
         alt: "Project 2",
         title: "E-commerce Website",
         description: "Full-stack development for an online retail platform",
-      },
-      {
-        id: 3,
-        src: "/p3.png",
-        alt: "Project 3",
-        title: "Brand Identity",
-        description: "Complete rebrand for a tech startup",
+        url: 'https://www.figma.com/design/yrwieRkdbTcBMFSoQNgxJz/Referral-Labs?node-id=12-2&p=f&t=l5Lldb0z4ivtTY8V-0'
       },
       {
         id: 4,
@@ -47,6 +44,7 @@ const Portfolio: React.FC = () => {
         alt: "Project 4",
         title: "Dashboard Interface",
         description: "Analytics dashboard with data visualization",
+        url: 'https://www.figma.com/design/nHmjOBQpL5V64wv9Kx7LRs/Tharkarre?node-id=0-1&p=f&t=8QPgzQawja3U3U71-0'
       },
     ],
     []
@@ -101,7 +99,7 @@ const Portfolio: React.FC = () => {
       className="relative bg-gray-900 rounded-xl overflow-hidden shadow-lg will-change-transform"
       style={{ transformPerspective: 1000 }}
     >
-      <div className="overflow-hidden">
+        <Link href={project.url} target="_blank">
         <motion.img
           src={project.src}
           alt={project.alt}
@@ -110,7 +108,7 @@ const Portfolio: React.FC = () => {
           loading="lazy"
           decoding="async"
         />
-      </div>
+      </Link>
     </motion.div>
   );
 

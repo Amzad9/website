@@ -26,10 +26,6 @@ const testimonials = [
   },
   {
     image:
-      "/p4.png",
-  },
-  {
-    image:
       "/p5.png",
   },
 ];
