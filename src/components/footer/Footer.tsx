@@ -1,21 +1,13 @@
 import Image from "next/image";
-import Logo from "@/assets/logof.svg";
+import Logo from "@/assets/whiteLogo.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import styles from "./footer.module.scss";
 
 const SocialMediaList = [
   {
-    icon: "instagram",
-    url: "",
-  },
-  {
-    icon: "twitter",
-    url: "",
-  },
-  {
     icon: "linkedin",
-    url: "",
+    url: "https://www.linkedin.com/company/weblibron/?viewAsMember=true",
   },
 ];
 

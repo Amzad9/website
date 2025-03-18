@@ -5,7 +5,7 @@ export default function Services() {
   return (
     <section id="service" className="flex flex-col">
       <Head>
-        <title>Top Quality Software & Apps</title>
+        <title>WebLibron</title>
         <meta
           name="description"
           content="Building top-quality software and apps for over fifteen years."
