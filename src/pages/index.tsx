@@ -4,7 +4,7 @@ import HeroSection from "@/components/hero";
 import AboutUs from "@/components/about/About";
 import Services from "@/components/services/index";
 import Portfolio from "@/components/portfolio/Portfolio";
-import { TestimonialsSection } from "@/components/Testimonials/TestimonialsSection";
+// import { TestimonialsSection } from "@/components/Testimonials/TestimonialsSection";
 import Contact from "@/components/contact/Contact";
 import Footer from "@/components/footer/Footer";
 
