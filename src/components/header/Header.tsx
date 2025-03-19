@@ -23,7 +23,6 @@ const Header = ({ logo }: HeaderProps) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavbar = () => setIsOpenNavbar((prev) => !prev);
 
   return (
     <div className="md:container relative z-40">
