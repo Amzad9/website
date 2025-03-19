@@ -25,7 +25,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://weblibron.com/wl.jpg", // Replace with your actual OG image URL
+        url: "https://weblibron.com/favicon.ico", // Replace with your actual OG image URL
         width: 1200,
         height: 630,
         alt: "Weblibron Web Solutions Preview",

@@ -27,6 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/wl.jpg" />
         <title>Weblibron - Web Solution</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <script dangerouslySetInnerHTML={{ __html: `
           function initApollo() {
             var n = Math.random().toString(36).substring(7),
