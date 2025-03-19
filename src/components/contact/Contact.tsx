@@ -25,7 +25,7 @@ const Contact = () => {
                 </div>
                 <div className="ms-10">
                   <p className="mb-0 text-white font-poppins">+91 8178614811</p>
-                  <p className="text-white font-poppins">+91 88400002768</p>
+                  <p className="text-white font-poppins">+91 8840002768</p>
                 </div>
               </div>
 
