@@ -42,8 +42,8 @@ const Header = ({ logo }: HeaderProps) => {
           </Link>
 
           <div className="flex items-center gap-5">
-            <Link href='#contact'
-              className="rounded-[50px] shadow-[0_10px_20px_0_rgba(192,192,192,0.15)] flex px-4 py-2.5 min-w-[120px] justify-center items-center bg-[var(--button)] border-none text-[var(--black)] text-center text-sm font-medium leading-4 transition-all duration-200 ease-in-out cursor-pointer tracking-wider font-inter max-[767px]:hidden" href={""}            >
+            <Link
+              className="rounded-[50px] shadow-[0_10px_20px_0_rgba(192,192,192,0.15)] flex px-4 py-2.5 min-w-[120px] justify-center items-center bg-[var(--button)] border-none text-[var(--black)] text-center text-sm font-medium leading-4 transition-all duration-200 ease-in-out cursor-pointer tracking-wider font-inter max-[767px]:hidden" href='#contact'>
               Start a Project
             </Link>
 
