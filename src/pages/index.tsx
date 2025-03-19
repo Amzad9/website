@@ -11,7 +11,7 @@ if (typeof window !== "undefined") {
 }
 // Metadata for SEO with Weblibron branding
 export const metadata = {
-  title: "Weblibron - Web Development & Design Solutions",
+  title: "Weblibron - App and Web Development & Design Solutions",
   description:
     "Elevate your online presence with Weblibron's swift, stunning web solutions. Specializing in web development, app development, and design.",
   keywords:

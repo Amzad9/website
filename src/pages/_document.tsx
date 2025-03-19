@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
+      <meta name="robots" content="index, follow" />
       <body className="antialiased">
         <Main />
         <NextScript />
