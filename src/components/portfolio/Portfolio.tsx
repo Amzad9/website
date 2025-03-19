@@ -119,7 +119,7 @@ const Portfolio: React.FC = () => {
   );
 
   return (
-    <section id="showcase" className="relative z-20 p-6 py-20 text-white">
+    <section id="showcase" className="relative z-20 p-6 pb-10 text-white">
       <motion.div
         ref={ref}
         initial="hidden"
@@ -145,7 +145,7 @@ const Portfolio: React.FC = () => {
       </motion.div>
      <div className="text-center mt-10">
  <Link href='/showcase' legacyBehavior>
-        <a className="text-white font-poppins border rounded-full border-gray-600 px-8 py-3 inline-block">Browse Projects</a>
+        <a className="text-white font-poppins border-2 rounded-full border-gray-600 px-8 py-3 inline-block">Browse Projects</a>
       </Link>
 </div>
      

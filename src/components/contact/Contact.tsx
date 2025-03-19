@@ -1,7 +1,7 @@
 import { Phone, Mail, Map  } from "lucide-react";
 const Contact = () => {
   return (
-    <section className="gradient-section text-black py-5 relative z-10">
+    <section id="contact" className="gradient-section text-black py-5 relative z-10">
       <div className="container mx-auto px-6 text-start">
         <div className="grid grid-cols-12">
           <div className="col-span-12 md:col-span-6">

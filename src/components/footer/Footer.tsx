@@ -13,7 +13,7 @@ const SocialMediaList = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white pt-12 relative z-10">
+    <footer className="bg-black text-white pt-12 relative z-50">
      <Link
         href="https://wa.me/918178614811?text=Thank%20you%20for%20reaching%20out.%20%F0%9F%9A%80%20We%20specialize%20in%20Web%20Development%2C%20App%20Development%2C%20and%20Design%20to%20help%20businesses%20grow%20online"
         className="fixed z-50 bottom-10 right-8"

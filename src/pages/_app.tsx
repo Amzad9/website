@@ -23,8 +23,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <meta name="robots" content="index, follow" />
         <link rel="icon" href="/wl.jpg" />
-        <title>Weblibron</title>
+        <title>Weblibron - Web Solution</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script dangerouslySetInnerHTML={{ __html: `
           function initApollo() {
