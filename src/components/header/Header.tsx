@@ -22,6 +22,7 @@ const Header = ({ logo }: HeaderProps) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavbar = () => setIsOpenNavbar((prev) => !prev);
 
   return (
     <div className="md:container relative z-40">
@@ -46,8 +47,14 @@ const Header = ({ logo }: HeaderProps) => {
             >
               Start a Project
             </button>
+
+            <button
+              className="block w-7 border-none bg-transparent"
+              onClick={handleNavbar}
+              aria-label="Toggle navigation menu"
+            >
              <Menu color="#f1f1f1" />
-          
+            </button>
           </div>
         </div>
       </header>
