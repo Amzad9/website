@@ -8,15 +8,32 @@ const SocialMediaList = [
   {
     icon: "linkedin",
     url: "https://www.linkedin.com/company/weblibron/?viewAsMember=true",
+    label: "LinkedIn",
   },
+  // Add more social media items here
 ];
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white pt-12 relative z-50">
-     <Link
+    <footer className="relative bg-gradient-to-b from-gray-900 via-black to-black text-white pt-16 overflow-hidden">
+      {/* Enhanced Background Effects */}
+      <div className="absolute inset-0">
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-black to-black"></div>
+        
+        {/* Pattern */}
+        <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
+        
+        {/* Glowing Effects */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px]"></div>
+      </div>
+
+      {/* WhatsApp Button - Using better accessibility and animation */}
+      <Link
         href="https://wa.me/918178614811?text=Thank%20you%20for%20reaching%20out.%20%F0%9F%9A%80%20We%20specialize%20in%20Web%20Development%2C%20App%20Development%2C%20and%20Design%20to%20help%20businesses%20grow%20online"
-        className="fixed z-50 bottom-10 right-8"
+        className="fixed z-50 bottom-10 right-8 transform hover:scale-110 transition-transform duration-300 shadow-lg rounded-full hover:shadow-2xl"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contact us on WhatsApp"
@@ -27,151 +44,145 @@ const Footer: React.FC = () => {
           height={60}
           alt="WhatsApp Contact"
           priority
+          className="filter drop-shadow-lg"
         />
       </Link>
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-12 md:grid-cols-12 gap-8">
-          {/* Logo and Description */}
+
+      <div className="container mx-auto px-6 relative">
+        <div className="grid grid-cols-12 md:grid-cols-12 gap-12">
+          {/* Logo and Description Section */}
           <div className="col-span-12 md:col-span-3">
-            <div className="flex items-center space-x-2 mb-3">
-              <Link href="/" className="logo">
-                <Image src={Logo} alt="weblibron logo" width={150} />
-              </Link>
-            </div>
-            <p className="text-sm w-full font-poppins">
-             At Weblibron, we strive to create innovative web and app solutions that meet your needs. Your success is our priority.
+            <Link 
+              href="/" 
+              className="logo inline-block transform hover:scale-105 transition-transform duration-300"
+              aria-label="Weblibron Home"
+            >
+              <Image 
+                src={Logo} 
+                alt="weblibron logo" 
+                width={150} 
+                className="filter brightness-110"
+              />
+            </Link>
+            <p className="text-gray-300 mt-6 leading-relaxed font-light">
+              At Weblibron, we strive to create innovative web and app solutions that meet your needs. Your success is our priority.
             </p>
-            {/* Social Media Icons */}
-            <ul className="flex w-full border-t-2 pt-5 pb-5 mt-4 border-white border-opacity-5 gap-5 items-center">
-              {SocialMediaList.map((item, key) => (
-                <motion.li
-                  whileHover={{
-                    scale: 1.1, // Slightly less dramatic scaling
-                    rotate: -3, // Subtle rotation for a smoother effect
-                    transition: {
-                      duration: 0.4, // Slightly longer duration for smoothness
-                      ease: [0.16, 1, 0.3, 1], // Custom cubic-bezier for smooth ease-out
-                    },
-                  }}
-                  whileTap={{
-                    scale: 0.9, // Less aggressive scaling on tap
-                    transition: {
-                      duration: 0.2, // Quick response for tap interaction
-                      ease: "easeInOut", // Smooth ease-in-out for tap
-                    },
-                  }}
-                  key={key}
-                >
-                  <Link href={item.url} target="_blank">
-                    <i className={styles[item.icon]}></i>
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
+            
+            {/* Social Media Icons with improved design */}
+            <nav aria-label="Social Media Links">
+              <ul className="flex w-full border-t border-gray-800/50 pt-6 mt-6 gap-6 items-center">
+                {SocialMediaList.map((item, key) => (
+                  <motion.li
+                    whileHover={{
+                      scale: 1.1,
+                      y: -2,
+                      transition: { duration: 0.3 }
+                    }}
+                    key={key}
+                  >
+                    <Link 
+                      href={item.url} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={item.label}
+                      className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-3 rounded-full hover:bg-primary transition-colors duration-300 flex items-center justify-center backdrop-blur-sm border border-white/5 hover:border-white/10"
+                    >
+                      <i className={`${styles[item.icon]} text-xl`}></i>
+                    </Link>
+                  </motion.li>
+                ))}
+              </ul>
+            </nav>
           </div>
 
-          {/* Company Section */}
-          <div className="col-span-12 md:col-span-3">
-            <h4 className="text-xl font-semibold text-white mb-2">
-              Quick Link
-            </h4>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a
-                  href="#home"
-                  className="text-sm font-inter hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  className="text-sm font-inter hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#service"
-                  className="text-sm font-inter hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
-                >
-                  Service
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#showcase"
-                  className="text-sm font-inter hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out"
-                >
-                  Showcase
-                </a>
-              </li>
-            </ul>
-          </div>
+          {/* Quick Links Section */}
+          <nav className="col-span-12 md:col-span-3 relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-blue-500/5 to-transparent rounded-xl blur-xl"></div>
+            <div className="relative">
+              <h2 className="text-xl font-bold text-white mb-8 relative">
+                Quick Links
+                <span className="absolute -bottom-3 left-0 w-16 h-[3px] bg-gradient-to-r from-primary to-blue-500 rounded-full"></span>
+              </h2>
+              <ul className="space-y-4">
+                {['Home', 'About Us', 'Service', 'Showcase'].map((item) => (
+                  <li key={item}>
+                    <a
+                      href={`#${item.toLowerCase().replace(' ', '')}`}
+                      className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-2 group"
+                    >
+                      <span className="w-2 h-2 bg-primary rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </nav>
 
-          {/* Support Section */}
+          {/* Contact Section */}
           <div className="col-span-12 md:col-span-3">
-            <h4 className="text-xl font-semibold text-white mb-2">Contact Us</h4>
-            <ul className="space-y-2 text-sm">
+            <h2 className="text-xl font-bold text-white mb-8 relative">
+              Contact Us
+              <span className="absolute -bottom-3 left-0 w-16 h-[3px] bg-gradient-to-r from-primary to-primary/50 rounded-full"></span>
+            </h2>
+            <ul className="space-y-4">
               <li>
-               <Link
-                href="mailto:hello@weblibron.com"
-                className="hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out text-xl"
-              >
-                hello@weblibron.com
-              </Link>
+                <Link
+                  href="mailto:hello@weblibron.com"
+                  className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-3"
+                >
+                  <span className="material-icons text-primary">email</span>
+                  hello@weblibron.com
+                </Link>
               </li>
               <li>
-               <Link
+                <Link
                   href="tel:+918178614811"
-                  className="hover:text-primary hover:ps-1 hover:underline duration-300 ease-in-out text-xl"
+                  className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-3"
                 >
+                  <span className="material-icons text-primary">phone</span>
                   +91 8178 61 4811
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Location Section */}
+          {/* Location Section - Improved styling */}
           <div className="col-span-12 md:col-span-3">
-            <h4 className="text-xl font-semibold text-white mb-2">Location</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <h5 className="text-lg text-white">Dubai Office</h5>
-                <a
-                  href="#dubai"
-                  className="hover:text-primary hover:underline duration-300 ease-in-out text-sm font-inter font-medium text-gray-400"
-                >
-                  115, Al Ahmadi Building, Al Qusais, Dubai, U.A.E
-                </a>
-              </li>
-              <li>
-                <h5 className="text-lg text-white">India Office</h5>
-                <a
-                  href="#india1"
-                  className="hover:text-primary hover:underline duration-300 ease-in-out text-sm font-inter  font-medium text-gray-400"
-                >
-                  Ajnara Gen X, Gaziabad, Uttar Pradesh, India
-                </a>
-              </li>
-              {/* <li>
-                <h5 className="text-lg text-white">India Office</h5>
-                <a
-                  href="#india2"
-                  className="hover:text-primary hover:underline duration-300 ease-in-out text-sm font-inter  font-medium text-gray-400"
-                >
-                  Kareli, Prayagraj, Uttar Pradesh, India
-                </a>
-              </li> */}
-            </ul>
+            <h2 className="text-xl font-bold text-white mb-8 relative">
+              Location
+              <span className="absolute -bottom-3 left-0 w-16 h-[3px] bg-gradient-to-r from-primary to-primary/50 rounded-full"></span>
+            </h2>
+            <address className="not-italic space-y-8">
+              <div className="transform hover:translate-x-2 transition-transform duration-300">
+                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                  <span className="material-icons text-primary text-xl">location_on</span>
+                  Dubai Office
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  115, Al Ahmadi Building,<br />
+                  Al Qusais, Dubai, U.A.E
+                </p>
+              </div>
+              <div className="transform hover:translate-x-2 transition-transform duration-300">
+                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                  <span className="material-icons text-primary text-xl">location_on</span>
+                  India Office
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Ajnara Gen X,<br />
+                  Gaziabad, Uttar Pradesh, India
+                </p>
+              </div>
+            </address>
           </div>
         </div>
-        <div className="text-left w-full border-t border-t-gray-800 mt-8">
-          <p className="text-center text-gray-400 py-5">
-            Copyright © {new Date().getFullYear()} Weblibron. All rights
-            reserved.
+
+        {/* Copyright Section with enhanced design */}
+        <div className="relative mt-12 py-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
+          <p className="text-gray-400 text-center relative">
+            © {new Date().getFullYear()} Weblibron. All rights reserved.
           </p>
         </div>
       </div>
