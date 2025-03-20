@@ -34,8 +34,8 @@ const AboutUs = () => {
                 <p className="text-gray-300 leading-relaxed text-lg">
                   We are a team of passionate creators and expert developers dedicated to crafting exceptional digital experiences. Specializing in UI/UX design and robust development, we blend bold visuals with cutting-edge technology.
                 </p>
-                <div className="flex flex-wrap gap-4 mt-8">
-                  <button className="group relative px-8 py-4 bg-gradient-to-r from-primary to-blue-500 rounded-lg overflow-hidden">
+                <div className="flex flex-col sm:flex-row flex-wrap gap-4 mt-8">
+                  <button className="w-full sm:w-auto group relative px-8 py-4 bg-gradient-to-r from-primary to-blue-500 rounded-lg overflow-hidden">
                     <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                     <div className="relative flex items-center gap-3">
                       <span className="text-2xl font-bold text-white">7+</span>
@@ -45,7 +45,7 @@ const AboutUs = () => {
                       </div>
                     </div>
                   </button>
-                  <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-primary rounded-lg overflow-hidden">
+                  <button className="w-full sm:w-auto group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-primary rounded-lg overflow-hidden">
                     <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                     <div className="relative flex items-center gap-3">
                       <span className="text-2xl font-bold text-white">20+</span>
@@ -71,14 +71,14 @@ const AboutUs = () => {
                     <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent mb-6">
                       Our Promise
                     </h3>
-                    <div className="flex justify-between items-center gap-4">
-                      <div className="text-center flex-1 p-4 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
+                    <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+                      <div className="text-center w-full sm:flex-1 p-4 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
                         <p className="text-xl font-semibold text-primary">Innovation</p>
                       </div>
-                      <div className="text-center flex-1 p-4 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
+                      <div className="text-center w-full sm:flex-1 p-4 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
                         <p className="text-xl font-semibold text-blue-400">Quality</p>
                       </div>
-                      <div className="text-center flex-1 p-4 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
+                      <div className="text-center w-full sm:flex-1 p-4 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
                         <p className="text-xl font-semibold text-primary">Excellence</p>
                       </div>
                     </div>
