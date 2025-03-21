@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Users, Code2, Award, Clock, MessageSquare, ChevronDown } from 'lucide-react';
 
-function Web() {
+const SolutionPage = () => {
     const services = [
         {
             title: "Web Development",
@@ -71,6 +71,80 @@ function Web() {
         },
     ];
 
+    const stats = [
+        { number: "500+", label: "Projects Completed", icon: Award },
+        { number: "200+", label: "Happy Clients", icon: Users },
+        { number: "1000+", label: "Lines of Code", icon: Code2 },
+        { number: "24/7", label: "Support Available", icon: Clock },
+    ];
+
+    const process = [
+        {
+            step: "01",
+            title: "Discovery & Planning",
+            description: "We analyze your requirements and create a detailed project roadmap tailored to your business goals.",
+            icon: MessageSquare
+        },
+        {
+            step: "02",
+            title: "Design & Development",
+            description: "Our team creates stunning designs and develops robust solutions using cutting-edge technologies.",
+            icon: Code2
+        },
+        {
+            step: "03",
+            title: "Testing & Quality",
+            description: "Rigorous testing ensures your solution is bug-free and performs optimally across all platforms.",
+            icon: CheckCircle2
+        },
+        {
+            step: "04",
+            title: "Launch & Support",
+            description: "We handle deployment and provide ongoing support to ensure your solution's success.",
+            icon: Award
+        }
+    ];
+
+    const testimonials = [
+        {
+            name: "Sarah Johnson",
+            role: "CEO, TechStart",
+            image: "/images/testimonials/client1.jpg",
+            quote: "Their web development services transformed our online presence. The team's expertise and dedication were exceptional."
+        },
+        {
+            name: "Michael Chen",
+            role: "CTO, InnovateCorp",
+            image: "/images/testimonials/client2.jpg",
+            quote: "The mobile app they developed for us exceeded our expectations. Their attention to detail and user experience is outstanding."
+        },
+        {
+            name: "Emma Davis",
+            role: "Product Manager, DesignHub",
+            image: "/images/testimonials/client3.jpg",
+            quote: "Their UI/UX design services helped us create an intuitive and beautiful interface that our users love."
+        }
+    ];
+
+    const faqs = [
+        {
+            question: "What technologies do you use?",
+            answer: "We use modern technologies including React, Next.js, Node.js, Python, and various cloud platforms. Our stack is chosen based on your specific project requirements."
+        },
+        {
+            question: "How long does a typical project take?",
+            answer: "Project timelines vary based on complexity and scope. A typical website project takes 4-8 weeks, while larger applications may take 3-6 months."
+        },
+        {
+            question: "Do you provide ongoing support?",
+            answer: "Yes, we offer comprehensive support packages including maintenance, updates, and technical assistance to ensure your solution remains optimal."
+        },
+        {
+            question: "What is your pricing structure?",
+            answer: "Our pricing is project-based and depends on your specific requirements. We offer flexible packages to suit different budgets and needs."
+        }
+    ];
+
     const fadeIn = {
         hidden: { opacity: 0, y: 20 },
         visible: { 
@@ -80,6 +154,12 @@ function Web() {
                 duration: 0.5
             } 
         }
+    };
+
+    const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+    const toggleFaq = (index: number) => {
+        setOpenFaqIndex(openFaqIndex === index ? null : index);
     };
 
     return (
@@ -134,6 +214,28 @@ function Web() {
                                 </button>
                             </div>
                         </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Stats Section */}
+            <section className="py-20 bg-black/50">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {stats.map((stat, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="text-center p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
+                            >
+                                <stat.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
+                                <h3 className="text-3xl font-bold text-white mb-2">{stat.number}</h3>
+                                <p className="text-gray-400">{stat.label}</p>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -238,8 +340,141 @@ function Web() {
                     </motion.section>
                 ))}
             </div>
+
+            {/* Process Section */}
+            <section className="py-20 bg-black/50">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Process</h2>
+                        <p className="text-gray-400 max-w-2xl mx-auto">We follow a systematic approach to deliver exceptional results for every project.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {process.map((step, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
+                            >
+                                <div className="text-primary text-4xl font-bold mb-4">{step.step}</div>
+                                <step.icon className="w-8 h-8 mb-4 text-primary" />
+                                <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
+                                <p className="text-gray-400">{step.description}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Testimonials Section */}
+            <section className="py-20 bg-black/50">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Client Testimonials</h2>
+                        <p className="text-gray-400 max-w-2xl mx-auto">What our clients say about working with us.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {testimonials.map((testimonial, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
+                            >
+                                <div className="flex items-center mb-4">
+                                    <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
+                                        <Image
+                                            src={testimonial.image}
+                                            alt={testimonial.name}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-white font-bold">{testimonial.name}</h3>
+                                        <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                                    </div>
+                                </div>
+                                <p className="text-gray-300 italic">"{testimonial.quote}"</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="py-20 bg-black/50">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+                        <p className="text-gray-400 max-w-2xl mx-auto">Find answers to common questions about our services.</p>
+                    </div>
+                    <div className="max-w-3xl mx-auto space-y-4">
+                        {faqs.map((faq, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
+                            >
+                                <div 
+                                    className="flex items-center justify-between cursor-pointer"
+                                    onClick={() => toggleFaq(index)}
+                                >
+                                    <h3 className="text-white font-bold">{faq.question}</h3>
+                                    <ChevronDown 
+                                        className={`w-5 h-5 text-gray-400 transition-transform duration-300 ${
+                                            openFaqIndex === index ? 'rotate-180' : ''
+                                        }`}
+                                    />
+                                </div>
+                                <motion.div
+                                    initial={false}
+                                    animate={{
+                                        height: openFaqIndex === index ? 'auto' : 0,
+                                        opacity: openFaqIndex === index ? 1 : 0,
+                                    }}
+                                    transition={{
+                                        duration: 0.3,
+                                        ease: "easeInOut"
+                                    }}
+                                    className="overflow-hidden"
+                                >
+                                    <p className="text-gray-400 mt-4">{faq.answer}</p>
+                                </motion.div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="py-20 bg-gradient-to-r from-primary/20 to-primary/10">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Digital Presence?</h2>
+                    <p className="text-gray-300 max-w-2xl mx-auto mb-8">
+                        Let's discuss how we can help you achieve your business goals with our cutting-edge solutions.
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4">
+                        <button className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/20 hover:translate-y-[-2px]">
+                            <span>Start Your Project</span>
+                            <ArrowRight className="w-4 h-4" />
+                        </button>
+                        <button className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all duration-300 flex items-center gap-2 hover:border-white/20 hover:translate-y-[-2px]">
+                            <span>Schedule a Call</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }
 
-export default Web;
+export default SolutionPage;
+

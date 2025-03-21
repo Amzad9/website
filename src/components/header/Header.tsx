@@ -24,6 +24,14 @@ const Header = ({ logo }: HeaderProps) => {
 
   const handleNavbar = () => setIsOpenNavbar((prev) => !prev);
 
+  const navLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '#about' },
+    { name: 'Service', href: '#service' },
+    { name: 'Showcase', href: '#showcase' },
+    { name: 'Contact', href: '#contact' },
+  ];
+
   return (
     <div className="md:container relative z-50">
       <header
@@ -44,10 +52,23 @@ const Header = ({ logo }: HeaderProps) => {
             />
           </Link>
 
+          {/* Navigation Menu */}
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-white/80 hover:text-white text-sm font-medium transition-colors duration-300"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
+
           <div className="flex items-center gap-4 md:gap-6">
             <Link
               className="rounded-full shadow-[0_8px_16px_rgba(0,0,0,0.4)] flex px-5 py-2.5 min-w-[130px] justify-center items-center bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary text-white text-center text-sm font-medium transition-all duration-300 hover:scale-105 tracking-wider max-[767px]:hidden"
-              href='#contact'
+              href='/contact'
             >
               Start a Project
             </Link>
