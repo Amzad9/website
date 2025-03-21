@@ -151,7 +151,7 @@ export default function Services() {
 
       {/* Hero Section */}
       <section 
-        className="relative z-10 pt-20 pb-12 overflow-hidden" 
+        className="relative z-10 pt-16 md:pt-20 pb-12 overflow-hidden" 
         aria-label="Our Services Showcase"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -217,7 +217,7 @@ export default function Services() {
       </section>
 
       {/* Services Grid Section */}
-      <section id="services" className="relative z-10 py-24">
+      <section id="services" className="relative z-10 pb-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             variants={staggerContainer}
@@ -281,7 +281,7 @@ export default function Services() {
       </section>
 
       {/* Bottom Section: Contact CTA */}
-      <section className="relative z-10 pb-24 pt-10">
+      <section className="relative z-10 pb-16 md:pb-24 pt-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}

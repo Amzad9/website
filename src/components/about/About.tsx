@@ -19,15 +19,11 @@ const AboutUs = () => {
     { name: "UI/UX Design", color: "#67E8B7" },
     { name: "E-commerce", color: "#A78BFA"},
     { name: "Progressive Web Apps (PWAs)", color: "#FF6B6B" },
-    { name: "Web Performance Optimization", color: "#4E95FF"},
-    { name: "Headless CMS Integration", color: "#67E8B7" },
-    { name: "Web Accessibility", color: "#A78BFA"},
+    { name: "SEO (Search Engine Optimization)", color: "#4E95FF"},
     { name: "Single - Page Applications (SPAs)", color: "#67E8B7" },
     { name: "Web Security", color: "#A78BFA"},
     { name: "API Development and Integration", color: "#FF6B6B" },
     { name: "Responsive Web Design", color: "#A78BFA"},
-    { name: "Serverless Architecture", color: "#FF6B6B" },
-    { name: "Visual Identity and Branding", color: "#FF6B6B" },
     { name: "User Interface (UI) Design", color: "#A78BFA"},
     { name: "User Experience (UX) Design", color: "#FF6B6B" },
   ];
@@ -44,28 +40,7 @@ const AboutUs = () => {
         <div className="absolute top-40 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[150px]"></div>
         <div className="absolute bottom-40 right-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[150px]"></div>
       </motion.div>
-
-      {/* Hero Section */}
-      {/* <motion.section 
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={fadeIn}
-        className="relative h-[40vh] flex items-center justify-center overflow-hidden mb-16"
-      >
-        <div className="container mx-auto px-6 relative z-10 text-center">
-          <span className="inline-block mb-4 px-4 py-1.5 bg-white/5 text-primary text-sm font-medium rounded-full border border-white/10">
-            About Our Company
-          </span>
-          <h1 className="text-5xl md:text-7xl text-white font-poppins mb-8 leading-tight font-medium">
-            We Are <span className="text-primary italic bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary transition-all duration-500">Weblibron</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in">
-            Crafting digital experiences that leave lasting impressions
-          </p>
-        </div>
-      </motion.section> */}
- <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial="hidden"
             whileInView="visible"
@@ -94,7 +69,7 @@ const AboutUs = () => {
               
               {/* The heading itself */}
               <div className="flex flex-row flex-wrap md:flex-row items-center justify-center gap-3 md:gap-4 relative">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-white leading-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-white leading-tight">
                   We Are 
                   <span className="relative inline-block mx-2">
                     {/* 3D Depth Shadow */}
@@ -123,7 +98,7 @@ const AboutUs = () => {
         </div>
 
       {/* Main Content */}
-      <main className="py-16 relative">
+      <main className="pb-0 md:py-16 relative">
         <div className="container mx-auto px-6">
           {/* About Section */}
           <motion.section 
@@ -145,20 +120,20 @@ const AboutUs = () => {
                   <div className="group relative px-8 py-5 bg-white/5 rounded-xl border border-white/10 hover:border-primary/30 transition-all duration-300 backdrop-blur-sm">
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
                     <div className="relative flex items-center gap-4">
-                      <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">7+</span>
+                      <span className="text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">7+</span>
                       <div className="text-left">
-                        <p className="text-white font-medium">Years</p>
-                        <p className="text-white/70 text-sm">Experience</p>
+                        <p className="text-white font-light">Years</p>
+                        <p className="text-white/70 text-sm font-light">Experience</p>
                       </div>
                     </div>
                   </div>
                   <div className="group relative px-8 py-5 bg-white/5 rounded-xl border border-white/10 hover:border-primary/30 transition-all duration-300 backdrop-blur-sm">
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
                     <div className="relative flex items-center gap-4">
-                      <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-primary">20+</span>
+                      <span className="text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-primary">10+</span>
                       <div className="text-left">
-                        <p className="text-white font-medium">Projects</p>
-                        <p className="text-white/70 text-sm">Delivered</p>
+                        <p className="text-white font-light">Projects</p>
+                        <p className="text-white/70 text-sm font-light">Delivered</p>
                       </div>
                     </div>
                   </div>
@@ -215,7 +190,7 @@ const AboutUs = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeIn}
-            className="max-w-6xl mx-auto mt-32"
+            className="max-w-6xl mx-auto mt-16 md:mt-32"
           >
            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 

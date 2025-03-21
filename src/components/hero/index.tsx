@@ -1,203 +1,185 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Geist } from "next/font/google";
 import Link from 'next/link';
 import { ArrowRight } from "lucide-react";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen overflow-hidden pt-20 bg-black">
-      {/* Enhanced Background Effects */}
-      <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
+      {/* Minimalist Background */}
+      <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-3"></div>
+      
+      {/* Simplified Glow Effects */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className="absolute inset-0"
+        className="absolute inset-0 pointer-events-none"
       >
-        <div className="absolute top-32 left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-32 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]"></div>
-        <motion.div 
-          animate={{ 
-            scale: [1, 1.05, 1],
-            opacity: [0.4, 0.5, 0.4],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            repeatType: "reverse",
-            ease: "easeInOut"
-          }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-full blur-[150px]"
-        ></motion.div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
       </motion.div>
 
-      {/* Animated Bubbles */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="bubble animate-float-slow1 bg-primary/5 w-[300px] h-[300px] rounded-full absolute -top-20 -left-20 blur-3xl"></div>
-        <div className="bubble animate-float-slow2 bg-blue-500/5 w-[250px] h-[250px] rounded-full absolute top-1/2 -right-20 blur-3xl"></div>
-        <div className="bubble animate-float-slow3 bg-primary/5 w-[200px] h-[200px] rounded-full absolute bottom-20 left-1/4 blur-3xl"></div>
-      </div>
-
-      <div className="md:container mx-auto px-4 md:px-6 min-h-screen flex items-center relative z-20">
-        <div className="max-w-full px-1 md:px-12 text-center justify-center  mx-auto w-full relative z-30">
-          {/* Premium Badge */}
+      {/* Content Container */}
+      <div className="container mx-auto px-4 min-h-screen flex items-center justify-center relative z-20">
+        <div className="max-w-4xl mx-auto text-center relative z-30">
+          {/* Minimal Badge */}
           <motion.div 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-xl rounded-full px-4 sm:px-6 py-2 mb-8 sm:mb-12 border border-white/10"
+            transition={{ duration: 0.7 }}
+            className="inline-flex items-center gap-2 bg-white/3 backdrop-blur-sm rounded-full px-4 py-1.5 mb-8 border border-white/5"
           >
-            <span className="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
-            <span className="text-white/80 text-sm font-light">Premium Digital Solutions</span>
+            <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
+            <span className="text-white/70 text-xs font-light">Premium Digital Solutions</span>
           </motion.div>
 
-          {/* Responsive Heading */}
-          <motion.h1 
-            initial={{ y: 30, opacity: 0 }}
+          {/* Clean Heading */}
+            <motion.h1 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-5xl md:text-6xl lg:text-7xl font-light font-poppins tracking-tight text-white mb-6"
+            >
+            <div className="mb-2">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500">
+              Innovative
+              </span>{" "}
+              <span className="text-white">High-Performance</span>{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500">
+              Solutions 
+              </span>
+            </div>
+            <div className="line">
+              <span className="text-white">with </span>{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500">
+              Our Insight.
+              </span>
+            </div>
+            </motion.h1>
+          
+          {/* Elegant Videos */}
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex justify-center gap-8 mb-10"
+          >
+            <div className="relative group">
+              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-primary/50 to-blue-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-sm"></div>
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="h-16 w-32 rounded-full object-cover border border-white/10"
+                src="/main.mp4"
+                aria-hidden="true"
+              />
+            </div>
+            
+            <div className="relative group">
+              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-blue-500/50 to-primary/50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-sm"></div>
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="h-16 w-32 rounded-full object-cover border border-white/10"
+                src="/swift.mp4"
+                aria-hidden="true"
+              />
+            </div>
+          </motion.div>
+
+          {/* Concise Description */}
+          <motion.p 
+            initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-3xl sm:text-3xl md:text-7xl font-medium tracking-tight text-white text-center font-inter mb-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3 leading-tight"
-          >
-            <span className="bg-clip-text text-white bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary transition-all duration-500">
-              Elevate
-            </span>
-            <span className="text-white font-medium">your</span>
-           
-            <span className="talic bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary transition-all duration-500">
-              impact
-            </span>
- <motion.video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="h-11 w-24 sm:h-12 sm:w-28 md:h-14 md:w-32 border-2 border-primary/9 rounded-full object-cover"
-              src="/main.mp4"
-              aria-hidden="true"
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            />
-            <span className="text-white font-medium">with our</span>
- <motion.video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="h-11 w-24 sm:h-12 sm:w-28 md:h-14 md:w-32 rounded-full object-cover"
-              src="/swift.mp4"
-              aria-hidden="true"
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.9 }}
-            />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary transition-all duration-500">
-              swift, stunning solutions
-            </span>
-           
-          </motion.h1>
-
-          {/* Description */}
-          <motion.p 
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg sm:text-xl md:text-2xl text-center text-gray-300 mt-6 sm:mt-8 mb-12 leading-relaxed"
+            className="text-lg md:text-xl text-white/80 mb-10 leading-relaxed max-w-xl mx-auto"
           >
             Supercharge your online presence with our lightning-fast,
-            high-performance web solutions. Experience seamless design, speed,
-            and innovation like never before.
+            high-performance web solutions.
           </motion.p>
 
-          {/* Responsive Buttons */}
+          {/* Minimalist Buttons */}
           <motion.div 
-            initial={{ y: 30, opacity: 0 }}
+            initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex flex-col sm:flex-row items-stretch justify-center sm:items-center gap-5 sm:gap-7"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             {/* Primary Button */}
             <Link 
               href="#contact"
-              className="group relative px-8 sm:px-10 py-5 sm:py-5 rounded-full bg- hover:to-primary transition-all duration-500"
+              className="group relative px-8 py-3 rounded-full bg-gradient-to-r from-primary to-blue-500 transition-all duration-300"
             >
-              <div className="relative flex items-center justify-center gap-3">
-                <span className="text-white text-lg font-medium">Get Started</span>
-                <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300 text-white" />
-                <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-1000"></div>
+              <div className="flex items-center justify-center gap-2">
+                <span className="text-white font-medium">Get Started</span>
+                <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300 text-white" />
               </div>
+              <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-primary/80 to-blue-500/80 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
 
             {/* Secondary Button */}
             <Link 
               href="/showcase"
-              className="group relative px-8 sm:px-10 py-5 sm:py-5 rounded-full transition-all duration-300 hover:bg-white/5 backdrop-blur-sm"
+              className="group px-8 py-3 rounded-full border border-white/10 hover:bg-white/5 transition-colors duration-300"
             >
-              <div className="relative flex items-center justify-center gap-3">
-                <span className="text-white/70 text-lg font-medium group-hover:text-white transition-colors duration-300">
+              <div className="flex items-center justify-center gap-2">
+                <span className="text-white/70 font-medium group-hover:text-white transition-colors duration-300">
                   View Projects
                 </span>
-                <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300 text-white/50 group-hover:text-white/80" />
+                <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300 text-white/50 group-hover:text-white" />
               </div>
             </Link>
           </motion.div>
-       
+          
+          {/* Minimal Line Separator */}
+          <motion.div
+            initial={{ scaleX: 0, opacity: 0 }}
+            animate={{ scaleX: 1, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="h-px w-16 bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto my-12"
+          ></motion.div>
+          
+          {/* Simple Stats */}
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex justify-center gap-8"
+          >
+            <div className="text-center">
+              <p className="text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-primary">10+</p>
+              <p className="text-xs md:text-sm text-white/50">Happy Clients</p>
+            </div>
+            <div className="h-10 w-px bg-white/10"></div>
+            <div className="text-center">
+              <p className="text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-primary">100%</p>
+              <p className="text-xs md:text-sm text-white/50">Satisfaction</p>
+            </div>
+            <div className="h-10 w-px bg-white/10"></div>
+            <div className="text-center">
+              <p className="text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-primary">24/7</p>
+              <p className="text-xs md:text-sm text-white/50">Support</p>
+            </div>
+          </motion.div>
         </div>
       </div>
 
-      {/* Add to your global CSS */}
+      {/* Subtle Grid Lines */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none"></div>
+      
+      {/* Minimalist Animation CSS */}
       <style jsx global>{`
-        @keyframes pulse-slow {
+        @keyframes pulse-soft {
           0%, 100% { opacity: 0.3; }
-          50% { opacity: 0.6; }
+          50% { opacity: 0.5; }
         }
-        .animate-pulse-slow {
-          animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        .delay-1000 {
-          animation-delay: 1s;
-        }
-        @keyframes shine {
-          from {
-            transform: translateX(-100%) rotate(45deg);
-          }
-          to {
-            transform: translateX(100%) rotate(45deg);
-          }
-        }
-        @keyframes float-slow1 {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          50% { transform: translate(30px, 30px) scale(1.1); }
-        }
-        @keyframes float-slow2 {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          50% { transform: translate(-20px, -20px) scale(1.15); }
-        }
-        @keyframes float-slow3 {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          50% { transform: translate(15px, -15px) scale(1.05); }
-        }
-        .animate-float-slow1 {
-          animation: float-slow1 15s ease-in-out infinite;
-        }
-        .animate-float-slow2 {
-          animation: float-slow2 18s ease-in-out infinite;
-        }
-        .animate-float-slow3 {
-          animation: float-slow3 20s ease-in-out infinite;
-        }
-        @keyframes shimmer {
-          0% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        .animate-shimmer {
-          animation: shimmer 8s linear infinite;
+        .animate-pulse-soft {
+          animation: pulse-soft 5s ease-in-out infinite;
         }
       `}</style>
     </section>
