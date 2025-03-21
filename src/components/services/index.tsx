@@ -151,7 +151,7 @@ export default function Services() {
 
       {/* Hero Section */}
       <section 
-        className="relative z-10 pt-16 md:pt-20 pb-12 overflow-hidden" 
+        className="relative z-10 pt-16 md:pt-10 pb-0 overflow-hidden" 
         aria-label="Our Services Showcase"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
