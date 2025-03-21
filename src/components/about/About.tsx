@@ -93,7 +93,7 @@ const AboutUs = () => {
               <div className="absolute -bottom-2 right-1/4 w-3 h-3 bg-blue-400 rounded-full opacity-70 animate-float-delayed"></div>
               
               {/* The heading itself */}
-              <div className="flex flex-col items-center justify-center gap-1 md:gap-2 relative">
+              <div className="flex flex-row flex-wrap md:flex-row items-center justify-center gap-3 md:gap-4 relative">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-white leading-tight">
                   We Are 
                   <span className="relative inline-block mx-2">

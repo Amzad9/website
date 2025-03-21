@@ -66,7 +66,7 @@ const Contact = () => {
             <div className="absolute top-1/2 right-[15%] w-1.5 h-1.5 bg-purple-400 rounded-full opacity-60 animate-float-slow"></div>
             
             {/* The heading itself */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 relative">
+            <div className="flex flex-row flex-wrap md:flex-row items-center justify-center gap-3 md:gap-4 relative">
               {/* Word 1: "Start" */}
               <motion.div
                 custom={0}

@@ -62,7 +62,7 @@ const HeroSection = () => {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl sm:text-5xl md:text-7xl font-medium tracking-tight text-white text-center font-inter mb-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3 leading-tight"
+            className="text-3xl sm:text-3xl md:text-7xl font-medium tracking-tight text-white text-center font-inter mb-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3 leading-tight"
           >
             <span className="bg-clip-text text-white bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary transition-all duration-500">
               Elevate
