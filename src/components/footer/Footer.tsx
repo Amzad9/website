@@ -97,8 +97,8 @@ const Footer: React.FC = () => {
             <div className="relative">
               <h2 className="text-xl font-bold text-white mb-8 relative">
                 Quick Links
-                <span className="absolute -bottom-3 left-0 w-16 h-[3px] bg-gradient-to-r from-primary to-blue-500 rounded-full"></span>
-              </h2>
+                <span className="absolute -bottom-3 left-0 w-16 h-[3px] bg-gradient-to-r from-primary to-primary/50 rounded-full"></span>
+                </h2>
               <ul className="space-y-4">
                 {['Home', 'About Us', 'Service', 'Showcase'].map((item) => (
                   <li key={item}>

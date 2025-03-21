@@ -39,7 +39,7 @@ const Portfolio: React.FC = () => {
         title: "Website Design",
         description: "Professional website design with modern aesthetics and responsive layout",
         url: 'https://www.figma.com/design/eS6sjVE0zUGVAHamxB5MyS/Untitled?node-id=0-1&p=f&t=vyLjEkfMgqqTAZYZ-0',
-        technologies: ['Figma', 'HTML/CSS', 'JavaScript']
+        technologies: ['Figma', 'HTML/CSS', 'Next Js', 'Tailwind CSS']
       },
       {
         id: 3,
@@ -48,7 +48,7 @@ const Portfolio: React.FC = () => {
         title: "Mobile App Design Hospital",
         description: "Healthcare management app focusing on patient care and medical services",
         url: 'https://www.figma.com/design/yrwieRkdbTcBMFSoQNgxJz/Referral-Labs?node-id=12-2&p=f&t=l5Lldb0z4ivtTY8V-0',
-        technologies: ['React Native', 'Firebase', 'Node.js']
+        technologies: ['React Native', 'MongoDB', 'Node.js']
       },
       {
         id: 4,
@@ -167,7 +167,7 @@ const Portfolio: React.FC = () => {
           {/* Title */}
           <h3 
             id={`project-title-${project.id}`} 
-            className="text-3xl font-light mb-3 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-blue-500 transition-all duration-300"
+            className="text-2xl font-light mb-3 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-blue-500 transition-all duration-300"
           >
             {project.title}
           </h3>
@@ -196,7 +196,7 @@ const Portfolio: React.FC = () => {
 
   return (
     <section 
-      id="showcase" 
+      id="portfolio" 
       className="min-h-screen bg-black relative z-20 py-24 text-white overflow-hidden"
       aria-label="Portfolio Showcase"
     >

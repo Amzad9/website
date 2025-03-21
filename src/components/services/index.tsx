@@ -3,6 +3,7 @@ import { InfiniteMovingCardsDemo } from "@/components/Card";
 import { motion } from "framer-motion";
 import { ArrowRight, Check, ChevronRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Services() {
   const fadeIn = {
@@ -280,7 +281,7 @@ export default function Services() {
       </section>
 
       {/* Bottom Section: Contact CTA */}
-      <section id="contact" className="relative z-10 pb-24 pt-10">
+      <section className="relative z-10 pb-24 pt-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -354,7 +355,7 @@ export default function Services() {
               </div>
               
               <div className="w-full max-w-md space-y-4">
-                <a
+                <Link
                   href="#contact"
                   className="w-full px-8 py-4 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center justify-between shadow-lg shadow-primary/20 hover:translate-y-[-2px] group/btn"
                 >
@@ -362,9 +363,9 @@ export default function Services() {
                   <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center transform group-hover/btn:translate-x-1 transition-transform duration-300">
                     <ArrowRight className="w-4 h-4" />
                   </div>
-                </a>
+                </Link>
                 
-                <a
+                <Link
                   href="#portfolio"
                   className="w-full px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all duration-300 flex items-center justify-between hover:border-white/20 hover:translate-y-[-2px] group/btn"
                 >
@@ -372,7 +373,7 @@ export default function Services() {
                   <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center transform group-hover/btn:translate-x-1 transition-transform duration-300">
                     <ArrowRight className="w-4 h-4" />
                   </div>
-                </a>
+                </Link>
               </div>
               
               {/* Features section */}

@@ -11,7 +11,7 @@ const geistSans = Geist({
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden bg-black">
+    <section id="home" className="relative min-h-screen overflow-hidden pt-20 bg-black">
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
       <motion.div 
@@ -44,8 +44,8 @@ const HeroSection = () => {
         <div className="bubble animate-float-slow3 bg-primary/5 w-[200px] h-[200px] rounded-full absolute bottom-20 left-1/4 blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 min-h-screen flex items-center relative z-20">
-        <div className="max-w-5xl mx-auto w-full relative z-30">
+      <div className="md:container mx-auto px-4 md:px-6 min-h-screen flex items-center relative z-20">
+        <div className="max-w-full px-1 md:px-12 text-center justify-center  mx-auto w-full relative z-30">
           {/* Premium Badge */}
           <motion.div 
             initial={{ y: 20, opacity: 0 }}
@@ -54,7 +54,7 @@ const HeroSection = () => {
             className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-xl rounded-full px-4 sm:px-6 py-2 mb-8 sm:mb-12 border border-white/10"
           >
             <span className="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
-            <span className="text-white/80 text-sm font-medium">Premium Digital Solutions</span>
+            <span className="text-white/80 text-sm font-light">Premium Digital Solutions</span>
           </motion.div>
 
           {/* Responsive Heading */}
@@ -62,32 +62,30 @@ const HeroSection = () => {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-poppins mb-6 flex flex-wrap items-center gap-2 sm:gap-3 leading-tight tracking-tight"
+            className="text-4xl sm:text-5xl md:text-7xl font-medium tracking-tight text-white text-center font-inter mb-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3 leading-tight"
           >
-            <span className="text-primary italic bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary transition-all duration-500">
+            <span className="bg-clip-text text-white bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary transition-all duration-500">
               Elevate
             </span>
             <span className="text-white font-medium">your</span>
-            <motion.video
+           
+            <span className="talic bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary transition-all duration-500">
+              impact
+            </span>
+ <motion.video
               autoPlay
               muted
               loop
               playsInline
-              className="h-11 w-24 sm:h-12 sm:w-28 md:h-14 md:w-32 rounded-full object-cover"
+              className="h-11 w-24 sm:h-12 sm:w-28 md:h-14 md:w-32 border-2 border-primary/9 rounded-full object-cover"
               src="/main.mp4"
               aria-hidden="true"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             />
-            <span className="text-primary italic bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary transition-all duration-500">
-              impact
-            </span>
             <span className="text-white font-medium">with our</span>
-            <span className="text-primary italic bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary transition-all duration-500">
-              swift, stunning solutions
-            </span>
-            <motion.video
+ <motion.video
               autoPlay
               muted
               loop
@@ -99,6 +97,10 @@ const HeroSection = () => {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.9 }}
             />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary transition-all duration-500">
+              swift, stunning solutions
+            </span>
+           
           </motion.h1>
 
           {/* Description */}
@@ -106,7 +108,7 @@ const HeroSection = () => {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mt-6 sm:mt-8 mb-12 leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl text-center text-gray-300 mt-6 sm:mt-8 mb-12 leading-relaxed"
           >
             Supercharge your online presence with our lightning-fast,
             high-performance web solutions. Experience seamless design, speed,
@@ -118,12 +120,12 @@ const HeroSection = () => {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-5 sm:gap-7"
+            className="flex flex-col sm:flex-row items-stretch justify-center sm:items-center gap-5 sm:gap-7"
           >
             {/* Primary Button */}
             <Link 
               href="#contact"
-              className="group relative px-8 sm:px-10 py-5 sm:py-5 rounded-full bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary transition-all duration-500"
+              className="group relative px-8 sm:px-10 py-5 sm:py-5 rounded-full bg- hover:to-primary transition-all duration-500"
             >
               <div className="relative flex items-center justify-center gap-3">
                 <span className="text-white text-lg font-medium">Get Started</span>
@@ -135,7 +137,7 @@ const HeroSection = () => {
             {/* Secondary Button */}
             <Link 
               href="/showcase"
-              className="group relative px-8 sm:px-10 py-5 sm:py-5 rounded-full border border-white/10 transition-all duration-300 hover:bg-white/5 backdrop-blur-sm"
+              className="group relative px-8 sm:px-10 py-5 sm:py-5 rounded-full transition-all duration-300 hover:bg-white/5 backdrop-blur-sm"
             >
               <div className="relative flex items-center justify-center gap-3">
                 <span className="text-white/70 text-lg font-medium group-hover:text-white transition-colors duration-300">
@@ -145,27 +147,7 @@ const HeroSection = () => {
               </div>
             </Link>
           </motion.div>
-          
-          {/* Stats Section */}
-          <motion.div 
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-            className="mt-20 flex flex-wrap gap-8 justify-start"
-          >
-            <div className="flex flex-col items-start">
-              <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500">7+</span>
-              <span className="text-gray-400 mt-1">Years Experience</span>
-            </div>
-            <div className="flex flex-col items-start">
-              <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-primary">20+</span>
-              <span className="text-gray-400 mt-1">Projects Completed</span>
-            </div>
-            <div className="flex flex-col items-start">
-              <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500">100%</span>
-              <span className="text-gray-400 mt-1">Client Satisfaction</span>
-            </div>
-          </motion.div>
+       
         </div>
       </div>
 
