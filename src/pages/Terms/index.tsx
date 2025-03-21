@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 const TermsAndConditions = () => {
   return (
-    <div className="min-h-screen bg-black text-white p-8">
+    <div className="min-h-screen bg-black text-white mt-20 p-8">
       <Head>
         <title>Terms and Conditions</title>
         <meta name="description" content="Terms and Conditions for [Your Company Name]" />

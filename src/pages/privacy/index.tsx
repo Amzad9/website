@@ -1,8 +1,13 @@
 import React from 'react'
+import Head from 'next/head';
 
 function index() {
   return (
     <div className="min-h-screen bg-black text-white p-8 mt-20">
+      <Head>
+        <title>Terms and Conditions</title>
+        <meta name="description" content="Terms and Conditions for [Your Company Name]" />
+      </Head>
       <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
       <p className="text-lg mb-4">
         Effective Date: 
