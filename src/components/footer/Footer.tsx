@@ -15,14 +15,10 @@ const SocialMediaList = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative bg-gradient-to-b from-gray-900 via-black to-black text-white pt-16 overflow-hidden">
+    <footer className="relative  bg-black text-white pt-16 overflow-hidden">
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-black to-black"></div>
-        
-        {/* Pattern */}
-        <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
+       
         
         {/* Glowing Effects */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] animate-pulse"></div>

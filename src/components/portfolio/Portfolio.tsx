@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import { motion, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Link from 'next/link';
+import { ExternalLink } from "lucide-react";
 
 // Define project interface
 interface Project {
@@ -11,13 +12,13 @@ interface Project {
   alt: string;
   title: string;
   description: string;
+  technologies?: string[];
 }
 
 const Portfolio: React.FC = () => {
-  // const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.1,
   });
 
   const projects: Project[] = useMemo(
@@ -28,7 +29,8 @@ const Portfolio: React.FC = () => {
         alt: "Mobile App Design Interface",
         title: "Mobile App Design",
         description: "Modern fitness tracking app with intuitive user interface and seamless experience",
-        url: 'https://www.figma.com/design/18EsoTdBNiupd8YqHtu1rn/Mizaan?node-id=0-1&p=f&t=nWWwFNjxeSsMFCP7-0'
+        url: 'https://www.figma.com/design/18EsoTdBNiupd8YqHtu1rn/Mizaan?node-id=0-1&p=f&t=nWWwFNjxeSsMFCP7-0',
+        technologies: ['React Native', 'Figma', 'Typescript']
       },
       {
         id: 2,
@@ -36,7 +38,8 @@ const Portfolio: React.FC = () => {
         alt: "Website Design Interface",
         title: "Website Design",
         description: "Professional website design with modern aesthetics and responsive layout",
-        url: 'https://www.figma.com/design/eS6sjVE0zUGVAHamxB5MyS/Untitled?node-id=0-1&p=f&t=vyLjEkfMgqqTAZYZ-0'
+        url: 'https://www.figma.com/design/eS6sjVE0zUGVAHamxB5MyS/Untitled?node-id=0-1&p=f&t=vyLjEkfMgqqTAZYZ-0',
+        technologies: ['Figma', 'HTML/CSS', 'JavaScript']
       },
       {
         id: 3,
@@ -44,7 +47,8 @@ const Portfolio: React.FC = () => {
         alt: "Hospital Mobile App Design",
         title: "Mobile App Design Hospital",
         description: "Healthcare management app focusing on patient care and medical services",
-        url: 'https://www.figma.com/design/yrwieRkdbTcBMFSoQNgxJz/Referral-Labs?node-id=12-2&p=f&t=l5Lldb0z4ivtTY8V-0'
+        url: 'https://www.figma.com/design/yrwieRkdbTcBMFSoQNgxJz/Referral-Labs?node-id=12-2&p=f&t=l5Lldb0z4ivtTY8V-0',
+        technologies: ['React Native', 'Firebase', 'Node.js']
       },
       {
         id: 4,
@@ -52,7 +56,8 @@ const Portfolio: React.FC = () => {
         alt: "Grocity Mobile App Design",
         title: "Grocity Mobile App Design",
         description: "Grocery shopping app with seamless ordering and delivery experience",
-        url: 'https://www.figma.com/design/nHmjOBQpL5V64wv9Kx7LRs/Tharkarre?node-id=0-1&p=f&t=8QPgzQawja3U3U71-0'
+        url: 'https://www.figma.com/design/nHmjOBQpL5V64wv9Kx7LRs/Tharkarre?node-id=0-1&p=f&t=8QPgzQawja3U3U71-0',
+        technologies: ['Flutter', 'Dart', 'Firebase']
       },
     ],
     []
@@ -64,20 +69,20 @@ const Portfolio: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.15,
         delayChildren: 0.1,
       },
     },
   };
 
   const itemVariants: Variants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
         type: "spring",
-        damping: 20,
+        damping: 25,
         stiffness: 100,
         mass: 0.5,
       },
@@ -85,15 +90,29 @@ const Portfolio: React.FC = () => {
   };
 
   const imageVariants: Variants = {
-    hidden: { scale: 1.1, opacity: 0 },
+    hidden: { scale: 1.05, opacity: 0 },
     visible: {
       scale: 1,
       opacity: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.7,
         ease: "easeOut",
       },
     },
+  };
+
+  // Animation variants for the heading text (like in Contact component)
+  const headingVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.15,
+        duration: 0.8,
+        ease: [0.215, 0.61, 0.355, 1]
+      }
+    })
   };
 
   interface ProjectItemProps {
@@ -104,7 +123,7 @@ const Portfolio: React.FC = () => {
   const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => (
     <motion.div
       variants={itemVariants}
-      className="relative bg-gray-900 rounded-xl overflow-hidden shadow-lg will-change-transform group"
+      className="relative rounded-xl overflow-hidden shadow-xl will-change-transform group h-full"
       style={{ transformPerspective: 1000 }}
       role="article"
       aria-labelledby={`project-title-${project.id}`}
@@ -113,68 +132,61 @@ const Portfolio: React.FC = () => {
         href={project.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="block"
+        className="block h-full bg-gradient-to-b from-gray-900 to-black"
       >
-        <motion.img
-          src={project.src}
-          alt={project.alt}
-          variants={imageVariants}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-          loading="lazy"
-          decoding="async"
-          width="600"
-          height="400"
-        />
+        <motion.div className="relative h-64 overflow-hidden">
+          <motion.img
+            src={project.src}
+            alt={project.alt}
+            variants={imageVariants}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            loading="lazy"
+            decoding="async"
+            width="600"
+            height="400"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+        </motion.div>
         
-        {/* Content overlay - Hidden by default, visible on hover */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-gray-900/95 to-gray-900/90 opacity-0 group-hover:opacity-100 transition-all duration-500">
-          {/* Subtle pattern overlay */}
-          <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-0 group-hover:opacity-5"></div>
-          
-          {/* Gradient accents */}
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-br from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100"></div>
-            <div className="absolute bottom-0 right-0 w-1/2 h-full bg-gradient-to-tl from-blue-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100"></div>
-          </div>
-
-          {/* Content Container */}
-          <div className="absolute inset-0 flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-all duration-500">
-            {/* Link Icon */}
-            <div className="absolute top-4 right-4 bg-white/10 p-2 rounded-full backdrop-blur-md transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-200">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </div>
-            
-            {/* Title */}
-            <h3 
-              id={`project-title-${project.id}`} 
-              className="text-3xl font-bold mb-3 text-white font-poppins transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500"
-            >
-              {project.title}
-            </h3>
-            
-            {/* Description */}
-            <p className="text-base text-gray-300 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
-              {project.description}
-            </p>
-            
-            {/* Button */}
-            <div className="mt-6 transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-200">
-              <span className="relative inline-flex group/button">
-                <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary via-blue-500 to-primary blur-md opacity-75 group-hover/button:opacity-100 animate-gradient-x"></span>
-                <span className="relative flex items-center gap-2 px-6 py-3 bg-black/50 rounded-xl backdrop-blur-sm border border-white/10 group-hover/button:border-white/20 transition-all duration-300">
-                  <span className="text-white font-medium">View Project</span>
-                  <svg 
-                    className="w-5 h-5 text-white transform group-hover/button:translate-x-1 transition-transform duration-300"
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                  </svg>
+        {/* Content */}
+        <div className="p-6 relative bg-gradient-to-b from-gray-900 to-black border-t border-white/5">
+          {/* Technologies tags */}
+          {project.technologies && (
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.technologies.map((tech, i) => (
+                <span 
+                  key={i} 
+                  className="text-xs px-2 py-1 rounded-full bg-white/5 text-gray-300 border border-white/10 font-light"
+                >
+                  {tech}
                 </span>
-              </span>
+              ))}
+            </div>
+          )}
+          
+          {/* Title */}
+          <h3 
+            id={`project-title-${project.id}`} 
+            className="text-3xl font-light mb-3 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-blue-500 transition-all duration-300"
+          >
+            {project.title}
+          </h3>
+          
+          {/* Description */}
+          <p className="text-base text-gray-300 mb-5">
+            {project.description}
+          </p>
+          
+          {/* View Button */}
+          <div className="flex items-center justify-between mt-auto">
+            <span className="text-primary group-hover:text-blue-400 transition-colors duration-300 font-light flex items-center gap-1">
+              View Project 
+              <ExternalLink className="w-4 h-4 inline-block transform group-hover:translate-x-1 transition-transform duration-300" />
+            </span>
+            
+            {/* Visual indicator */}
+            <div className="h-8 w-8 rounded-full flex items-center justify-center bg-white/5 group-hover:bg-primary/20 transition-colors duration-300">
+              <div className="h-2 w-2 rounded-full bg-primary transform scale-100 group-hover:scale-150 transition-transform duration-300"></div>
             </div>
           </div>
         </div>
@@ -185,94 +197,187 @@ const Portfolio: React.FC = () => {
   return (
     <section 
       id="showcase" 
-      className="min-h-screen bg-gradient-to-b from-black to-gray-900 relative z-20 p-6 pb-10 text-white"
+      className="min-h-screen bg-black relative z-20 py-24 text-white overflow-hidden"
       aria-label="Portfolio Showcase"
     >
-      {/* Adding the pattern and abstract shapes */}
-      <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10 animate-pulse"></div>
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
-      </div>
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className="absolute inset-0"
+      >
+        <div className="absolute top-20 left-20 w-96 h-96 bg-primary/5 rounded-full blur-[150px]"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/5 rounded-full blur-[150px]"></div>
+      </motion.div>
 
       <motion.div
         ref={ref}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={containerVariants}
-        className="max-w-7xl mx-auto relative z-10"
+        className="max-w-7xl mx-auto relative z-10 px-6"
       >
-        {/* Enhanced Heading Section */}
-        <motion.div className="text-center mb-12" variants={itemVariants}>
-          <h2 className="text-5xl md:text-6xl relative z-10 font-light mb-6 font-poppins">
-            Showcase of{" "}
-            <span className="relative">
-              <span className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-500 blur-lg opacity-50"></span>
-              <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500 italic">
-                Innovation
-              </span>
+        {/* Enhanced Heading Section like in Contact component */}
+        <div className="text-center mb-12 md:mb-20 relative">
+          {/* Enhanced Top Accent */}
+          <div className="inline-flex items-center gap-2 sm:gap-4 mb-6 sm:mb-8">
+            <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-r from-transparent to-primary"></div>
+            <span className="px-3 sm:px-5 py-1.5 sm:py-2 rounded-full bg-white/5 text-primary font-light tracking-wider text-xs sm:text-sm uppercase border border-white/10 shadow-lg shadow-primary/10">
+              Our Portfolio
             </span>
-          </h2>
+            <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-l from-transparent to-primary"></div>
+          </div>
+          
+          {/* Enhanced 3D Main Heading with Advanced Animations */}
+          <div className="relative py-4 md:py-8">
+            {/* Multiple layered glows for depth */}
+            <div className="absolute -inset-x-4 -inset-y-8 bg-gradient-to-r from-primary/10 via-blue-500/5 to-primary/10 rounded-full blur-3xl"></div>
+            <div className="absolute -inset-x-4 -inset-y-12 bg-gradient-to-br from-transparent via-blue-800/5 to-primary/5 rounded-full blur-2xl animate-pulse-slow opacity-70"></div>
+            
+            {/* Decorative elements */}
+            <div className="absolute -top-4 left-1/4 w-2 h-2 bg-primary rounded-full opacity-80 animate-float"></div>
+            <div className="absolute -bottom-2 right-1/4 w-3 h-3 bg-blue-400 rounded-full opacity-70 animate-float-delayed"></div>
+            <div className="absolute top-1/2 right-[15%] w-1.5 h-1.5 bg-purple-400 rounded-full opacity-60 animate-float-slow"></div>
+            
+            {/* The heading itself */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 relative">
+              {/* Word 1: "Showcase" */}
+              <motion.div
+                custom={0}
+                initial="hidden"
+                animate="visible"
+                variants={headingVariants}
+                className="relative group"
+              >
+                <span className="text-4xl md:text-6xl lg:text-7xl font-light text-gray-100 font-poppins tracking-tight relative inline-block">
+                  Showcase
+                  {/* Bottom shine effect */}
+                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></span>
+                </span>
+              </motion.div>
+              
+              {/* Word 2: "of" */}
+              <motion.div
+                custom={1}
+                initial="hidden"
+                animate="visible"
+                variants={headingVariants}
+                className="relative group"
+              >
+                <span className="text-4xl md:text-6xl lg:text-7xl font-light text-gray-100 font-poppins tracking-tight relative inline-block">
+                  of
+                  {/* Bottom shine effect */}
+                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></span>
+                </span>
+              </motion.div>
+              
+              {/* Word 3: "Innovation" with special treatment */}
+              <motion.div
+                custom={2}
+                initial="hidden"
+                animate="visible"
+                variants={headingVariants}
+                className="relative group"
+              >
+                <span className="relative">
+                  {/* 3D Depth Shadow */}
+                  <span className="absolute -inset-1 text-4xl md:text-6xl lg:text-7xl font-poppins tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary/30 to-blue-600/30 blur-[2px] italic transform translate-y-[0.15em] translate-x-[0.05em] select-none">
+                    Innovation
+                  </span>
+                  
+                  {/* Main text with animated gradient */}
+                  <span className="text-4xl md:text-6xl lg:text-7xl font-light font-poppins tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary italic bg-[length:200%_auto] animate-gradient-x relative inline-block">
+                    Innovation
+                  </span>
+                  
+                  {/* Enhanced underline with animated glow */}
+                  <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gradient-to-r from-primary/70 via-blue-400/70 to-primary/70 rounded-full transform origin-left group-hover:scale-x-110 transition-transform duration-500"></span>
+                  <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gradient-to-r from-primary via-blue-400 to-primary rounded-full opacity-70 blur-[2px] animate-pulse-slow"></span>
+                </span>
+              </motion.div>
+              
+              {/* Word 4: "Here" */}
+              <motion.div
+                custom={3}
+                initial="hidden"
+                animate="visible"
+                variants={headingVariants}
+                className="relative group"
+              >
+                <span className="text-4xl md:text-6xl lg:text-7xl font-light text-gray-100 font-poppins tracking-tight relative inline-block">
+                  Here
+                  {/* Bottom shine effect */}
+                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></span>
+                </span>
+              </motion.div>
+            </div>
+          </div>
 
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto font-poppins animate-fade-in">
-            A curated showcase of my creative expertise and professional projects, demonstrating innovation, precision, and impact-driven design
-          </p>
-        </motion.div>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+            className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed px-2 relative mt-6"
+          >
+            A curated showcase of our creative expertise and professional projects
+          </motion.p>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* First row: 3 portfolios */}
           {projects.slice(0, 3).map((project, index) => (
             <ProjectItem key={project.id} project={project} index={index} />
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Second row: 1 portfolio + browse button */}
-          {projects.slice(3, 4).map((project, index) => (
-            <ProjectItem key={project.id} project={project} index={index} />
-          ))}
+          <div className="md:col-span-1">
+            {projects.slice(3, 4).map((project, index) => (
+              <ProjectItem key={project.id} project={project} index={index + 3} />
+            ))}
+          </div>
           
-          {/* Attractive Browse Button Card */}
+          {/* Attractive Browse Button Card with improved design */}
           <motion.div
             variants={itemVariants}
-            className="relative bg-gradient-to-br from-primary/10 to-blue-500/10 rounded-xl overflow-hidden shadow-lg will-change-transform group"
+            className="relative bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden shadow-xl will-change-transform group md:col-span-2"
             style={{ transformPerspective: 1000 }}
           >
             <Link 
               href='/showcase'
-              className="h-full w-full flex flex-col items-center justify-center p-8 relative"
+              className="h-full w-full flex flex-col items-center justify-center p-16 relative"
             >
               {/* Background Effects */}
-              <div className="absolute inset-0 bg-gray-900/50 backdrop-blur-sm"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-blue-500/5 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
               <div className="absolute top-10 left-10 w-32 h-32 bg-primary/20 rounded-full blur-2xl animate-pulse"></div>
               <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
               
               {/* Content */}
-              <div className="relative z-10 flex flex-col items-center space-y-6">
+              <div className="relative z-10 flex flex-col items-center text-center space-y-8">
                 <div className="text-6xl mb-4">🎨</div>
-                <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500 font-poppins">
-                  Discover More
+                <h3 className="text-5xl font-light text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500 font-poppins">
+                  Discover Our Full Portfolio
                 </h3>
-                <p className="text-lg text-gray-300 text-center font-poppins">
-                  Explore our complete portfolio of innovative designs
+                <p className="text-2xl font-light text-gray-300 max-w-md">
+                  Explore our complete collection of innovative designs and successful projects
                 </p>
-                <span className="mt-6 px-8 py-3 border-2 border-primary rounded-full text-primary hover:bg-primary hover:text-white transform hover:scale-105 transition-all duration-300 font-poppins">
+                <span className="mt-6 px-10 py-4 rounded-full border-2 border-white/10 bg-black/40 backdrop-blur-sm text-white hover:text-primary hover:border-primary transition-all duration-300 font-light flex items-center gap-2 group-hover:border-primary/50">
                   View All Projects
+                  <ExternalLink className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
               </div>
-
-              {/* Hover Effect Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
           </motion.div>
         </div>
-
       </motion.div>
     </section>
   );
 };
 
-// Add display name for better debugging
 Portfolio.displayName = 'Portfolio';
 
 export default React.memo(Portfolio);

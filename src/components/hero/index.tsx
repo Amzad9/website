@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Geist } from "next/font/google";
 import Link from 'next/link';
+import { ArrowRight } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,13 +11,31 @@ const geistSans = Geist({
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10 animate-pulse"></div>
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
-      </div>
+    <section id="home" className="relative min-h-screen overflow-hidden bg-black">
+      {/* Enhanced Background Effects */}
+      <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className="absolute inset-0"
+      >
+        <div className="absolute top-32 left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-32 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]"></div>
+        <motion.div 
+          animate={{ 
+            scale: [1, 1.05, 1],
+            opacity: [0.4, 0.5, 0.4],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut"
+          }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-full blur-[150px]"
+        ></motion.div>
+      </motion.div>
 
       {/* Animated Bubbles */}
       <div className="absolute inset-0 overflow-hidden">
@@ -25,17 +44,26 @@ const HeroSection = () => {
         <div className="bubble animate-float-slow3 bg-primary/5 w-[200px] h-[200px] rounded-full absolute bottom-20 left-1/4 blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 min-h-screen flex items-center relative z-20">
-        {/* Content Container with Max Width */}
+      <div className="container mx-auto px-4 md:px-6 min-h-screen flex items-center relative z-20">
         <div className="max-w-5xl mx-auto w-full relative z-30">
           {/* Premium Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-xl rounded-full px-4 sm:px-6 py-2 mb-8 sm:mb-12 border border-white/10">
+          <motion.div 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-xl rounded-full px-4 sm:px-6 py-2 mb-8 sm:mb-12 border border-white/10"
+          >
             <span className="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
             <span className="text-white/80 text-sm font-medium">Premium Digital Solutions</span>
-          </div>
+          </motion.div>
 
           {/* Responsive Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins mb-6 flex items-center flex-wrap gap-2 sm:gap-3">
+          <motion.h1 
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-poppins mb-6 flex flex-wrap items-center gap-2 sm:gap-3 leading-tight tracking-tight"
+          >
             <span className="text-primary italic bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary transition-all duration-500">
               Elevate
             </span>
@@ -45,9 +73,12 @@ const HeroSection = () => {
               muted
               loop
               playsInline
-              className="h-10 w-24 sm:h-12 sm:w-28 md:h-14 md:w-32 rounded-full object-cover"
+              className="h-11 w-24 sm:h-12 sm:w-28 md:h-14 md:w-32 rounded-full object-cover"
               src="/main.mp4"
               aria-hidden="true"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
             />
             <span className="text-primary italic bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary transition-all duration-500">
               impact
@@ -61,61 +92,80 @@ const HeroSection = () => {
               muted
               loop
               playsInline
-              className="h-10 w-24 sm:h-12 sm:w-28 md:h-14 md:w-32 rounded-full object-cover"
+              className="h-11 w-24 sm:h-12 sm:w-28 md:h-14 md:w-32 rounded-full object-cover"
               src="/swift.mp4"
               aria-hidden="true"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
             />
-          </h1>
+          </motion.h1>
 
           {/* Description */}
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mt-6 sm:mt-8 mb-8 sm:mb-12 leading-relaxed">
+          <motion.p 
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mt-6 sm:mt-8 mb-12 leading-relaxed"
+          >
             Supercharge your online presence with our lightning-fast,
             high-performance web solutions. Experience seamless design, speed,
             and innovation like never before.
-          </p>
+          </motion.p>
 
           {/* Responsive Buttons */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6">
-            {/* Primary Button - Clean Dark */}
+          <motion.div 
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-5 sm:gap-7"
+          >
+            {/* Primary Button */}
             <Link 
               href="#contact"
-              className="group relative px-8 sm:px-10 py-4 sm:py-5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/20"
+              className="group relative px-8 sm:px-10 py-5 sm:py-5 rounded-full bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary transition-all duration-500"
             >
               <div className="relative flex items-center justify-center gap-3">
                 <span className="text-white text-lg font-medium">Get Started</span>
-                <svg 
-                  className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300 text-white/70" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
+                <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300 text-white" />
+                <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-1000"></div>
               </div>
             </Link>
 
-            {/* Secondary Button - Clean Dark */}
+            {/* Secondary Button */}
             <Link 
               href="/showcase"
-              className="group relative px-8 sm:px-10 py-4 sm:py-5 rounded-full border border-white/10 transition-all duration-300 hover:bg-white/5"
+              className="group relative px-8 sm:px-10 py-5 sm:py-5 rounded-full border border-white/10 transition-all duration-300 hover:bg-white/5 backdrop-blur-sm"
             >
               <div className="relative flex items-center justify-center gap-3">
-                <span className="text-white/70 text-lg font-medium">
+                <span className="text-white/70 text-lg font-medium group-hover:text-white transition-colors duration-300">
                   View Projects
                 </span>
-                <svg 
-                  className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300 text-white/50" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300 text-white/50 group-hover:text-white/80" />
               </div>
             </Link>
-          </div>
+          </motion.div>
+          
+          {/* Stats Section */}
+          <motion.div 
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="mt-20 flex flex-wrap gap-8 justify-start"
+          >
+            <div className="flex flex-col items-start">
+              <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500">7+</span>
+              <span className="text-gray-400 mt-1">Years Experience</span>
+            </div>
+            <div className="flex flex-col items-start">
+              <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-primary">20+</span>
+              <span className="text-gray-400 mt-1">Projects Completed</span>
+            </div>
+            <div className="flex flex-col items-start">
+              <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500">100%</span>
+              <span className="text-gray-400 mt-1">Client Satisfaction</span>
+            </div>
+          </motion.div>
         </div>
       </div>
 
