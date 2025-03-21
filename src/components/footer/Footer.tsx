@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Quick Links Section */}
-          <nav className="col-span-12 md:col-span-3 relative">
+          <nav className="col-span-12 md:col-span-2 relative">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-blue-500/5 to-transparent rounded-xl blur-xl"></div>
             <div className="relative">
               <h2 className="text-xl font-bold text-white mb-8 relative">
@@ -100,7 +100,31 @@ const Footer: React.FC = () => {
                 <span className="absolute -bottom-3 left-0 w-16 h-[3px] bg-gradient-to-r from-primary to-primary/50 rounded-full"></span>
                 </h2>
               <ul className="space-y-4">
-                {['Home', 'About Us', 'Service', 'Showcase'].map((item) => (
+                {['Web Development', 'App Development', 'UI/UX Design', 'E-commerce'].map((item) => (
+                  <li key={item}>
+                    <a
+                      href={`#${item.toLowerCase().replace(' ', '')}`}
+                      className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-2 group"
+                    >
+                      <span className="w-2 h-2 bg-primary rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </nav>
+
+ {/* Solution Links Section */}
+          <nav className="col-span-12 md:col-span-2 relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-blue-500/5 to-transparent rounded-xl blur-xl"></div>
+            <div className="relative">
+              <h2 className="text-xl font-bold text-white mb-8 relative">
+                Our Solution
+                <span className="absolute -bottom-3 left-0 w-16 h-[3px] bg-gradient-to-r from-primary to-primary/50 rounded-full"></span>
+                </h2>
+              <ul className="space-y-4">
+                {['Web Development', 'App Development', 'UI/UX Design', 'E-commerce'].map((item) => (
                   <li key={item}>
                     <a
                       href={`#${item.toLowerCase().replace(' ', '')}`}
@@ -116,28 +140,42 @@ const Footer: React.FC = () => {
           </nav>
 
           {/* Contact Section */}
-          <div className="col-span-12 md:col-span-3">
+          <div className="col-span-12 md:col-span-2">
             <h2 className="text-xl font-bold text-white mb-8 relative">
-              Contact Us
+              Legal
               <span className="absolute -bottom-3 left-0 w-16 h-[3px] bg-gradient-to-r from-primary to-primary/50 rounded-full"></span>
             </h2>
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="mailto:hello@weblibron.com"
+                  href="/aboutus" target="_blank"
                   className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-3"
                 >
-                  <span className="material-icons text-primary">email</span>
-                  hello@weblibron.com
+                  About Us
+                </Link>
+              </li>
+               <li>
+                <Link
+                  href="/contactus" target="_blank"
+                  className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-3"
+                >
+                  Contact us
                 </Link>
               </li>
               <li>
                 <Link
-                  href="tel:+918178614811"
+                  href="/privacy" target="_blank"
                   className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-3"
                 >
-                  <span className="material-icons text-primary">phone</span>
-                  +91 8178 61 4811
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms" target="_blank"
+                  className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-3"
+                >
+                  Terms & Conditions
                 </Link>
               </li>
             </ul>
@@ -149,7 +187,7 @@ const Footer: React.FC = () => {
               Location
               <span className="absolute -bottom-3 left-0 w-16 h-[3px] bg-gradient-to-r from-primary to-primary/50 rounded-full"></span>
             </h2>
-            <address className="not-italic space-y-8">
+            <address className="not-italic space-y-4">
               <div className="transform hover:translate-x-2 transition-transform duration-300">
                 <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                   <span className="material-icons text-primary text-xl">location_on</span>

@@ -200,7 +200,7 @@ export default function Services() {
                     <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gradient-to-r from-primary/70 via-blue-400/70 to-primary/70 rounded-full transform origin-left group-hover:scale-x-110 transition-transform duration-500"></span>
                     <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gradient-to-r from-primary via-blue-400 to-primary rounded-full opacity-70 blur-[2px] animate-pulse-slow"></span>
                   </span>
-                  Solutions
+                  Services
                 </h1>
               </div>
             </div>
@@ -217,7 +217,7 @@ export default function Services() {
       </section>
 
       {/* Services Grid Section */}
-      <section id="services" className="relative z-10 pb-16 md:py-24">
+      <section id="services" className="relative z-10 pb-16 md:pb-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             variants={staggerContainer}
