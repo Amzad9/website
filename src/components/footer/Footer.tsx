@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
                 className="filter brightness-110"
               />
             </Link>
-            <p className="text-gray-300 mt-6 leading-relaxed font-light">
+            <p className="text-gray-300 mt-6 leading-relaxed font-light w-[50%] md:w-[100%]">
               At Weblibron, we strive to create innovative web and app solutions that meet your needs. Your success is our priority.
             </p>
             
