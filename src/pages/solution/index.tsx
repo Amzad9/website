@@ -19,7 +19,7 @@ const SolutionPage = () => {
                 "E-commerce Solutions",
                 "Web Application Security"
             ],
-            image: ""
+            image: "/p1.png"
         },
         {
             title: "App Development",
@@ -35,7 +35,7 @@ const SolutionPage = () => {
                 "App Maintenance & Support",
                 "Cloud Integration"
             ],
-            image: "/public/images/p1.png"
+            image: "/p2.png"
         },
         {
             title: "UI/UX Design",
@@ -51,7 +51,7 @@ const SolutionPage = () => {
                 "Design Systems",
                 "Accessibility Design"
             ],
-            image: "/public/images/p1.png"
+            image: "/p3.png"
         },
         {
             title: "E-commerce Solutions",
@@ -67,7 +67,7 @@ const SolutionPage = () => {
                 "Payment Gateway Integration",
                 "Analytics & Reporting Tools"
             ],
-            image: "/public/images/p1.png"
+            image: "/p5.png"
         },
     ];
 
@@ -169,15 +169,14 @@ const SolutionPage = () => {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <Image
-                        src="/images/services-banner.jpg"
+                        src="/p2.png"
                         alt="Services Banner"
                         fill
                         className="object-cover"
                         priority
                     />
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-black/70"></div>
-                </div>
+<div className="absolute inset-0 bg-gradient-to-b from-black  to-black opacity-90"></div>                </div>
 
                 {/* Content */}
                 <div className="relative h-full flex items-center">
