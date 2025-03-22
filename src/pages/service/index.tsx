@@ -3,9 +3,24 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import ServiceIllustration from '@/components/illustrations/ServiceIllustration';
+import SeoHead from '@/components/seo/SeoHead';
+
+type ServiceType = 'web' | 'app' | 'design' | 'ecommerce';
+
+interface Service {
+    title: string;
+    subtitle: string;
+    description: string;
+    gradientFrom: string;
+    gradientTo: string;
+    imagePosition: 'left' | 'right';
+    features: string[];
+    illustrationType: ServiceType;
+}
 
 function Web() {
-    const services = [
+    const services: Service[] = [
         {
             title: "Web Development",
             subtitle: "Modern & Responsive Solutions",
@@ -20,7 +35,7 @@ function Web() {
                 "E-commerce Solutions",
                 "Web Application Security"
             ],
-            image: "/p1.png"
+            illustrationType: "web"
         },
         {
             title: "App Development",
@@ -36,7 +51,7 @@ function Web() {
                 "App Maintenance & Support",
                 "Cloud Integration"
             ],
-            image: "/p2.png"
+            illustrationType: "app"
         },
         {
             title: "UI/UX Design",
@@ -52,7 +67,7 @@ function Web() {
                 "Design Systems",
                 "Accessibility Design"
             ],
-            image: "/p3.png"
+            illustrationType: "design"
         },
         {
             title: "E-commerce Solutions",
@@ -68,7 +83,7 @@ function Web() {
                 "Payment Gateway Integration",
                 "Analytics & Reporting Tools"
             ],
-            image: "/p5.png"
+            illustrationType: "ecommerce"
         },
     ];
 
@@ -85,6 +100,14 @@ function Web() {
 
     return (
         <div className="bg-black min-h-screen">
+            <SeoHead
+                title="Professional Digital Services | Web Development, Mobile Apps & UI/UX Design in Bangladesh"
+                description="Expert digital services including web development, mobile apps, UI/UX design, and e-commerce solutions in Bangladesh. Transform your business with our professional services. Get affordable and high-quality digital solutions."
+                keywords="web development services, mobile app development, UI/UX design, e-commerce solutions, digital services, Bangladesh, professional web development, custom website development, responsive web design, mobile app development company, UI/UX design agency, e-commerce development services, affordable web development, best web development company in Bangladesh, professional digital agency, Bangladesh IT company, web development cost in Bangladesh, mobile app development cost, UI/UX design cost, e-commerce website cost"
+                ogImage="/p5.png"
+                canonicalUrl="https://yourwebsite.com/service"
+            />
+
             {/* Hero Banner Section */}
             <section className="relative h-[60vh] min-h-[500px] w-full overflow-hidden">
                 {/* Background Image */}
@@ -93,11 +116,11 @@ function Web() {
                         src="/p5.png"
                         alt="Services Banner"
                         fill
-                        className="object-cover"
+                        className="object-cover brightness-50"
                         priority
                     />
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-black  to-black opacity-90"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90"></div>
                 </div>
 
                 {/* Content */}
@@ -153,13 +176,8 @@ function Web() {
                                     {item.imagePosition === 'left' ? (
                                         <>
                                             <div className="w-full md:w-1/2 text-center mb-8 md:mb-0">
-                                                <div className="relative h-[400px] w-full rounded-xl overflow-hidden">
-                                                    <Image 
-                                                        src={item.image} 
-                                                        alt={item.title}
-                                                        fill
-                                                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                                    />
+                                                <div className="relative h-[400px] w-full rounded-xl overflow-hidden bg-black/50 p-8">
+                                                    <ServiceIllustration type={item.illustrationType} className="w-full h-full" />
                                                 </div>
                                             </div>
                                             <div className="w-full md:w-1/2 space-y-6 md:ps-5">
@@ -216,13 +234,8 @@ function Web() {
                                                 </div>
                                             </div>
                                             <div className="w-full md:w-1/2 text-center">
-                                                <div className="relative h-[400px] w-full rounded-xl overflow-hidden">
-                                                    <Image 
-                                                        src={item.image} 
-                                                        alt={item.title}
-                                                        fill
-                                                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                                    />
+                                                <div className="relative h-[400px] w-full rounded-xl overflow-hidden bg-black/50 p-8">
+                                                    <ServiceIllustration type={item.illustrationType} className="w-full h-full" />
                                                 </div>
                                             </div>
                                         </>
