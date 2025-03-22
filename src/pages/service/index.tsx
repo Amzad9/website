@@ -98,6 +98,19 @@ function Web() {
         }
     };
 
+    const headingVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: (i: number) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: i * 0.15,
+                duration: 0.8,
+                ease: [0.215, 0.61, 0.355, 1]
+            }
+        })
+    };
+
     return (
         <div className="bg-black min-h-screen">
             <SeoHead
@@ -105,7 +118,7 @@ function Web() {
                 description="Expert digital services including web development, mobile apps, UI/UX design, and e-commerce solutions in Bangladesh. Transform your business with our professional services. Get affordable and high-quality digital solutions."
                 keywords="web development services, mobile app development, UI/UX design, e-commerce solutions, digital services, Bangladesh, professional web development, custom website development, responsive web design, mobile app development company, UI/UX design agency, e-commerce development services, affordable web development, best web development company in Bangladesh, professional digital agency, Bangladesh IT company, web development cost in Bangladesh, mobile app development cost, UI/UX design cost, e-commerce website cost"
                 ogImage="/p5.png"
-                canonicalUrl="https://yourwebsite.com/service"
+                canonicalUrl="https://weblibron.com/service"
             />
 
             {/* Hero Banner Section */}
@@ -120,7 +133,7 @@ function Web() {
                         priority
                     />
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90"></div>
+                     <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-black"></div>
                 </div>
 
                 {/* Content */}
@@ -132,18 +145,74 @@ function Web() {
                             variants={fadeIn}
                             className="max-w-4xl mx-auto text-center"
                         >
-                        
+                            {/* Enhanced Top Accent */}
                             
-                            <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-white leading-tight mb-6">
-                                Premium Digital Services
-                            </h1>
                             
-                            <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
+                            {/* Enhanced 3D Main Heading */}
+                            <div className="relative py-4 md:py-8">
+                                {/* Multiple layered glows for depth */}
+                                <div className="absolute -inset-x-4 -inset-y-8 bg-gradient-to-r from-primary/10 via-blue-500/5 to-primary/10 rounded-full blur-3xl"></div>
+                                <div className="absolute -inset-x-4 -inset-y-12 bg-gradient-to-br from-transparent via-blue-800/5 to-primary/5 rounded-full blur-2xl animate-pulse-slow opacity-70"></div>
+                                
+                                {/* Decorative elements */}
+                                <div className="absolute -top-4 left-1/4 w-2 h-2 bg-primary rounded-full opacity-80 animate-float"></div>
+                                <div className="absolute -bottom-2 right-1/4 w-3 h-3 bg-blue-400 rounded-full opacity-70 animate-float-delayed"></div>
+                                <div className="absolute top-1/2 right-[15%] w-1.5 h-1.5 bg-purple-400 rounded-full opacity-60 animate-float-slow"></div>
+                                
+                                {/* The heading itself */}
+                                <div className="flex flex-row flex-wrap md:flex-row items-center justify-center gap-3 md:gap-4 relative">
+                                    {/* Word 1: "Digital" */}
+                                    <motion.div
+                                        custom={0}
+                                        initial="hidden"
+                                        animate="visible"
+                                        variants={headingVariants}
+                                        className="relative group"
+                                    >
+                                        <span className="text-4xl md:text-6xl lg:text-7xl font-light text-gray-100 font-poppins tracking-tight relative inline-block">
+                                            Digital
+                                            <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></span>
+                                        </span>
+                                    </motion.div>
+                                    
+                                    {/* Word 2: "Solutions" with special treatment */}
+                                    <motion.div
+                                        custom={1}
+                                        initial="hidden"
+                                        animate="visible"
+                                        variants={headingVariants}
+                                        className="relative group"
+                                    >
+                                        <span className="relative">
+                                            {/* 3D Depth Shadow */}
+                                            <span className="absolute -inset-1 text-4xl md:text-6xl lg:text-7xl font-poppins tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-primary/30 to-blue-600/30 blur-[2px] italic transform translate-y-[0.15em] translate-x-[0.05em] select-none">
+                                                Services
+                                            </span>
+                                            
+                                            {/* Main text with animated gradient */}
+                                            <span className="text-4xl md:text-6xl lg:text-7xl font-light font-poppins tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary italic bg-[length:200%_auto] animate-gradient-x relative inline-block">
+                                                Services
+                                            </span>
+                                            
+                                            {/* Enhanced underline with animated glow */}
+                                            <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gradient-to-r from-primary/70 via-blue-400/70 to-primary/70 rounded-full transform origin-left group-hover:scale-x-110 transition-transform duration-500"></span>
+                                            <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gradient-to-r from-primary via-blue-400 to-primary rounded-full opacity-70 blur-[2px] animate-pulse-slow"></span>
+                                        </span>
+                                    </motion.div>
+                                </div>
+                            </div>
+
+                            <motion.p 
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.8, duration: 0.6 }}
+                                className="text-lg text-gray-300 max-w-3xl mx-auto mb-8"
+                            >
                                 We deliver cutting-edge digital solutions that transform businesses and drive growth through innovation and expertise.
-                            </p>
+                            </motion.p>
 
                             <div className="flex flex-wrap justify-center gap-4">
-                               <Link className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/20 hover:translate-y-[-2px]" href={'/solution'}>
+                                <Link className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/20 hover:translate-y-[-2px]" href={'/solution'}>
                                     <span>Explore Solution</span>
                                     <ArrowRight className="w-4 h-4" />
                                 </Link>

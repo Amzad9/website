@@ -1,9 +1,7 @@
 import React from "react";
 import dynamic from 'next/dynamic';
 import { motion } from "framer-motion";
-import { Star, Quote, Users, Code2, Palette, Rocket, Target, Heart, Award, Globe, Clock, Shield, Sparkles, Lightbulb, Zap } from "lucide-react";
 import Head from "next/head";
-// Dynamically import components
 const AboutUs = dynamic(() => import("@/components/about/About"), { ssr: false });
 
 const AboutUsPage = () => {

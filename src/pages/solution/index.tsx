@@ -177,7 +177,7 @@ const SolutionPage = () => {
                         priority
                     />
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-black"></div>
                 </div>
 
                 {/* Content */}
@@ -190,13 +190,7 @@ const SolutionPage = () => {
                             className="max-w-4xl mx-auto text-center"
                         >
                             {/* Enhanced Top Accent */}
-                            <div className="inline-flex items-center gap-2 sm:gap-4 mb-6 sm:mb-8">
-                                <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-r from-transparent to-primary"></div>
-                                <span className="px-3 sm:px-5 py-1.5 sm:py-2 rounded-full bg-white/5 text-primary font-light tracking-wider text-xs sm:text-sm uppercase border border-white/10 shadow-lg shadow-primary/10">
-                                    Our Solutions
-                                </span>
-                                <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-l from-transparent to-primary"></div>
-                            </div>
+                            
                             
                             {/* Enhanced 3D Main Heading */}
                             <div className="relative py-4 md:py-8">
