@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const AboutUs = () => {
   const fadeIn = {
@@ -61,7 +62,7 @@ const AboutUs = () => {
             <div className="relative py-4 md:py-8">
               {/* Multiple layered glows for depth */}
               <div className="absolute -inset-x-4 -inset-y-8 bg-gradient-to-r from-primary/10 via-blue-500/5 to-primary/10 rounded-full blur-3xl"></div>
-              <div className="absolute -inset-x-4 -inset-y-12 bg-gradient-to-br from-transparent via-blue-800/5 to-primary/5 rounded-full blur-2xl animate-pulse-slow opacity-70"></div>
+              <div className="absolute -inset-x-4 -inset-y-12 bg-gradient-to-br from-transparent via-red-500/5 to-primary/5 rounded-full blur-2xl animate-pulse-slow opacity-70"></div>
               
               {/* Decorative elements */}
               <div className="absolute -top-4 left-1/4 w-2 h-2 bg-primary rounded-full opacity-80 animate-float"></div>
@@ -144,13 +145,13 @@ const AboutUs = () => {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
                 >
-                  <a 
-                    href="#contact" 
+                  <Link 
+                    href="/aboutus" 
                     className="inline-flex items-center gap-2 text-primary hover:text-blue-400 transition-colors duration-300 group"
                   >
-                    <span>Contact us to learn more</span>
+                    <span>Know More</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
+                  </Link>
                 </motion.div>
               </div>
               <div className="relative group">

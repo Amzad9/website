@@ -167,7 +167,7 @@ function Web() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="w-full md:w-1/2 space-y-6">
+                                            <div className="w-full md:w-1/2 space-y-6 md:ps-5">
                                                 <div>
                                                     <h2 className={`text-3xl font-bold mb-2 relative inline-block bg-gradient-to-r ${item.gradientFrom} ${item.gradientTo} bg-clip-text text-transparent group-hover:after:absolute group-hover:after:bottom-0 group-hover:after:left-0 group-hover:after:h-[2px] group-hover:after:w-full group-hover:after:bg-gradient-to-r group-hover:after:from-transparent group-hover:after:via-primary group-hover:after:to-transparent group-hover:after:transition-all group-hover:after:duration-500`}>
                                                         {item.title}
@@ -195,7 +195,7 @@ function Web() {
                                         </>
                                     ) : (
                                         <>
-                                            <div className="w-full md:w-1/2 space-y-6">
+                                            <div className="w-full md:w-1/2 space-y-6 md:pe-5">
                                                 <div>
                                                     <h2 className={`text-3xl font-bold mb-2 relative inline-block bg-gradient-to-r ${item.gradientFrom} ${item.gradientTo} bg-clip-text text-transparent group-hover:after:absolute group-hover:after:bottom-0 group-hover:after:left-0 group-hover:after:h-[2px] group-hover:after:w-full group-hover:after:bg-gradient-to-r group-hover:after:from-transparent group-hover:after:via-primary group-hover:after:to-transparent group-hover:after:transition-all group-hover:after:duration-500`}>
                                                         {item.title}

@@ -26,7 +26,7 @@ export const InfiniteMovingCards = ({
   const getDirection = () => {
     if (containerRef.current) {
       if (direction === "left") {
-        containerRef.current.style.setProperty("--animation-direction", "forwards");
+        containerRef.current.style.setProperty("--animation-direction", "reverse");
       } else {
         containerRef.current.style.setProperty("--animation-direction", "reverse");
       }

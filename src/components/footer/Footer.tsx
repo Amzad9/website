@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
                 {['Web Development', 'App Development', 'UI/UX Design', 'E-commerce'].map((item) => (
                   <li key={item}>
                     <a
-                      href={`#${item.toLowerCase().replace(' ', '')}`}
+                      href={`/service`}
                       className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-2 group"
                     >
                       <span className="w-2 h-2 bg-primary rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></span>
@@ -127,7 +127,7 @@ const Footer: React.FC = () => {
                 {['Web Development', 'App Development', 'UI/UX Design', 'E-commerce'].map((item) => (
                   <li key={item}>
                     <a
-                      href={`#${item.toLowerCase().replace(' ', '')}`}
+                      href={`/solution`}
                       className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-2 group"
                     >
                       <span className="w-2 h-2 bg-primary rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></span>
@@ -148,7 +148,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="/aboutus" target="_blank"
+                  href="/aboutus"
                   className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-3"
                 >
                   About Us
@@ -156,7 +156,7 @@ const Footer: React.FC = () => {
               </li>
                <li>
                 <Link
-                  href="/contactus" target="_blank"
+                  href="#contact"
                   className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-3"
                 >
                   Contact us
@@ -164,7 +164,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="/privacy" target="_blank"
+                  href="/privacy"
                   className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-3"
                 >
                   Privacy Policy
@@ -172,7 +172,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="/terms" target="_blank"
+                  href="/terms"
                   className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-3"
                 >
                   Terms & Conditions

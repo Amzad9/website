@@ -28,4 +28,20 @@ const testimonials = [
     image:
       "/p5.png",
   },
+ {
+    image:
+      "/p3.png",
+  },
+  {
+    image:
+      "/p5.png",
+  },
+ {
+    image:
+      "/p3.png",
+  },
+  {
+    image:
+      "/p5.png",
+  },
 ];

@@ -97,7 +97,7 @@ const AboutUsPage = () => {
 
       {/* Hero Section */}
       <section 
-        className="relative min-h-[60vh] flex items-center justify-center overflow-hidden"
+        className="relative mt-20 min-h-[60vh] flex items-center justify-center overflow-hidden"
         aria-labelledby="hero-title"
       >
         {/* Background Effects */}
@@ -145,7 +145,7 @@ const AboutUsPage = () => {
 
       {/* Mission & Vision Section */}
       <section 
-        className="py-20 relative overflow-hidden"
+        className="relative overflow-hidden"
         aria-labelledby="mission-vision-title"
       >
         {/* Background Effects */}
@@ -263,7 +263,7 @@ const AboutUsPage = () => {
 
       {/* Enhanced Testimonials Section */}
       <section 
-        className="py-20 relative overflow-hidden"
+        className="pt-20 relative overflow-hidden"
         aria-labelledby="testimonials-title"
       >
         {/* Background Effects */}
