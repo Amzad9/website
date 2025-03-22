@@ -5,7 +5,8 @@ import Head from "next/head";
 import LogoWhite from "@/assets/whiteLogo.png";
 import { useRouter } from "next/router";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Loader from "@/components/Loader";
 
 // Dynamically import components with no SSR
 const Header = dynamic(() => import("@/components/header/Header"), { ssr: false });
@@ -24,6 +25,7 @@ declare global {
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const logo = router.pathname === "/" ? LogoWhite : LogoWhite;
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Initialize dataLayer
@@ -43,8 +45,21 @@ export default function App({ Component, pageProps }: AppProps) {
 
     router.events.on('routeChangeComplete', handleRouteChange);
 
+    // Handle page loading
+    const handleStart = () => setIsLoading(true);
+    const handleEnd = () => setIsLoading(false);
+
+    router.events.on('routeChangeStart', handleStart);
+    router.events.on('routeChangeComplete', handleEnd);
+
+    // Initial page load
+    const timer = setTimeout(() => setIsLoading(false), 1000);
+
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange);
+      router.events.off('routeChangeStart', handleStart);
+      router.events.off('routeChangeComplete', handleEnd);
+      clearTimeout(timer);
     };
   }, [router.events]);
 
@@ -111,6 +126,7 @@ export default function App({ Component, pageProps }: AppProps) {
         ` }} />
       </Head>
       <SpeedInsights />
+      {isLoading && <Loader />}
       <Header logo={logo} />
       <Component {...pageProps} />
       <Contact />

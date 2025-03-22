@@ -1,8 +1,22 @@
 import { Phone, Mail, Map, Send, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState } from "react";
+import { supabase } from "@/lib/supabase";
+import Loader from "../Loader";
 
 const Contact = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
+
   // Services with their respective colors
   const services = [
     { name: "Web Development", color: "#FF6B6B", icon: "🌐" },
@@ -25,12 +39,64 @@ const Contact = () => {
     })
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setSubmitStatus(null);
+
+    try {
+      console.log('Submitting form data:', formData); // Debug log
+
+      const { data, error } = await supabase
+        .from('contact_messages')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            created_at: new Date().toISOString(),
+          },
+        ])
+        .select();
+
+      console.log('Supabase response:', { data, error }); // Debug log
+
+      if (error) {
+        console.error('Supabase error:', error); // Debug log
+        throw error;
+      }
+
+      setSubmitStatus({
+        type: "success",
+        message: "Message sent successfully! We'll get back to you soon.",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error('Form submission error:', error); // Debug log
+      setSubmitStatus({
+        type: "error",
+        message: error instanceof Error ? error.message : "Failed to send message. Please try again later.",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
   return (
     <section 
       id="contact" 
       className="min-h-screen bg-black relative z-10 overflow-hidden py-16 md:pt-5 md:pb-10"
       aria-label="Contact Information"
     >
+      {isLoading && <Loader />}
+      
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
         {/* Pattern Background */}
@@ -284,7 +350,7 @@ const Contact = () => {
             ))}
           </div>
 
-          {/* Simplified Form Container */}
+          {/* Updated Form Container */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -311,70 +377,100 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Form Inputs */}
-              <form className="flex flex-col flex-grow space-y-3 sm:space-y-4">
+              {/* Updated Form Inputs */}
+              <form onSubmit={handleSubmit} className="flex flex-col flex-grow space-y-3 sm:space-y-4">
                 {/* Name Input */}
                 <div className="space-y-1">
-                  <label className="ext-md text-gray-300 ml-1 flex items-center gap-2 font-light">
-                      <span className="w-1 h-1 rounded-full bg-primary"></span>
-                      Your Name
-                    </label>
-                    <div className="relative">
-                      <input
-                        type="text"
+                  <label className="text-md text-gray-300 ml-1 flex items-center gap-2 font-light">
+                    <span className="w-1 h-1 rounded-full bg-primary"></span>
+                    Your Name
+                  </label>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
                       className="w-full h-14 bg-white/[0.03] rounded-lg border border-white/10 px-3 py-2 text-white 
-                                 placeholder:text-gray-500 outline-none transition-all duration-300
-                                 focus:border-primary focus:bg-white/[0.07]"
-                        placeholder="John Doe"
-                      />
-                    </div>
+                               placeholder:text-gray-500 outline-none transition-all duration-300
+                               focus:border-primary focus:bg-white/[0.07]"
+                      placeholder="John Doe"
+                    />
                   </div>
+                </div>
 
                 {/* Email Input */}
                 <div className="space-y-1">
                   <label className="text-md text-gray-300 ml-1 flex items-center gap-2 font-light">
-                      <span className="w-1 h-1 rounded-full bg-blue-500"></span>
-                      Your Email
-                    </label>
-                    <div className="relative">
-                      <input
-                        type="email"
+                    <span className="w-1 h-1 rounded-full bg-blue-500"></span>
+                    Your Email
+                  </label>
+                  <div className="relative">
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
                       className="w-full h-14 bg-white/[0.03] rounded-lg border border-white/10 px-3 py-2 text-white 
-                                 placeholder:text-gray-500 outline-none transition-all duration-300
-                                 focus:border-blue-500 focus:bg-white/[0.07]"
-                        placeholder="john@example.com"
-                      />
-                    </div>
+                               placeholder:text-gray-500 outline-none transition-all duration-300
+                               focus:border-blue-500 focus:bg-white/[0.07]"
+                      placeholder="john@example.com"
+                    />
                   </div>
+                </div>
 
                 {/* Message Input */}
                 <div className="space-y-1">
-                  <label className="ext-md text-gray-300 ml-1 flex items-center gap-2 font-light">
-                      <span className="w-1 h-1 rounded-full bg-purple-500"></span>
-                      Your Message
-                    </label>
+                  <label className="text-md text-gray-300 ml-1 flex items-center gap-2 font-light">
+                    <span className="w-1 h-1 rounded-full bg-purple-500"></span>
+                    Your Message
+                  </label>
                   <div className="relative flex flex-col">
-                      <textarea
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
                       rows={5}
                       className="w-full bg-white/[0.03] rounded-lg border border-white/10 px-3 py-2 text-white 
-                                placeholder:text-gray-500 outline-none transition-all duration-300 min-h-[60px]]
-                                 focus:border-purple-500 focus:bg-white/[0.07] resize-none"
-                        placeholder="Write your message here..."
-                      ></textarea>
-                    </div>
+                                placeholder:text-gray-500 outline-none transition-all duration-300 min-h-[60px]
+                                focus:border-purple-500 focus:bg-white/[0.07] resize-none"
+                      placeholder="Write your message here..."
+                    ></textarea>
                   </div>
+                </div>
+
+                {/* Status Message */}
+                {submitStatus && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className={`p-3 rounded-lg ${
+                      submitStatus.type === "success"
+                        ? "bg-green-500/10 text-green-400 border border-green-500/20"
+                        : "bg-red-500/10 text-red-400 border border-red-500/20"
+                    }`}
+                  >
+                    {submitStatus.message}
+                  </motion.div>
+                )}
 
                 {/* Submit Button with arrow */}
-                  <button
-                    type="submit"
-                  className="bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90 text-white rounded-lg px-4 py-4 transition-all duration-300 mt-2 shadow-md shadow-primary/10 flex items-center justify-between"
+                <button
+                  type="submit"
+                  disabled={isLoading}
+                  className="bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90 text-white rounded-lg px-4 py-4 transition-all duration-300 mt-2 shadow-md shadow-primary/10 flex items-center justify-between disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <span className="text-white text-xl font-light">Send Message</span>
+                  <span className="text-white text-xl font-light">
+                    {isLoading ? "Sending..." : "Send Message"}
+                  </span>
                   <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center transform group-hover:translate-x-1 transition-transform duration-300">
                     <ArrowRight className="w-3 h-3 text-white" />
                   </div>
-                  </button>
-                </form>
+                </button>
+              </form>
             </div>
           </motion.div>
         </div>
