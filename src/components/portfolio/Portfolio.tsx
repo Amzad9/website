@@ -30,7 +30,7 @@ const Portfolio: React.FC = () => {
         title: "Mobile App Design",
         description: "Modern fitness tracking app with intuitive user interface and seamless experience",
         url: 'https://www.figma.com/design/18EsoTdBNiupd8YqHtu1rn/Mizaan?node-id=0-1&p=f&t=nWWwFNjxeSsMFCP7-0',
-        technologies: ['React Native', 'Figma', 'Typescript']
+        technologies: ['React Native', 'Typescript', 'Figma', 'Node Js', 'MongoDB']
       },
       {
         id: 2,
@@ -48,7 +48,7 @@ const Portfolio: React.FC = () => {
         title: "Mobile App Design Hospital",
         description: "Healthcare management app focusing on patient care and medical services",
         url: 'https://www.figma.com/design/yrwieRkdbTcBMFSoQNgxJz/Referral-Labs?node-id=12-2&p=f&t=l5Lldb0z4ivtTY8V-0',
-        technologies: ['React Native', 'MongoDB', 'Node.js']
+        technologies: ['React Native', 'MongoDB', 'Node.js','Typescript']
       },
       {
         id: 4,
@@ -57,7 +57,7 @@ const Portfolio: React.FC = () => {
         title: "Grocity Mobile App Design",
         description: "Grocery shopping app with seamless ordering and delivery experience",
         url: 'https://www.figma.com/design/nHmjOBQpL5V64wv9Kx7LRs/Tharkarre?node-id=0-1&p=f&t=8QPgzQawja3U3U71-0',
-        technologies: ['Flutter', 'Dart', 'Firebase']
+        technologies: ['React Native', 'MongoDB', 'Node.js','Typescript']
       },
     ],
     []
@@ -196,8 +196,8 @@ const Portfolio: React.FC = () => {
 
   return (
     <section 
-      id="portfolio" 
-      className="min-h-screen bg-black relative z-20 py-24 text-white overflow-hidden"
+      id="showcase" 
+      className="min-h-screen bg-black relative z-20 py-5 text-white overflow-hidden"
       aria-label="Portfolio Showcase"
     >
       {/* Background Effects */}

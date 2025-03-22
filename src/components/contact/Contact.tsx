@@ -28,7 +28,7 @@ const Contact = () => {
   return (
     <section 
       id="contact" 
-      className="min-h-screen bg-black relative z-10 overflow-hidden py-16 md:py-24"
+      className="min-h-screen bg-black relative z-10 overflow-hidden py-16 md:pt-5 md:pb-10"
       aria-label="Contact Information"
     >
       {/* Enhanced Background Effects */}

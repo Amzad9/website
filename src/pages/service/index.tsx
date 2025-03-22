@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 function Web() {
     const services = [
@@ -19,7 +20,7 @@ function Web() {
                 "E-commerce Solutions",
                 "Web Application Security"
             ],
-            image: ""
+            image: "/p1.png"
         },
         {
             title: "App Development",
@@ -35,7 +36,7 @@ function Web() {
                 "App Maintenance & Support",
                 "Cloud Integration"
             ],
-            image: "/public/images/p1.png"
+            image: "/p2.png"
         },
         {
             title: "UI/UX Design",
@@ -51,7 +52,7 @@ function Web() {
                 "Design Systems",
                 "Accessibility Design"
             ],
-            image: "/public/images/p1.png"
+            image: "/p3.png"
         },
         {
             title: "E-commerce Solutions",
@@ -67,7 +68,7 @@ function Web() {
                 "Payment Gateway Integration",
                 "Analytics & Reporting Tools"
             ],
-            image: "/public/images/p1.png"
+            image: "/p5.png"
         },
     ];
 
@@ -89,14 +90,14 @@ function Web() {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <Image
-                        src="/images/services-banner.jpg"
+                        src="/p5.png"
                         alt="Services Banner"
                         fill
                         className="object-cover"
                         priority
                     />
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-black/70"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black  to-black opacity-90"></div>
                 </div>
 
                 {/* Content */}
@@ -108,16 +109,10 @@ function Web() {
                             variants={fadeIn}
                             className="max-w-4xl mx-auto text-center"
                         >
-                            <div className="inline-flex items-center gap-2 sm:gap-4 mb-6 sm:mb-8">
-                                <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-r from-transparent to-primary"></div>
-                                <span className="px-3 sm:px-5 py-1.5 sm:py-2 rounded-full bg-white/5 text-primary font-light tracking-wider text-xs sm:text-sm uppercase border border-white/10 shadow-lg shadow-primary/10">
-                                    Our Services
-                                </span>
-                                <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-l from-transparent to-primary"></div>
-                            </div>
+                        
                             
                             <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-white leading-tight mb-6">
-                                Premium Digital Solutions
+                                Premium Digital Services
                             </h1>
                             
                             <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
@@ -125,13 +120,13 @@ function Web() {
                             </p>
 
                             <div className="flex flex-wrap justify-center gap-4">
-                                <button className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/20 hover:translate-y-[-2px]">
-                                    <span>Explore Services</span>
+                               <Link className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/20 hover:translate-y-[-2px]" href={'/solution'}>
+                                    <span>Explore Solution</span>
                                     <ArrowRight className="w-4 h-4" />
-                                </button>
-                                <button className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all duration-300 flex items-center gap-2 hover:border-white/20 hover:translate-y-[-2px]">
+                                </Link>
+                                <Link className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all duration-300 flex items-center gap-2 hover:border-white/20 hover:translate-y-[-2px]" href='#contact'>
                                     <span>Contact Us</span>
-                                </button>
+                                </Link>
                             </div>
                         </motion.div>
                     </div>
@@ -158,7 +153,7 @@ function Web() {
                                     {item.imagePosition === 'left' ? (
                                         <>
                                             <div className="w-full md:w-1/2 text-center mb-8 md:mb-0">
-                                                <div className="relative h-[300px] w-full rounded-xl overflow-hidden">
+                                                <div className="relative h-[400px] w-full rounded-xl overflow-hidden">
                                                     <Image 
                                                         src={item.image} 
                                                         alt={item.title}
@@ -167,7 +162,7 @@ function Web() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="w-full md:w-1/2 space-y-6">
+                                            <div className="w-full md:w-1/2 space-y-6 md:ps-5">
                                                 <div>
                                                     <h2 className={`text-3xl font-bold mb-2 relative inline-block bg-gradient-to-r ${item.gradientFrom} ${item.gradientTo} bg-clip-text text-transparent group-hover:after:absolute group-hover:after:bottom-0 group-hover:after:left-0 group-hover:after:h-[2px] group-hover:after:w-full group-hover:after:bg-gradient-to-r group-hover:after:from-transparent group-hover:after:via-primary group-hover:after:to-transparent group-hover:after:transition-all group-hover:after:duration-500`}>
                                                         {item.title}
@@ -195,7 +190,7 @@ function Web() {
                                         </>
                                     ) : (
                                         <>
-                                            <div className="w-full md:w-1/2 space-y-6">
+                                            <div className="w-full md:w-1/2 space-y-6 md:pe-5">
                                                 <div>
                                                     <h2 className={`text-3xl font-bold mb-2 relative inline-block bg-gradient-to-r ${item.gradientFrom} ${item.gradientTo} bg-clip-text text-transparent group-hover:after:absolute group-hover:after:bottom-0 group-hover:after:left-0 group-hover:after:h-[2px] group-hover:after:w-full group-hover:after:bg-gradient-to-r group-hover:after:from-transparent group-hover:after:via-primary group-hover:after:to-transparent group-hover:after:transition-all group-hover:after:duration-500`}>
                                                         {item.title}
@@ -221,7 +216,7 @@ function Web() {
                                                 </div>
                                             </div>
                                             <div className="w-full md:w-1/2 text-center">
-                                                <div className="relative h-[300px] w-full rounded-xl overflow-hidden">
+                                                <div className="relative h-[400px] w-full rounded-xl overflow-hidden">
                                                     <Image 
                                                         src={item.image} 
                                                         alt={item.title}

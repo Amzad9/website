@@ -226,12 +226,12 @@ export default function Services() {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 gap-10 max-w-7xl mx-auto"
           >
-            {services.map((service, i) => (
+            {services.map((service) => (
               <motion.div 
                 key={service.title}
                 variants={popIn}
                 className="bg-[#0A0A0A]/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/[0.05] group h-full flex flex-col relative cursor-pointer hover:scale-[1.02] transition-all duration-300"
-                onClick={() => window.location.href = "#contact"}
+                onClick={() => window.location.href = "/service"}
               >
                 {/* Glowing accent in corner */}
                 <div className={`absolute top-0 right-0 w-32 h-32 rounded-full blur-[80px] opacity-20 bg-gradient-to-r ${service.color} -z-0 group-hover:opacity-40 transition-opacity duration-700`}></div>
