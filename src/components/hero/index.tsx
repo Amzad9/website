@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden pt-20 bg-black">
+    <section id="home" className="relative min-h-screen overflow-hidden pt-24 bg-black">
       {/* Minimalist Background */}
       <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-3"></div>
       

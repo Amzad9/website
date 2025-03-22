@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, Users, Code2, Award, Clock, MessageSquare, ChevronDown } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Users, Code2, Award, Clock, MessageSquare } from 'lucide-react';
+import Link from 'next/link';
 
 const SolutionPage = () => {
     const services = [
@@ -74,7 +75,6 @@ const SolutionPage = () => {
     const stats = [
         { number: "500+", label: "Projects Completed", icon: Award },
         { number: "200+", label: "Happy Clients", icon: Users },
-        { number: "1000+", label: "Lines of Code", icon: Code2 },
         { number: "24/7", label: "Support Available", icon: Clock },
     ];
 
@@ -105,46 +105,8 @@ const SolutionPage = () => {
         }
     ];
 
-    const testimonials = [
-        {
-            name: "Sarah Johnson",
-            role: "CEO, TechStart",
-            image: "/images/testimonials/client1.jpg",
-            quote: "Their web development services transformed our online presence. The team's expertise and dedication were exceptional."
-        },
-        {
-            name: "Michael Chen",
-            role: "CTO, InnovateCorp",
-            image: "/images/testimonials/client2.jpg",
-            quote: "The mobile app they developed for us exceeded our expectations. Their attention to detail and user experience is outstanding."
-        },
-        {
-            name: "Emma Davis",
-            role: "Product Manager, DesignHub",
-            image: "/images/testimonials/client3.jpg",
-            quote: "Their UI/UX design services helped us create an intuitive and beautiful interface that our users love."
-        }
-    ];
 
-    const faqs = [
-        {
-            question: "What technologies do you use?",
-            answer: "We use modern technologies including React, Next.js, Node.js, Python, and various cloud platforms. Our stack is chosen based on your specific project requirements."
-        },
-        {
-            question: "How long does a typical project take?",
-            answer: "Project timelines vary based on complexity and scope. A typical website project takes 4-8 weeks, while larger applications may take 3-6 months."
-        },
-        {
-            question: "Do you provide ongoing support?",
-            answer: "Yes, we offer comprehensive support packages including maintenance, updates, and technical assistance to ensure your solution remains optimal."
-        },
-        {
-            question: "What is your pricing structure?",
-            answer: "Our pricing is project-based and depends on your specific requirements. We offer flexible packages to suit different budgets and needs."
-        }
-    ];
-
+ 
     const fadeIn = {
         hidden: { opacity: 0, y: 20 },
         visible: { 
@@ -187,14 +149,7 @@ const SolutionPage = () => {
                             variants={fadeIn}
                             className="max-w-4xl mx-auto text-center"
                         >
-                            <div className="inline-flex items-center gap-2 sm:gap-4 mb-6 sm:mb-8">
-                                <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-r from-transparent to-primary"></div>
-                                <span className="px-3 sm:px-5 py-1.5 sm:py-2 rounded-full bg-white/5 text-primary font-light tracking-wider text-xs sm:text-sm uppercase border border-white/10 shadow-lg shadow-primary/10">
-                                    Our Services
-                                </span>
-                                <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-l from-transparent to-primary"></div>
-                            </div>
-                            
+                           
                             <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-white leading-tight mb-6">
                                 Premium Digital Solutions
                             </h1>
@@ -204,13 +159,13 @@ const SolutionPage = () => {
                             </p>
 
                             <div className="flex flex-wrap justify-center gap-4">
-                                <button className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/20 hover:translate-y-[-2px]">
+                                <Link className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/20 hover:translate-y-[-2px]" href={'/service'}>
                                     <span>Explore Services</span>
                                     <ArrowRight className="w-4 h-4" />
-                                </button>
-                                <button className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all duration-300 flex items-center gap-2 hover:border-white/20 hover:translate-y-[-2px]">
+                                </Link>
+                                <Link className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all duration-300 flex items-center gap-2 hover:border-white/20 hover:translate-y-[-2px]" href='#contact'>
                                     <span>Contact Us</span>
-                                </button>
+                                </Link>
                             </div>
                         </motion.div>
                     </div>
@@ -220,7 +175,7 @@ const SolutionPage = () => {
             {/* Stats Section */}
             <section className="py-20 bg-black/50">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {stats.map((stat, index) => (
                             <motion.div
                                 key={index}
@@ -259,7 +214,7 @@ const SolutionPage = () => {
                                     {item.imagePosition === 'left' ? (
                                         <>
                                             <div className="w-full md:w-1/2 text-center mb-8 md:mb-0">
-                                                <div className="relative h-[300px] w-full rounded-xl overflow-hidden">
+                                                <div className="relative h-[400px] w-full rounded-xl overflow-hidden">
                                                     <Image 
                                                         src={item.image} 
                                                         alt={item.title}
@@ -268,7 +223,7 @@ const SolutionPage = () => {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="w-full md:w-1/2 space-y-6">
+                                            <div className="w-full md:w-1/2 space-y-6 md:ps-5">
                                                 <div>
                                                     <h2 className={`text-3xl font-bold mb-2 relative inline-block bg-gradient-to-r ${item.gradientFrom} ${item.gradientTo} bg-clip-text text-transparent group-hover:after:absolute group-hover:after:bottom-0 group-hover:after:left-0 group-hover:after:h-[2px] group-hover:after:w-full group-hover:after:bg-gradient-to-r group-hover:after:from-transparent group-hover:after:via-primary group-hover:after:to-transparent group-hover:after:transition-all group-hover:after:duration-500`}>
                                                         {item.title}
@@ -296,7 +251,7 @@ const SolutionPage = () => {
                                         </>
                                     ) : (
                                         <>
-                                            <div className="w-full md:w-1/2 space-y-6">
+                                            <div className="w-full md:w-1/2 space-y-6 md:ps-5">
                                                 <div>
                                                     <h2 className={`text-3xl font-bold mb-2 relative inline-block bg-gradient-to-r ${item.gradientFrom} ${item.gradientTo} bg-clip-text text-transparent group-hover:after:absolute group-hover:after:bottom-0 group-hover:after:left-0 group-hover:after:h-[2px] group-hover:after:w-full group-hover:after:bg-gradient-to-r group-hover:after:from-transparent group-hover:after:via-primary group-hover:after:to-transparent group-hover:after:transition-all group-hover:after:duration-500`}>
                                                         {item.title}
@@ -322,7 +277,7 @@ const SolutionPage = () => {
                                                 </div>
                                             </div>
                                             <div className="w-full md:w-1/2 text-center">
-                                                <div className="relative h-[300px] w-full rounded-xl overflow-hidden">
+                                                <div className="relative h-[400px] w-full rounded-xl overflow-hidden">
                                                     <Image 
                                                         src={item.image} 
                                                         alt={item.title}
@@ -367,92 +322,6 @@ const SolutionPage = () => {
                 </div>
             </section>
 
-            {/* Testimonials Section */}
-            <section className="py-20 bg-black/50">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Client Testimonials</h2>
-                        <p className="text-gray-400 max-w-2xl mx-auto">What our clients say about working with us.</p>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {testimonials.map((testimonial, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
-                            >
-                                <div className="flex items-center mb-4">
-                                    <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                                        <Image
-                                            src={testimonial.image}
-                                            alt={testimonial.name}
-                                            fill
-                                            className="object-cover"
-                                        />
-                                    </div>
-                                    <div>
-                                        <h3 className="text-white font-bold">{testimonial.name}</h3>
-                                        <p className="text-gray-400 text-sm">{testimonial.role}</p>
-                                    </div>
-                                </div>
-                                <p className="text-gray-300 italic">"{testimonial.quote}"</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* FAQ Section */}
-            <section className="py-20 bg-black/50">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
-                        <p className="text-gray-400 max-w-2xl mx-auto">Find answers to common questions about our services.</p>
-                    </div>
-                    <div className="max-w-3xl mx-auto space-y-4">
-                        {faqs.map((faq, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
-                            >
-                                <div 
-                                    className="flex items-center justify-between cursor-pointer"
-                                    onClick={() => toggleFaq(index)}
-                                >
-                                    <h3 className="text-white font-bold">{faq.question}</h3>
-                                    <ChevronDown 
-                                        className={`w-5 h-5 text-gray-400 transition-transform duration-300 ${
-                                            openFaqIndex === index ? 'rotate-180' : ''
-                                        }`}
-                                    />
-                                </div>
-                                <motion.div
-                                    initial={false}
-                                    animate={{
-                                        height: openFaqIndex === index ? 'auto' : 0,
-                                        opacity: openFaqIndex === index ? 1 : 0,
-                                    }}
-                                    transition={{
-                                        duration: 0.3,
-                                        ease: "easeInOut"
-                                    }}
-                                    className="overflow-hidden"
-                                >
-                                    <p className="text-gray-400 mt-4">{faq.answer}</p>
-                                </motion.div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
             {/* CTA Section */}
             <section className="py-20 bg-gradient-to-r from-primary/20 to-primary/10">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -461,13 +330,10 @@ const SolutionPage = () => {
                         Let's discuss how we can help you achieve your business goals with our cutting-edge solutions.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <button className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/20 hover:translate-y-[-2px]">
+                        <Link className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/20 hover:translate-y-[-2px]" href={'#contact'}>
                             <span>Start Your Project</span>
                             <ArrowRight className="w-4 h-4" />
-                        </button>
-                        <button className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all duration-300 flex items-center gap-2 hover:border-white/20 hover:translate-y-[-2px]">
-                            <span>Schedule a Call</span>
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>

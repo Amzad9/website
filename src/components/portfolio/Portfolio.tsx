@@ -197,7 +197,7 @@ const Portfolio: React.FC = () => {
   return (
     <section 
       id="showcase" 
-      className="min-h-screen bg-black relative z-20 py-24 text-white overflow-hidden"
+      className="min-h-screen bg-black relative z-20 py-5 text-white overflow-hidden"
       aria-label="Portfolio Showcase"
     >
       {/* Background Effects */}
