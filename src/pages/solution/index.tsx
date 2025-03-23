@@ -709,7 +709,7 @@ const SolutionPage = () => {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Digital Presence?</h2>
                     <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-                        Let's discuss how we can help you achieve your business goals with our cutting-edge solutions.
+                        Let&apos;s discuss how we can help you achieve your business goals with our cutting-edge solutions.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/20 hover:translate-y-[-2px]" href={'#contact'}>

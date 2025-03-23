@@ -5,7 +5,6 @@ import AboutUs from "@/components/about/About";
 import Services from "@/components/services/index";
 import Portfolio from "@/components/portfolio/Portfolio";
 import Expertise from "@/components/expertise/Expertise";
-import ClientTestimonial from "@/components/clients/ClientTestimonial";
 
 // Register GSAP ScrollTrigger only on client-side
 if (typeof window !== "undefined") {
@@ -45,7 +44,6 @@ export default function Home() {
       <Expertise />
       <Services />
       <Portfolio />
-      {/* <ClientTestimonial /> */}
     </>
   );
 }

@@ -149,7 +149,7 @@ const AboutUs = () => {
                     <path d="M10.583 17.321C9.553 16.227 9 15 9 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
                   </svg>
                   <p className="text-gray-300 leading-relaxed italic text-lg mb-8">
-                    "Our mission is to empower businesses with custom-built solutions that not only stand out but also deliver smooth, engaging, and high-speed user experiences."
+                    &quot;Our mission is to empower businesses with custom-built solutions that not only stand out but also deliver smooth, engaging, and high-speed user experiences.&quot;
                   </p>
                   <div className="pt-8 border-t border-gray-700/30">
                     <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent mb-8">

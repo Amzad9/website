@@ -369,7 +369,7 @@ const Contact = () => {
                     <h3 className="text-xl md:text-3xl font-bold text-transparent tracking-tight">Send Message</h3>
                     <div className="absolute -bottom-2 left-0 h-[2px] w-0 bg-gradient-to-r from-primary to-blue-400 group-hover:w-full transition-all duration-500 ease-out"></div>
                   </div>
-                  <p className="text-gray-300 leading-relaxed pr-4 text-sm">We'd love to hear from you</p>
+                  <p className="text-gray-300 leading-relaxed pr-4 text-sm">We&apos;d love to hear from you</p>
                 </div>
 
                 <div className="w-12 h-14 rounded-xl flex items-center justify-center border border-white/10 bg-black/30 group-hover:border-white/20 transition-all duration-300">

@@ -149,7 +149,7 @@ function ClientTestimonial() {
                         transition={{ delay: 0.8, duration: 0.6 }}
                         className="text-lg text-gray-300 max-w-3xl mx-auto"
                     >
-                        Don't just take our word for it. Here's what our clients have to say about working with us.
+                        Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with us.
                     </motion.p>
                 </div>
 
@@ -185,7 +185,7 @@ function ClientTestimonial() {
                                 </div>
 
                                 {/* Testimonial Content */}
-                                <p className="text-gray-300 mb-6 italic">"{testimonial.quote}"</p>
+                                <p className="text-gray-300 mb-6 italic">&quot;{testimonial.quote}&quot;</p>
 
                                 {/* Client Info */}
                                 <div className="flex items-center gap-4">

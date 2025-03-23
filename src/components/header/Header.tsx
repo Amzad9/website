@@ -78,7 +78,7 @@ const Header = ({ logo }: HeaderProps) => {
           <div className="flex items-center gap-4 md:gap-6">
             <Link
               className="rounded-full shadow-[0_8px_16px_rgba(0,0,0,0.4)] flex px-5 py-2.5 min-w-[130px] justify-center items-center bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary text-white text-center text-sm font-medium transition-all duration-300 hover:scale-105 tracking-wider max-[767px]:hidden focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black"
-              href='/contact'
+              href='#contact'
               aria-label="Start a new project"
             >
               Start a Project

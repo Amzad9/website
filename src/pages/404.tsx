@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
 
 export default function Custom404() {
   const router = useRouter();
@@ -25,7 +24,7 @@ export default function Custom404() {
             Page Not Found
           </h2>
           <p className="mt-2 text-sm text-gray-400">
-            The page you're looking for doesn't exist or has been moved.
+            The page you&apos;re looking for doesn&apos;t exist or has been moved.
           </p>
         </motion.div>
         <motion.div 

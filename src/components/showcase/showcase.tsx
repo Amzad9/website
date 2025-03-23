@@ -1,9 +1,8 @@
 import React, { useMemo, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import Link from 'next/link';
-import { ArrowRight, Code2, Smartphone, Palette, Globe, Database, Shield, Zap, BookOpen, Server } from 'lucide-react';
+import { ArrowRight, Smartphone, Palette, Globe, Shield, Server } from 'lucide-react';
 
 interface Project {
   id: number;
@@ -28,8 +27,7 @@ interface Skill {
 }
 
 const ShowCase: React.FC = () => {
-  const [ref, inView] = useInView({ threshold: 0.2 });
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [selectedCategory] = useState<string>("All");
   const [selectedSkillTab, setSelectedSkillTab] = useState<string>("Development");
 
   const projects: Project[] = useMemo(
@@ -74,10 +72,6 @@ const ShowCase: React.FC = () => {
     []
   );
 
-  const categories = useMemo(
-    () => ["All", ...Array.from(new Set(projects.map((p) => p.category)))],
-    [projects]
-  );
 
   const filteredProjects = useMemo(
     () =>

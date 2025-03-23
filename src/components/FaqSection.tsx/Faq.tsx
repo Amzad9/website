@@ -1,7 +1,14 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 import { ChevronDown } from 'lucide-react';
+import { useState } from 'react';
+
 function Faq() {
+    const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+    const toggleFaq = (index: number) => {
+        setOpenFaqIndex(openFaqIndex === index ? null : index);
+    };
    const faqs = [
         {
             question: "What technologies do you use?",
