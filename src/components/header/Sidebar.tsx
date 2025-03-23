@@ -1,147 +1,72 @@
+import React from "react";
 import Link from "next/link";
-import { useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { X } from "lucide-react";
 
-// Define the interface for the Sidebar props
 interface SidebarProps {
   isOpen: boolean;
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsOpen: (value: boolean) => void;
 }
 
-export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
-  const handleClose = () => {
-    setIsOpen(false);
-  };
-
-  // Animation variants for the sidebar (smooth transition instead of spring)
-  const sidebarVariants = {
-    open: {
-      x: 0,
-      opacity: 1,
-      transition: { type: "tween", duration: 0.3, ease: "easeInOut" },
-    },
-    closed: {
-      x: "100%",
-      opacity: 0,
-      transition: { type: "tween", duration: 0.3, ease: "easeInOut" },
-    },
-  };
-
-  const NavData = [
-    {
-      name: "Home",
-      url: "#home",
-    },
-    {
-      name: "About Us",
-      url: "#about",
-    },
-    {
-      name: "Service",
-      url: "#service",
-    },
-    {
-      name: "Showcase",
-      url: "#showcase",
-    },
+const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
+  const navLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '#about' },
+    { name: 'Service', href: '#service' },
+    { name: 'Showcase', href: '#showcase' },
+    { name: 'Contact', href: '#contact' },
   ];
 
-  // Animation variants for navigation menu items (smooth transition)
-  const navItemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.1, // Staggered delay for each item
-        type: "tween", // Smooth transition instead of spring
-        duration: 0.3,
-        ease: "easeInOut",
-      },
-    }),
-  };
-
-  // Handle outside clicks to close the sidebar
-  useEffect(() => {
-    const handleOutsideClick = (e: MouseEvent) => {
-      if (isOpen) {
-        const sidebar = document.querySelector(".sidebar-motion");
-        if (sidebar && !sidebar.contains(e.target as Node)) {
-          setIsOpen(false);
-        }
-      }
-    };
-
-    if (isOpen) {
-      document.addEventListener("mousedown", handleOutsideClick);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [isOpen, setIsOpen]);
-
   return (
-    <>
-      {/* Overlay for outside clicks */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.5 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-0 bg-red-300 z-30 "
-            onClick={handleClose}
-          />
-        )}
-      </AnimatePresence>
-
-      {/* Sidebar with Framer Motion Animation */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial="closed"
-            animate="open"
-            exit="closed"
-            variants={sidebarVariants}
-            className="fixed rounded-l-3xl top-0 right-0 h-screen w-[300px] bg-black text-white p-4 shadow-lg z-40 sidebar-motion"
+    <div
+      className={`fixed inset-0 z-40 bg-black/90 backdrop-blur-xl transition-all duration-300 ease-in-out md:hidden
+        ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile navigation menu"
+    >
+      <div
+        className={`fixed top-0 right-0 h-full w-[300px] bg-black/95 backdrop-blur-xl border-l border-white/10 p-6 transition-all duration-300 ease-in-out
+          ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+        id="sidebar"
+      >
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-xl font-semibold text-white">Menu</h2>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="p-2 rounded-full hover:bg-white/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black"
+            aria-label="Close menu"
           >
-            {/* Navigation Menu with Animation and Hover Underline */}
-            <nav className="space-y-3 mt-10 pb-10 border-b border-gray-800">
-              {NavData.map((item, index) => (
-                <motion.div
-                  key={item.name} // Changed key to item.name for uniqueness
-                  custom={index} // Pass index for staggered animation
-                  initial="hidden"
-                  animate="visible"
-                  variants={navItemVariants}
-                >
-                  <Link
-                    href={item.url}
-                    onClick={handleClose}
-                    className="block px-4 text-3xl font-semibold text-right py-2 rounded transition"
-                  >
-                    <motion.span
-                      whileHover={{
-                        textDecoration: "underline", // Underline on hover
-                      }}
-                      transition={{
-                        type: "tween",
-                        duration: 0.3,
-                        ease: "easeInOut",
-                      }}
-                      className="inline-block hover:text-primary"
-                    >
-                      {item.name}
-                    </motion.span>
-                  </Link>
-                </motion.div>
-              ))}
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+            <X className="w-6 h-6 text-white" aria-hidden="true" />
+          </button>
+        </div>
+
+        <nav className="space-y-4">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-white/80 hover:text-white text-lg font-medium transition-colors duration-300 py-2 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black rounded-md px-2 block hover:bg-white/5"
+              onClick={() => setIsOpen(false)}
+              aria-current={link.href === '/' ? 'page' : undefined}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="mt-8">
+          <Link
+            href="/contact"
+            className="block w-full rounded-xl shadow-lg flex px-5 py-3 justify-center items-center bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary text-white text-center text-sm font-medium transition-all duration-300 hover:scale-105 tracking-wider focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black"
+            onClick={() => setIsOpen(false)}
+            aria-label="Start a new project"
+          >
+            Start a Project
+          </Link>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default Sidebar;

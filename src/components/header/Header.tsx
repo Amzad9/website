@@ -24,35 +24,74 @@ const Header = ({ logo }: HeaderProps) => {
 
   const handleNavbar = () => setIsOpenNavbar((prev) => !prev);
 
+  const navLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '#about' },
+    { name: 'Service', href: '#service' },
+    { name: 'Showcase', href: '#showcase' },
+    { name: 'Contact', href: '#contact' },
+  ];
+
   return (
-    <div className="md:container relative z-40">
+    <div className="md:container relative z-50" role="banner">
       <header
-        className={`fixed  top-0 md:top-2.5 left-1/2 w-full max-w-[1216px] bg-[var(--foreground)] z-30 transition-all duration-200 ease-in-out -translate-x-1/2 rounded-0  md:rounded-[40px] px-11 py-5 md:py-1.5
-          ${scrolled ? 'shadow-none bg-[rgba(179,179,179,0.2)] backdrop-blur-md max-w-[800px]' : ''}`}
+        className={`fixed top-0 md:top-5 left-1/2 w-full max-w-[1216px] z-30 transition-all duration-300 ease-in-out -translate-x-1/2 rounded-0 md:rounded-[30px] px-6 md:px-8 py-4 md:py-3
+          ${scrolled 
+            ? 'shadow-lg bg-black/70 backdrop-blur-xl max-w-[900px] border border-white/5' 
+            : 'bg-black/30 backdrop-blur-sm'}`}
+        role="navigation"
+        aria-label="Main navigation"
       >
         <div className="flex justify-between items-center">
-          <Link href="/" className="logo">
+          <Link 
+            href="/" 
+            className="logo"
+            aria-label="Weblibron Home"
+          >
             <Image
               src={logo}
-              alt="Company Logo"
-              className="transition-[height] duration-200 ease-in-out max-[480px] max-[480px]:w-full"
-              width={120}
+              alt="Weblibron Logo"
+              className="transition-all duration-200 ease-in-out"
+              width={110}
+              height={40}
               priority
             />
           </Link>
 
-          <div className="flex items-center gap-5">
+          {/* Navigation Menu */}
+          <nav 
+            className="hidden md:flex items-center gap-8"
+            aria-label="Primary navigation"
+          >
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-white/80 hover:text-white text-sm font-medium transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black rounded-md px-2 py-1"
+                aria-current={link.href === '/' ? 'page' : undefined}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-4 md:gap-6">
             <Link
-              className="rounded-[50px] shadow-[0_10px_20px_0_rgba(192,192,192,0.15)] flex px-4 py-2.5 min-w-[120px] justify-center items-center bg-[var(--button)] border-none text-[var(--black)] text-center text-sm font-medium leading-4 transition-all duration-200 ease-in-out cursor-pointer tracking-wider font-inter max-[767px]:hidden" href='#contact'>
+              className="rounded-full shadow-[0_8px_16px_rgba(0,0,0,0.4)] flex px-5 py-2.5 min-w-[130px] justify-center items-center bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary text-white text-center text-sm font-medium transition-all duration-300 hover:scale-105 tracking-wider max-[767px]:hidden focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black"
+              href='#contact'
+              aria-label="Start a new project"
+            >
               Start a Project
             </Link>
 
             <button
-              className="block w-7 border-none bg-transparent"
+              className="flex justify-center items-center w-10 h-10 rounded-full bg-black/50 hover:bg-primary/80 transition-colors duration-300 border border-white/10 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black"
               onClick={handleNavbar}
-              aria-label="Toggle navigation menu"
+              aria-expanded={isOpenNavbar}
+              aria-controls="sidebar"
+              aria-label={isOpenNavbar ? "Close navigation menu" : "Open navigation menu"}
             >
-             <Menu color="#f1f1f1" />
+              <Menu className="w-5 h-5" color="#ffffff" aria-hidden="true" />
             </button>
           </div>
         </div>

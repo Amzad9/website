@@ -14,18 +14,26 @@ export function InfiniteMovingCardsDemo() {
 const testimonials = [
   {
     image:
-       "/p1.png",
+       "/1.jpeg",
   },
   {
     image:
-      "/p2.png",
+      "/2.jpeg",
   },
   {
     image:
-      "/p3.png",
+      "/3.jpeg",
   },
   {
     image:
-      "/p5.png",
+      "/4.jpeg",
+  },
+  {
+    image:
+      "/5.jpeg",
+  },
+{
+    image:
+      "/6.jpeg",
   },
 ];
