@@ -86,7 +86,7 @@ const AboutUs = () => {
         </div>
 
       {/* Main Content */}
-      <main className="pb-0 md:pt-16 relative">
+      <main className="pb-0 md:pt-8 relative">
         <div className="container mx-auto px-6">
           {/* About Section */}
           <motion.section 
@@ -105,23 +105,23 @@ const AboutUs = () => {
                   We are a team of passionate creators and expert developers at Weblibron, dedicated to crafting exceptional digital experiences. Specializing in UI/UX design, app development, and web development, we blend bold visuals with cutting-edge technology to bring your vision to life
                 </p>
                 <div className="flex flex-col sm:flex-row flex-wrap gap-5 mt-10">
-                  <div className="group relative px-8 py-5 bg-white/5 rounded-xl border border-white/10 hover:border-primary/30 transition-all duration-300 backdrop-blur-sm">
+                  <div className="group relative px-8 py-3 bg-white/5 rounded-xl border border-white/10 hover:border-primary/30 transition-all duration-300 backdrop-blur-sm flex-grow">
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
                     <div className="relative flex items-center gap-4">
                       <span className="text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">7+</span>
                       <div className="text-left">
-                        <p className="text-white font-light">Years</p>
-                        <p className="text-white/70 text-sm font-light">Experience</p>
+                        <p className="text-white font-light">Years Experience</p>
+                        {/* <p className="text-white/70 text-sm font-light">Experience</p> */}
                       </div>
                     </div>
                   </div>
-                  <div className="group relative px-8 py-5 bg-white/5 rounded-xl border border-white/10 hover:border-primary/30 transition-all duration-300 backdrop-blur-sm">
+                  <div className="group relative px-8 py-3 bg-white/5 rounded-xl border border-white/10 hover:border-primary/30 transition-all duration-300 backdrop-blur-sm flex-grow">
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
                     <div className="relative flex items-center gap-4">
                       <span className="text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-primary">10+</span>
                       <div className="text-left">
-                        <p className="text-white font-light">Projects</p>
-                        <p className="text-white/70 text-sm font-light">Delivered</p>
+                        <p className="text-white font-light">Projects Delivered</p>
+                        {/* <p className="text-white/70 text-sm font-light">Delivered</p> */}
                       </div>
                     </div>
                   </div>
@@ -156,13 +156,13 @@ const AboutUs = () => {
                       Our Promise
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <div className="text-center p-4 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group">
+                      <div className="text-center p-3 cursor-pointer rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group">
                         <p className="text-xl font-semibold text-primary group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-blue-500 transition-all duration-300">Innovation</p>
                       </div>
-                      <div className="text-center p-4 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group">
+                      <div className="text-center p-3 cursor-pointer rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group">
                         <p className="text-xl font-semibold text-blue-400 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-primary transition-all duration-300">Quality</p>
                       </div>
-                      <div className="text-center p-4 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group">
+                      <div className="text-center p-3 cursor-pointer rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group">
                         <p className="text-xl font-semibold text-primary group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-blue-500 transition-all duration-300">Excellence</p>
                       </div>
                     </div>
