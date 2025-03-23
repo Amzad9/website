@@ -1,8 +1,7 @@
 import Head from "next/head";
 import { InfiniteMovingCardsDemo } from "@/components/Card";
 import { motion } from "framer-motion";
-import { ArrowRight, Check, ChevronRight, ExternalLink } from "lucide-react";
-import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Services() {

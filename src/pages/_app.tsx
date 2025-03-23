@@ -18,7 +18,7 @@ declare global {
     trackingFunctions: {
       onLoad: (config: { appId: string }) => void;
     };
-    dataLayer: any[];
+    dataLayer: Array<{ [key: string]: unknown }>;
   }
 }
 
