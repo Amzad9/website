@@ -269,7 +269,7 @@ const SolutionPage = () => {
             </section>
 
             {/* Stats Section */}
-            <section className="py-20 bg-black/50">
+            <section className="pt-5 bg-black/50">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {stats.map((stat, index) => (
@@ -291,7 +291,7 @@ const SolutionPage = () => {
             </section>
 
             {/* Services Section */}
-            <div className="space-y-16 py-20">
+            <div className="space-y-16 py-10">
                 {services.map((item, index) => (
                     <motion.section 
                         key={index}
@@ -394,7 +394,7 @@ const SolutionPage = () => {
             </div>
 
             {/* Process Section */}
-            <section className="py-20 bg-black/50 relative overflow-hidden">
+            <section className="py-10 bg-black/50 relative overflow-hidden">
                 {/* Animated Background Elements */}
                 <div className="absolute inset-0">
                     <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] opacity-20 animate-pulse"></div>

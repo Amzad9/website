@@ -9,21 +9,21 @@ const AboutUsPage = () => {
     <div className="min-h-screen bg-black" role="main">
       <Head>
         <title>About Us - Weblibron | Leading Web Development & Design Agency</title>
-        <meta name="description" content="Discover Weblibron's story - a team of passionate creators and expert developers dedicated to transforming ideas into exceptional digital experiences. Learn about our mission, vision, and core values." />
+        <meta name="description" content="Discover Weblibron story - a team of passionate creators and expert developers dedicated to transforming ideas into exceptional digital experiences. Learn about our mission, vision, and core values." />
         <meta name="keywords" content="Weblibron about us, web development agency, digital solutions, web design company, IT services, digital transformation, web development team" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://weblibron.com/aboutus" />
         <meta property="og:title" content="About Us - Weblibron | Leading Web Development & Design Agency" />
-        <meta property="og:description" content="Discover Weblibron's story - a team of passionate creators and expert developers dedicated to transforming ideas into exceptional digital experiences. Learn about our mission, vision, and core values." />
+        <meta property="og:description" content="Discover Weblibron story - a team of passionate creators and expert developers dedicated to transforming ideas into exceptional digital experiences. Learn about our mission, vision, and core values." />
         <meta property="og:image" content="https://weblibron.com/og-image.jpg" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://weblibron.com/aboutus" />
         <meta property="twitter:title" content="About Us - Weblibron | Leading Web Development & Design Agency" />
-        <meta property="twitter:description" content="Discover Weblibron's story - a team of passionate creators and expert developers dedicated to transforming ideas into exceptional digital experiences. Learn about our mission, vision, and core values." />
+        <meta property="twitter:description" content="Discover Weblibron story - a team of passionate creators and expert developers dedicated to transforming ideas into exceptional digital experiences. Learn about our mission, vision, and core values." />
         <meta property="twitter:image" content="https://weblibron.com/og-image.jpg" />
         
         {/* Additional Meta Tags */}
@@ -70,7 +70,7 @@ const AboutUsPage = () => {
               "@context": "https://schema.org",
               "@type": "AboutPage",
               "name": "About Weblibron",
-              "description": "Learn about Weblibron's mission to empower businesses with innovative digital solutions that drive growth and enhance user experiences.",
+              "description": "Learn about Weblibron mission to empower businesses with innovative digital solutions that drive growth and enhance user experiences.",
               "publisher": {
                 "@type": "Organization",
                 "name": "Weblibron",
