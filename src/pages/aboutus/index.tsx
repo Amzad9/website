@@ -185,7 +185,7 @@ const AboutUsPage = () => {
       <AboutUs />
 
       {/* Why Choose Us Section */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-16 md:pt-16 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
         <motion.div 

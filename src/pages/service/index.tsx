@@ -243,7 +243,7 @@ function Web() {
                                     {item.imagePosition === 'left' ? (
                                         <>
                                             <div className="w-full md:w-1/2 text-center mb-8 md:mb-0">
-                                                <div className="relative h-[460px] w-full rounded-xl overflow-hidden bg-black/50 p-8">
+                                                <div className="relative h-[200px] md:h-[460px] w-full rounded-xl overflow-hidden bg-black/50 p-8">
                                                     <Image 
                                                         src={item.image} 
                                                         alt={item.title} 
@@ -307,7 +307,7 @@ function Web() {
                                                 </div>
                                             </div>
                                             <div className="w-full md:w-1/2 text-center">
-                                                <div className="relative h-[460px] w-full rounded-xl overflow-hidden bg-black/50 p-8">
+                                                <div className="relative h-[200px] md:h-[460px] w-full rounded-xl overflow-hidden bg-black/50 p-8">
                                                     <Image 
                                                         src={item.image} 
                                                         alt={item.title} 
