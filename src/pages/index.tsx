@@ -45,7 +45,7 @@ export default function Home() {
       <Expertise />
       <Services />
       <Portfolio />
-      <ClientTestimonial />
+      {/* <ClientTestimonial /> */}
     </>
   );
 }

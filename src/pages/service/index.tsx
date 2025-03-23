@@ -3,10 +3,8 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import ServiceIllustration from '@/components/illustrations/ServiceIllustration';
 import SeoHead from '@/components/seo/SeoHead';
 
-type ServiceType = 'web' | 'app' | 'design' | 'ecommerce';
 
 interface Service {
     title: string;
@@ -16,7 +14,7 @@ interface Service {
     gradientTo: string;
     imagePosition: 'left' | 'right';
     features: string[];
-    illustrationType: ServiceType;
+    image: string;
 }
 
 function Web() {
@@ -35,7 +33,7 @@ function Web() {
                 "E-commerce Solutions",
                 "Web Application Security"
             ],
-            illustrationType: "web"
+            image: '/2.jpeg'
         },
         {
             title: "App Development",
@@ -51,7 +49,7 @@ function Web() {
                 "App Maintenance & Support",
                 "Cloud Integration"
             ],
-            illustrationType: "app"
+            image: '/3.jpeg'
         },
         {
             title: "UI/UX Design",
@@ -67,7 +65,7 @@ function Web() {
                 "Design Systems",
                 "Accessibility Design"
             ],
-            illustrationType: "design"
+            image: '/4.jpeg'
         },
         {
             title: "E-commerce Solutions",
@@ -83,7 +81,7 @@ function Web() {
                 "Payment Gateway Integration",
                 "Analytics & Reporting Tools"
             ],
-            illustrationType: "ecommerce"
+            image: '/5.jpeg'
         },
     ];
 
@@ -126,14 +124,14 @@ function Web() {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <Image
-                        src="/p5.png"
+                        src="/1.jpeg"
                         alt="Services Banner"
                         fill
                         className="object-cover brightness-50"
                         priority
                     />
                     {/* Overlay */}
-                     <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-black"></div>
+                    <div className="absolute inset-0 bg-black opacity-90"></div>
                 </div>
 
                 {/* Content */}
@@ -245,8 +243,14 @@ function Web() {
                                     {item.imagePosition === 'left' ? (
                                         <>
                                             <div className="w-full md:w-1/2 text-center mb-8 md:mb-0">
-                                                <div className="relative h-[400px] w-full rounded-xl overflow-hidden bg-black/50 p-8">
-                                                    <ServiceIllustration type={item.illustrationType} className="w-full h-full" />
+                                                <div className="relative h-[460px] w-full rounded-xl overflow-hidden bg-black/50 p-8">
+                                                    <Image 
+                                                        src={item.image} 
+                                                        alt={item.title} 
+                                                        width={600}
+                                                        height={460}
+                                                        className="w-full h-full" 
+                                                    />
                                                 </div>
                                             </div>
                                             <div className="w-full md:w-1/2 space-y-6 md:ps-5">
@@ -303,8 +307,14 @@ function Web() {
                                                 </div>
                                             </div>
                                             <div className="w-full md:w-1/2 text-center">
-                                                <div className="relative h-[400px] w-full rounded-xl overflow-hidden bg-black/50 p-8">
-                                                    <ServiceIllustration type={item.illustrationType} className="w-full h-full" />
+                                                <div className="relative h-[460px] w-full rounded-xl overflow-hidden bg-black/50 p-8">
+                                                    <Image 
+                                                        src={item.image} 
+                                                        alt={item.title} 
+                                                        width={600}
+                                                        height={460}
+                                                        className="w-full h-full" 
+                                                    />
                                                 </div>
                                             </div>
                                         </>
