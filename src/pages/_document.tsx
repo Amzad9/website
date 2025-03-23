@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Document() {
   return (
@@ -13,7 +14,7 @@ export default function Document() {
         
         {/* Preload Critical Resources */}
         <link rel="preload" href="/wl.jpg" as="image" />
-        <link rel="preload" href="/fonts/your-main-font.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         
         {/* Additional Meta Tags */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -47,6 +48,7 @@ export default function Document() {
         />
         <Main />
         <NextScript />
+        <SpeedInsights />
       </body>
     </Html>
   );
