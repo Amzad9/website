@@ -31,25 +31,16 @@ const TermsAndConditions = () => {
       </Head>
 
       {/* Banner Section */}
-      <header className="relative w-full h-[300px]" role="banner">
-        <Image
-          src="/images/terms-banner.jpg"
-          alt="Terms and Conditions Banner"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-          quality={75}
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-5xl font-bold text-center">Terms and Conditions</h1>
+      <header className="relative w-full h-[300px] bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900" role="banner">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/50 flex items-center justify-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-center text-white">Terms and Conditions</h1>
         </div>
       </header>
 
-      <main className="p-8">
-        <div className="max-w-full">
-          <p className="text-xl mb-8 text-gray-300">Effective Date: March 2024</p>
-          <p className="text-xl leading-relaxed mb-8">
+      <main className="container mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-base text-gray-400 mb-8">Effective Date: March 2024</p>
+          <p className="text-base leading-relaxed mb-8 text-gray-200">
             Welcome to Weblibron! These Terms and Conditions (&quot;Terms&quot;)
             govern your access to and use of our website, mobile application, and
             any other services provided by us (collectively, the
@@ -57,22 +48,22 @@ const TermsAndConditions = () => {
             these Terms and our Privacy Policy.
           </p>
 
-          <section aria-labelledby="acceptance-terms">
-            <h2 id="acceptance-terms" className="text-4xl font-bold mb-6 mt-12">1. Acceptance of Terms</h2>
-            <p className="text-xl mb-8">
+          <section aria-labelledby="acceptance-terms" className="mb-12">
+            <h2 id="acceptance-terms" className="text-xl md:text-2xl font-bold mb-4 text-white border-b border-gray-700 pb-2">1. Acceptance of Terms</h2>
+            <p className="text-base text-gray-200">
               By accessing or using our Services, you acknowledge that you have
               read, understood, and agree to be bound by these Terms. If you do not
               agree to these Terms, you must not use our Services.
             </p>
           </section>
 
-          <section aria-labelledby="user-conduct">
-            <h2 id="user-conduct" className="text-4xl font-bold mb-6 mt-12">2. User Conduct</h2>
-            <p className="text-xl mb-6">
+          <section aria-labelledby="user-conduct" className="mb-12">
+            <h2 id="user-conduct" className="text-xl md:text-2xl font-bold mb-4 text-white border-b border-gray-700 pb-2">2. User Conduct</h2>
+            <p className="text-base mb-4 text-gray-200">
               You agree to use our Services only for lawful purposes and in
               accordance with these Terms. You must not:
             </p>
-            <ul className="list-disc list-inside text-xl space-y-3 mb-8" role="list">
+            <ul className="list-disc list-inside text-base space-y-3 mb-8 text-gray-200" role="list">
               <li role="listitem">
                 Use our Services in any way that could harm or impair the Services
                 or the experience of other users.
@@ -89,9 +80,9 @@ const TermsAndConditions = () => {
             </ul>
           </section>
 
-          <section aria-labelledby="intellectual-property">
-            <h2 id="intellectual-property" className="text-4xl font-bold mb-6 mt-12">3. Intellectual Property Rights</h2>
-            <p className="text-xl mb-8">
+          <section aria-labelledby="intellectual-property" className="mb-12">
+            <h2 id="intellectual-property" className="text-xl md:text-2xl font-bold mb-4 text-white border-b border-gray-700 pb-2">3. Intellectual Property Rights</h2>
+            <p className="text-base text-gray-200">
               All content on our Services, including text, graphics, logos, images,
               and software, is the property of Weblibron or its licensors
               and is protected by copyright, trademark, and other intellectual
@@ -100,9 +91,9 @@ const TermsAndConditions = () => {
             </p>
           </section>
 
-          <section aria-labelledby="account-security">
-            <h2 id="account-security" className="text-4xl font-bold mb-6 mt-12">4. Account and Security</h2>
-            <p className="text-xl mb-8">
+          <section aria-labelledby="account-security" className="mb-12">
+            <h2 id="account-security" className="text-xl md:text-2xl font-bold mb-4 text-white border-b border-gray-700 pb-2">4. Account and Security</h2>
+            <p className="text-base text-gray-200">
               If you create an account with us, you are responsible for maintaining
               the confidentiality of your account and password and for restricting
               access to your account. You agree to immediately notify us of any
@@ -110,9 +101,9 @@ const TermsAndConditions = () => {
             </p>
           </section>
 
-          <section aria-labelledby="disclaimer">
-            <h2 id="disclaimer" className="text-4xl font-bold mb-6 mt-12">5. Disclaimer of Warranties</h2>
-            <p className="text-xl mb-8">
+          <section aria-labelledby="disclaimer" className="mb-12">
+            <h2 id="disclaimer" className="text-xl md:text-2xl font-bold mb-4 text-white border-b border-gray-700 pb-2">5. Disclaimer of Warranties</h2>
+            <p className="text-base text-gray-200">
               Our Services are provided &quot;as is&quot; and &quot;as
               available.&quot; We make no representations or warranties of any kind,
               express or implied, as to the operation of our Services or the
@@ -122,9 +113,9 @@ const TermsAndConditions = () => {
             </p>
           </section>
 
-          <section aria-labelledby="limitation-liability">
-            <h2 id="limitation-liability" className="text-4xl font-bold mb-6 mt-12">6. Limitation of Liability</h2>
-            <p className="text-xl mb-8">
+          <section aria-labelledby="limitation-liability" className="mb-12">
+            <h2 id="limitation-liability" className="text-xl md:text-2xl font-bold mb-4 text-white border-b border-gray-700 pb-2">6. Limitation of Liability</h2>
+            <p className="text-base text-gray-200">
               To the fullest extent permissible by law, Weblibron will not
               be liable for any damages, including but not limited to direct,
               indirect, incidental, consequential, or punitive damages, arising out
@@ -132,9 +123,9 @@ const TermsAndConditions = () => {
             </p>
           </section>
 
-          <section aria-labelledby="indemnification">
-            <h2 id="indemnification" className="text-4xl font-bold mb-6 mt-12">7. Indemnification</h2>
-            <p className="text-xl mb-8">
+          <section aria-labelledby="indemnification" className="mb-12">
+            <h2 id="indemnification" className="text-xl md:text-2xl font-bold mb-4 text-white border-b border-gray-700 pb-2">7. Indemnification</h2>
+            <p className="text-base text-gray-200">
               You agree to indemnify and hold Weblibron, its affiliates,
               officers, directors, employees, and agents harmless from any claim or
               demand, including reasonable attorneys&apos; fees, made by any third
@@ -143,31 +134,31 @@ const TermsAndConditions = () => {
             </p>
           </section>
 
-          <section aria-labelledby="changes-terms">
-            <h2 id="changes-terms" className="text-4xl font-bold mb-6 mt-12">8. Changes to Terms</h2>
-            <p className="text-xl mb-8">
+          <section aria-labelledby="changes-terms" className="mb-12">
+            <h2 id="changes-terms" className="text-xl md:text-2xl font-bold mb-4 text-white border-b border-gray-700 pb-2">8. Changes to Terms</h2>
+            <p className="text-base text-gray-200">
               We reserve the right to update or modify these Terms at any time
               without prior notice. Your continued use of our Services after any
               such changes constitutes your acceptance of the new Terms.
             </p>
           </section>
 
-          <section aria-labelledby="governing-law">
-            <h2 id="governing-law" className="text-4xl font-bold mb-6 mt-12">9. Governing Law</h2>
-            <p className="text-xl mb-8">
+          <section aria-labelledby="governing-law" className="mb-12">
+            <h2 id="governing-law" className="text-xl md:text-2xl font-bold mb-4 text-white border-b border-gray-700 pb-2">9. Governing Law</h2>
+            <p className="text-base text-gray-200">
               These Terms are governed by and construed in accordance with the laws
               of India, without regard to its conflict of law
               provisions.
             </p>
           </section>
 
-          <section aria-labelledby="contact-us">
-            <h2 id="contact-us" className="text-4xl font-bold mb-6 mt-12">10. Contact Us</h2>
-            <p className="text-xl mb-6">
+          <section aria-labelledby="contact-us" className="mb-12">
+            <h2 id="contact-us" className="text-xl md:text-2xl font-bold mb-4 text-white border-b border-gray-700 pb-2">10. Contact Us</h2>
+            <p className="text-base text-gray-200 mb-4">
               If you have any questions or concerns about these Terms, please
               contact us at:
             </p>
-            <address className="text-xl space-y-2 not-italic">
+            <address className="text-base space-y-2 not-italic text-gray-200">
               <p>Weblibron</p>
               <p><a href="tel:+918178614811" className="hover:text-primary transition-colors duration-300">+91 8178614811</a></p>
               <p><a href="mailto:info@weblibron.com" className="hover:text-primary transition-colors duration-300">info@weblibron.com</a></p>
