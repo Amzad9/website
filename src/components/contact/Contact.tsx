@@ -505,17 +505,6 @@ const Contact = () => {
             </div>
           </motion.div>
         </div>
-
-        {/* Bottom CTA with gradient underline */}
-        <div className="mt-12 sm:mt-16 md:mt-20 text-center">
-          <a
-            href="#portfolio"
-            className="inline-flex items-center gap-2 px-5 py-2  hover:bg-white/10 text-gray-300 hover:text-white rounded-full transition-colors duration-300 relative group"
-          >
-            <span>View Our Portfolio</span>
-            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-          </a>
-        </div>
       </div>
     </section>
   );
