@@ -15,7 +15,7 @@ const testimonial = {
 export const TestimonialsSection = () => {
   return (
     <section className="container mx-auto bg-black py-16">
-      <div className="bg-black relative z-20 mx-auto max-w-7xl">
+      <div className="bg-black relative z-20 mx-auto container">
         <div className="inline-flex items-center px-6 py-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl shadow-lg w-full md:w-[600px]">
           <div className="flex flex-col w-full">
             {/* Quote Icon */}

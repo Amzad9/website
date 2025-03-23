@@ -223,7 +223,7 @@ export default function Services() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 gap-10 max-w-7xl mx-auto"
+            className="grid md:grid-cols-2 gap-10 container mx-auto"
           >
             {services.map((service) => (
               <motion.div 

@@ -35,22 +35,25 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Optimized Heading for LCP */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light font-poppins tracking-tight text-white mb-6">
-            <div className="mb-2">
-              <span className="text-gradient-primary">
+          <h1 
+            className="text-5xl md:text-6xl lg:text-7xl font-light font-poppins tracking-tight text-white mb-6"
+            style={{ textRendering: 'optimizeLegibility' }}
+          >
+            <span className="inline-block mb-2">
+              <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/90 to-blue-500">
                 Innovative
-              </span>{" "}
-              <span className="text-white">High-Performance</span>{" "}
-              <span className="text-gradient-primary">
-                Solutions 
               </span>
-            </div>
-            <div className="line">
-              <span className="text-white">with </span>{" "}
-              <span className="text-gradient-primary">
-                Our Insight.
+              <span className="inline-block"> High-Performance </span>
+              <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary/90 to-primary">
+                Solutions
               </span>
-            </div>
+            </span>
+            <span className="block">
+              <span className="inline-block">with </span>{" "}
+              <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-primary/90">
+                {" "}Our Insight.
+              </span>
+            </span>
           </h1>
           
           {/* Elegant Videos */}

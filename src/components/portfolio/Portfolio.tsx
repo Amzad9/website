@@ -225,7 +225,7 @@ const Portfolio: React.FC = () => {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={containerVariants}
-        className="max-w-7xl mx-auto relative z-10 px-6"
+        className="container mx-auto relative z-10 px-6"
       >
         {/* Enhanced Heading Section like in Contact component */}
         <div className="text-center mb-12 md:mb-20 relative">
