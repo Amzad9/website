@@ -43,7 +43,7 @@ function Faq() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
+                                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 pt-4"
                             >
                                 <div 
                                     className="flex items-center justify-between cursor-pointer"
@@ -66,9 +66,9 @@ function Faq() {
                                         duration: 0.3,
                                         ease: "easeInOut"
                                     }}
-                                    className="overflow-hidden"
+                                    className="overflow-hidden pt-4"
                                 >
-                                    <p className="text-gray-400 mt-4">{faq.answer}</p>
+                                    <p className="text-gray-400 mt-6 pt-8">{faq.answer}</p>
                                 </motion.div>
                             </motion.div>
                         ))}
