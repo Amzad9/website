@@ -25,6 +25,7 @@ export default function Document() {
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="theme-color" content="#000000" />
+        <meta charSet="utf-8" />
 
         {/* Google Tag Manager */}
         <Script id="google-tag-manager" strategy="afterInteractive">
@@ -34,14 +35,6 @@ export default function Document() {
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-KQ9CGZHC');`}
         </Script>
-
-        <link
-          rel="preload"
-          href="/fonts/Poppins-Light.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
       </Head>
       <body className="antialiased">
         {/* Google Tag Manager (noscript) */}
