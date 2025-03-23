@@ -15,7 +15,7 @@ const SocialMediaList = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative  bg-black text-white pt-16 overflow-hidden">
+    <footer className="relative  bg-black text-white pt-16 overflow-hidden md:px-0 px-4">
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
        
@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
                 Quick Links
                 <span className="absolute -bottom-3 left-0 w-16 h-[3px] bg-gradient-to-r from-primary to-primary/50 rounded-full"></span>
                 </h2>
-              <ul className="space-y-4">
+              <ul className="space-y-4 -ms-4">
                 {['Web Development', 'App Development', 'UI/UX Design', 'E-commerce'].map((item) => (
                   <li key={item}>
                     <a
@@ -123,7 +123,7 @@ const Footer: React.FC = () => {
                 Our Solution
                 <span className="absolute -bottom-3 left-0 w-16 h-[3px] bg-gradient-to-r from-primary to-primary/50 rounded-full"></span>
                 </h2>
-              <ul className="space-y-4">
+              <ul className="space-y-4 -ms-4">
                 {['Web Development', 'App Development', 'UI/UX Design', 'E-commerce'].map((item) => (
                   <li key={item}>
                     <a

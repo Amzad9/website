@@ -348,7 +348,7 @@ const Portfolio: React.FC = () => {
           >
             <Link 
               href='/showcase'
-              className="h-full w-full flex flex-col items-center justify-center p-16 relative"
+              className="h-full w-full flex flex-col items-center justify-center py-16 md:px-16 px-5 relative"
             >
               {/* Background Effects */}
               <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-blue-500/5 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>

@@ -75,28 +75,28 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#000000" />
         
         {/* Favicon */}
-        <link rel="icon" href="/wl.jpg" />
+        <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         
         {/* Primary Meta Tags */}
         <title>Weblibron - Web Solution</title>
         <meta name="title" content="Weblibron - Web Solution" />
-        <meta name="description" content="Elevate your online presence with Weblibron's swift, stunning web solutions. Specializing in web development, app development, and design." />
+        <meta name="description" content="Elevate your online presence with Weblibron swift, stunning web solutions. Specializing in web development, app development, and design." />
         <meta name="keywords" content="Weblibron, web development, app development, design, fast websites, SEO, stunning web solutions" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://weblibron.com/" />
         <meta property="og:title" content="Weblibron - Web Solution" />
-        <meta property="og:description" content="Elevate your online presence with Weblibron's swift, stunning web solutions. Specializing in web development, app development, and design." />
+        <meta property="og:description" content="Elevate your online presence with Weblibron swift, stunning web solutions. Specializing in web development, app development, and design." />
         <meta property="og:image" content="https://weblibron.com/og-image.jpg" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://weblibron.com/" />
         <meta property="twitter:title" content="Weblibron - Web Solution" />
-        <meta property="twitter:description" content="Elevate your online presence with Weblibron's swift, stunning web solutions. Specializing in web development, app development, and design." />
+        <meta property="twitter:description" content="Elevate your online presence with Weblibron swift, stunning web solutions. Specializing in web development, app development, and design." />
         <meta property="twitter:image" content="https://weblibron.com/og-image.jpg" />
         
         {/* Additional Meta Tags */}

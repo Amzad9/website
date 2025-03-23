@@ -6,21 +6,21 @@ const TermsAndConditions = () => {
     <div className="min-h-screen bg-black text-white font-poppins" role="main">
       <Head>
         <title>Terms and Conditions - Weblibron</title>
-        <meta name="description" content="Read Weblibron's terms and conditions to understand our service usage policies, user responsibilities, and legal agreements. Learn about our intellectual property rights and user conduct guidelines." />
+        <meta name="description" content="Read Weblibron terms and conditions to understand our service usage policies, user responsibilities, and legal agreements. Learn about our intellectual property rights and user conduct guidelines." />
         <meta name="keywords" content="Weblibron terms, terms and conditions, service agreement, user agreement, legal terms, website terms" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://weblibron.com/terms" />
         <meta property="og:title" content="Terms and Conditions - Weblibron" />
-        <meta property="og:description" content="Read Weblibron's terms and conditions to understand our service usage policies, user responsibilities, and legal agreements. Learn about our intellectual property rights and user conduct guidelines." />
+        <meta property="og:description" content="Read Weblibron terms and conditions to understand our service usage policies, user responsibilities, and legal agreements. Learn about our intellectual property rights and user conduct guidelines." />
         <meta property="og:image" content="https://weblibron.com/og-image.jpg" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://weblibron.com/terms" />
         <meta property="twitter:title" content="Terms and Conditions - Weblibron" />
-        <meta property="twitter:description" content="Read Weblibron's terms and conditions to understand our service usage policies, user responsibilities, and legal agreements. Learn about our intellectual property rights and user conduct guidelines." />
+        <meta property="twitter:description" content="Read Weblibron terms and conditions to understand our service usage policies, user responsibilities, and legal agreements. Learn about our intellectual property rights and user conduct guidelines." />
         <meta property="twitter:image" content="https://weblibron.com/og-image.jpg" />
         
         {/* Additional Meta Tags */}
