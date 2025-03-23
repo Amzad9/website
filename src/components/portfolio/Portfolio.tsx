@@ -54,8 +54,8 @@ const Portfolio: React.FC = () => {
       {
         id: 4,
         src: "/p5.png",
-        alt: "Grocity Mobile App Design",
-        title: "Grocity Mobile App Design",
+        alt: "Grocery Mobile App Design",
+        title: "Grocery Mobile App Design",
         description: "Grocery shopping app with seamless ordering and delivery experience",
         url: 'https://www.figma.com/design/nHmjOBQpL5V64wv9Kx7LRs/Tharkarre?node-id=0-1&p=f&t=8QPgzQawja3U3U71-0',
         technologies: ['React Native', 'MongoDB', 'Node.js','Typescript']
