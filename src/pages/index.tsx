@@ -14,14 +14,14 @@ if (typeof window !== "undefined") {
 export const metadata = {
   title: "Weblibron - App and Web Development & Design Solutions",
   description:
-    "Elevate your online presence with Weblibron's swift, stunning web solutions. Specializing in web development, app development, and design.",
+    "Elevate your online presence with Weblibron swift, stunning web solutions. Specializing in web development, app development, and design.",
   keywords:
     "Weblibron, web development, app development, design, fast websites, SEO, stunning web solutions",
   canonical: "https://weblibron.com", // Replace with your actual domain
   openGraph: {
     title: "Weblibron",
     description:
-      "Supercharge your business with Weblibron's high-performance web solutions.",
+      "Supercharge your business with Weblibron high-performance web solutions.",
     url: "https://weblibron.com", // Replace with your actual domain
     type: "website",
     images: [

@@ -13,7 +13,7 @@ export default function Document() {
         <link rel="dns-prefetch" href="https://assets.apollo.io" />
         
         {/* Preload Critical Resources */}
-        <link rel="preload" href="/wl.jpg" as="image" />
+        <link rel="preload" href="/favicon.ico" as="image" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         
         {/* Additional Meta Tags */}

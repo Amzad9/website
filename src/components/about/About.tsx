@@ -98,10 +98,10 @@ const AboutUs = () => {
           >
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div className="space-y-8">
-                <h2 className="text-3xl md:text-5xl text-white font-medium leading-tight">
+                <h2 className="text-3xl md:text-5xl text-center md:text-left text-white font-light leading-tight">
                   Transforming Ideas into <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">Digital Reality</span>
                 </h2>
-                <p className="text-gray-300 leading-7 font-normal text-lg">
+                <p className="text-gray-300 leading-7 font-normal text-lg text-center md:text-left">
                   We are a team of passionate creators and expert developers at Weblibron, dedicated to crafting exceptional digital experiences. Specializing in UI/UX design, app development, and web development, we blend bold visuals with cutting-edge technology to bring your vision to life
                 </p>
                 <div className="flex flex-col sm:flex-row flex-wrap gap-5 mt-10">
