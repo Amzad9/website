@@ -210,7 +210,7 @@ export default function Services() {
           </motion.div>
         </div>
         
-        <div className="mt-12">
+        <div className="">
           <InfiniteMovingCardsDemo />
         </div>
       </section>
@@ -287,7 +287,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="bg-[#0A0A0A]/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/[0.05] group p-8 md:p-10 max-w-4xl mx-auto relative shadow-xl shadow-black/20 hover:scale-[1.01] transition-all duration-300"
+            className="bg-[#0A0A0A]/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/[0.05] group p-8 md:p-10 max-w-6xl mx-auto relative shadow-xl shadow-black/20 hover:scale-[1.01] transition-all duration-300"
           >
             {/* Glowing accent in corner */}
             <div className="absolute top-0 right-0 w-64 h-64 rounded-full blur-[100px] opacity-20 bg-gradient-to-r from-primary to-blue-400 -z-0 group-hover:opacity-30 transition-opacity duration-700"></div>
@@ -356,20 +356,20 @@ export default function Services() {
               <div className="w-full max-w-md space-y-4">
                 <Link
                   href="#contact"
-                  className="w-full px-8 py-4 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center justify-between shadow-lg shadow-primary/20 hover:translate-y-[-2px] group/btn"
+                  className="w-full px-8 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center justify-between shadow-lg shadow-primary/20 hover:translate-y-[-2px] group/btn"
                 >
                   <span className="text-base">Schedule a Consultation</span>
-                  <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center transform group-hover/btn:translate-x-1 transition-transform duration-300">
+                  <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center transform group-hover/btn:translate-0.5 transition-transform duration-300">
                     <ArrowRight className="w-4 h-4" />
                   </div>
                 </Link>
                 
                 <Link
                   href="#portfolio"
-                  className="w-full px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all duration-300 flex items-center justify-between hover:border-white/20 hover:translate-y-[-2px] group/btn"
+                  className="w-full px-8 py-3 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all duration-300 flex items-center justify-between hover:border-white/20 hover:translate-y-[-2px] group/btn"
                 >
                   <span className="text-base">View Our Portfolio</span>
-                  <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center transform group-hover/btn:translate-x-1 transition-transform duration-300">
+                  <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center transform group-hover/btn:translate-0.5 transition-transform duration-300">
                     <ArrowRight className="w-4 h-4" />
                   </div>
                 </Link>

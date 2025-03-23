@@ -113,7 +113,7 @@ const HeroSection = () => {
             {/* Primary Button */}
             <Link 
               href="#contact"
-              className="group relative px-8 py-3 rounded-full bg-gradient-to-r from-primary to-blue-500 transition-all duration-300"
+              className="group relative px-8 py-2 rounded-full bg-gradient-to-r from-primary to-blue-500 transition-all duration-300"
             >
               <div className="flex items-center justify-center gap-2">
                 <span className="text-white font-medium">Get Started</span>
@@ -125,7 +125,7 @@ const HeroSection = () => {
             {/* Secondary Button */}
             <Link 
               href="/showcase"
-              className="group px-8 py-3 rounded-full border border-white/10 hover:bg-white/5 transition-colors duration-300"
+              className="group px-8 py-2 rounded-full border border-white/10 hover:bg-white/5 transition-colors duration-300"
             >
               <div className="flex items-center justify-center gap-2">
                 <span className="text-white/70 font-medium group-hover:text-white transition-colors duration-300">
