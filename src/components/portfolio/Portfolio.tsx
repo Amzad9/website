@@ -365,7 +365,7 @@ const Portfolio: React.FC = () => {
                 <p className="text-2xl font-light text-gray-300 max-w-md">
                   Explore our complete collection of innovative designs and successful projects
                 </p>
-                <span className="mt-6 px-10 py-4 rounded-full border-2 border-white/10 bg-black/40 backdrop-blur-sm text-white hover:text-primary hover:border-primary transition-all duration-300 font-light flex items-center gap-2 group-hover:border-primary/50">
+                <span className="mt-6 px-10 py-2 rounded-full border-2 border-white/10 bg-black/40 backdrop-blur-sm text-white hover:text-primary hover:border-primary transition-all duration-300 font-light flex items-center gap-2 group-hover:border-primary/50">
                   View All Projects
                   <ExternalLink className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
