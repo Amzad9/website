@@ -34,29 +34,24 @@ const HeroSection = () => {
             <span className="text-white/70 text-xs font-light">Premium Digital Solutions</span>
           </motion.div>
 
-          {/* Clean Heading */}
-            <motion.h1 
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-light font-poppins tracking-tight text-white mb-6"
-            >
+          {/* Optimized Heading for LCP */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light font-poppins tracking-tight text-white mb-6">
             <div className="mb-2">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500">
-              Innovative
+              <span className="text-gradient-primary">
+                Innovative
               </span>{" "}
               <span className="text-white">High-Performance</span>{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500">
-              Solutions 
+              <span className="text-gradient-primary">
+                Solutions 
               </span>
             </div>
             <div className="line">
               <span className="text-white">with </span>{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500">
-              Our Insight.
+              <span className="text-gradient-primary">
+                Our Insight.
               </span>
             </div>
-            </motion.h1>
+          </h1>
           
           {/* Elegant Videos */}
           <motion.div
@@ -171,17 +166,6 @@ const HeroSection = () => {
 
       {/* Subtle Grid Lines */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none"></div>
-      
-      {/* Minimalist Animation CSS */}
-      <style jsx global>{`
-        @keyframes pulse-soft {
-          0%, 100% { opacity: 0.3; }
-          50% { opacity: 0.5; }
-        }
-        .animate-pulse-soft {
-          animation: pulse-soft 5s ease-in-out infinite;
-        }
-      `}</style>
     </section>
   );
 };

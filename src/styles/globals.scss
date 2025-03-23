@@ -1,17 +1,49 @@
+@use "sass:color";
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+// Variables
+$primary: #DAA520;
+$primary-gradient: linear-gradient(to right, $primary, color.adjust($primary, $lightness: -10%));
+
 :root {
   --black: #000000;
   --white: #ffffff;
-  --primary: #DAA520;
-  // --primary: #c8f169;
+  --primary: #{$primary};
   --secondary: #043f2e;
   --button: #eef2e3;
-  --poppins: "Poppins", serif, --inter: "Inter", serif;
+  --poppins: "Poppins", serif;
+  --inter: "Inter", serif;
+}
+
+// Gradient Text Mixin
+@mixin gradient-text {
+  background: $primary-gradient;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+// Utility Classes
+.text-gradient-primary {
+  @include gradient-text;
+}
+
+// Animation Keyframes
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 5s ease-in-out infinite;
 }
 
 .gradient-section {
@@ -19,9 +51,9 @@
     url("./../assets/contact.jpg");
   background-size: cover;
   background-position: center;
-  padding-top: 3rem; /* Matches Tailwind's py-40 (40 * 0.25rem = 10rem) */
+  padding-top: 3rem;
   padding-bottom: 3rem;
-  color: #000; /* Matches text-black */
+  color: #000;
   background-color: #000;
 }
 
@@ -31,6 +63,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }

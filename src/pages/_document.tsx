@@ -34,6 +34,14 @@ export default function Document() {
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-KQ9CGZHC');`}
         </Script>
+
+        <link
+          rel="preload"
+          href="/fonts/Poppins-Light.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
       </Head>
       <body className="antialiased">
         {/* Google Tag Manager (noscript) */}
