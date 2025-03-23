@@ -249,7 +249,7 @@ function Web() {
                                                         alt={item.title} 
                                                         width={600}
                                                         height={460}
-                                                        className="w-full h-full" 
+                                                        className="w-full h-full object-cover" 
                                                     />
                                                 </div>
                                             </div>
@@ -313,7 +313,7 @@ function Web() {
                                                         alt={item.title} 
                                                         width={600}
                                                         height={460}
-                                                        className="w-full h-full" 
+                                                        className="w-full h-full object-cover" 
                                                     />
                                                 </div>
                                             </div>

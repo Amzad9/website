@@ -316,7 +316,7 @@ const SolutionPage = () => {
                                                         alt={item.title}
                                                         width={600}
                                                         height={460}
-                                                        className="rounded-xl"
+                                                        className="rounded-xl object-cover"
                                                     />
                                                 </div>
                                             </div>
@@ -380,7 +380,7 @@ const SolutionPage = () => {
                                                         alt={item.title}
                                                         width={600}
                                                         height={460}
-                                                        className="rounded-xl"
+                                                        className="rounded-xl object-cover"
                                                     />
                                                 </div>
                                             </div>

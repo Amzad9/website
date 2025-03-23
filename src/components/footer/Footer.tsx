@@ -44,10 +44,10 @@ const Footer: React.FC = () => {
         />
       </Link>
 
-      <div className="container mx-auto px-6 relative">
-        <div className="grid grid-cols-12 md:grid-cols-12 gap-12">
+      <div className="container mx-auto px-4 sm:px-6 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Logo and Description Section */}
-          <div className="col-span-12 md:col-span-3">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-3">
             <Link 
               href="/" 
               className="logo inline-block transform hover:scale-105 transition-transform duration-300"
@@ -60,13 +60,13 @@ const Footer: React.FC = () => {
                 className="filter brightness-110"
               />
             </Link>
-            <p className="text-gray-300 mt-6 leading-relaxed font-light w-[50%] md:w-[100%]">
+            <p className="text-gray-300 mt-6 leading-relaxed font-light w-full">
               At Weblibron, we strive to create innovative web and app solutions that meet your needs. Your success is our priority.
             </p>
             
             {/* Social Media Icons with improved design */}
             <nav aria-label="Social Media Links">
-              <ul className="flex w-full border-t border-gray-800/50 pt-6 mt-6 gap-6 items-center">
+              <ul className="flex w-full border-t border-gray-800/50 pt-6 mt-6 gap-4 items-center">
                 {SocialMediaList.map((item, key) => (
                   <motion.li
                     whileHover={{
@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Quick Links Section */}
-          <nav className="col-span-12 md:col-span-2 relative">
+          <nav className="col-span-1 sm:col-span-1 lg:col-span-2 relative">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-blue-500/5 to-transparent rounded-xl blur-xl"></div>
             <div className="relative">
               <h2 className="text-xl font-bold text-white mb-8 relative">
@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
           </nav>
 
  {/* Solution Links Section */}
-          <nav className="col-span-12 md:col-span-2 relative">
+          <nav className="col-span-1 sm:col-span-1 lg:col-span-2 relative">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-blue-500/5 to-transparent rounded-xl blur-xl"></div>
             <div className="relative">
               <h2 className="text-xl font-bold text-white mb-8 relative">
@@ -140,7 +140,7 @@ const Footer: React.FC = () => {
           </nav>
 
           {/* Contact Section */}
-          <div className="col-span-12 md:col-span-2">
+          <div className="col-span-1 sm:col-span-1 lg:col-span-2">
             <h2 className="text-xl font-bold text-white mb-8 relative">
               Legal
               <span className="absolute -bottom-3 left-0 w-16 h-[3px] bg-gradient-to-r from-primary to-primary/50 rounded-full"></span>
@@ -182,7 +182,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Location Section - Improved styling */}
-          <div className="col-span-12 md:col-span-3">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-3">
             <h2 className="text-xl font-bold text-white mb-8 relative">
               Location
               <span className="absolute -bottom-3 left-0 w-16 h-[3px] bg-gradient-to-r from-primary to-primary/50 rounded-full"></span>
@@ -193,7 +193,7 @@ const Footer: React.FC = () => {
                   <span className="material-icons text-primary text-xl">location_on</span>
                   Dubai Office
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                   115, Al Ahmadi Building,<br />
                   Al Qusais, Dubai, U.A.E
                 </p>
@@ -203,7 +203,7 @@ const Footer: React.FC = () => {
                   <span className="material-icons text-primary text-xl">location_on</span>
                   India Office
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                   Ajnara Gen X,<br />
                   Gaziabad, Uttar Pradesh, India
                 </p>
@@ -213,9 +213,9 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Copyright Section with enhanced design */}
-        <div className="relative mt-12 py-8">
+        <div className="relative mt-8 sm:mt-12 py-6 sm:py-8">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
-          <p className="text-gray-400 text-center relative">
+          <p className="text-gray-400 text-center relative text-sm sm:text-base">
             © {new Date().getFullYear()} Weblibron. All rights reserved.
           </p>
         </div>
