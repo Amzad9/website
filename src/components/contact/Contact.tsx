@@ -269,7 +269,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-stretch max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-stretch max-w-10xl mx-auto">
           {/* Enhanced Contact Cards Container */}
           <div className="space-y-3 sm:space-y-4">
             {[
