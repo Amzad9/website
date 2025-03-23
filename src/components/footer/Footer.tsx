@@ -172,7 +172,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="/terms"
+                  href="/terms-and-conditions"
                   className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-3"
                 >
                   Terms & Conditions
@@ -213,7 +213,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Copyright Section with enhanced design */}
-        <div className="relative mt-8 sm:mt-12 py-6 sm:py-8">
+        <div className="relative mt-8 sm:mt-12 py-6 sm:py-6">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
           <p className="text-gray-400 text-center relative text-sm sm:text-base">
             © {new Date().getFullYear()} Weblibron. All rights reserved.

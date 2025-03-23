@@ -56,7 +56,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
 
         <div className="mt-8">
           <Link
-            href="/contact"
+            href="#contact"
             className="block w-full rounded-xl shadow-lg flex px-5 py-3 justify-center items-center bg-gradient-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary text-white text-center text-sm font-medium transition-all duration-300 hover:scale-105 tracking-wider focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black"
             onClick={() => setIsOpen(false)}
             aria-label="Start a new project"
