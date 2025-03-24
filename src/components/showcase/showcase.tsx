@@ -303,7 +303,7 @@ const ShowCase: React.FC = () => {
       </section>
 
       {/* Projects Section */}
-      <div id="projects" className="space-y-16 py-20">
+      <div id="projects" className="space-y-16 py-10">
         {filteredProjects.map((project, index) => (
           <motion.section 
             key={project.id}
@@ -317,7 +317,7 @@ const ShowCase: React.FC = () => {
             <div className={`absolute top-0 ${project.imagePosition === 'right' ? 'right-0' : 'left-0'} w-64 h-64 rounded-full blur-[100px] opacity-20 bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} -z-0 group-hover:opacity-40 transition-opacity duration-700`}></div>
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="bg-[#0A0A0A]/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/[0.05] group hover:scale-[1.02] transition-all duration-500 hover:shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+              <div className="bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden border border-white/[0.05] group hover:scale-[1.02] transition-all duration-500 hover:shadow-[0_0_50px_rgba(0,0,0,0.5)]">
                 <div className="flex flex-col md:flex-row items-center justify-between p-8">
                   {project.imagePosition === 'left' ? (
                     <>
@@ -328,7 +328,7 @@ const ShowCase: React.FC = () => {
                             alt={project.alt} 
                             width={400}
                             height={300}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover rounded-xl"
                             quality={60}
                             loading="lazy"
                             sizes="(max-width: 768px) 100vw, 33vw"

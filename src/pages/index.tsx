@@ -1,10 +1,17 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import HeroSection from "@/components/hero";
+// import HeroSection from "@/components/hero";
 import AboutUs from "@/components/about/About";
 import Services from "@/components/services/index";
 import Portfolio from "@/components/portfolio/Portfolio";
 import Expertise from "@/components/expertise/Expertise";
+import dynamic from "next/dynamic";
+import Loader from "@/components/Loader";
+
+const HeroSection = dynamic(() => import("@/components/hero"), {
+  loading: () => <Loader/>,
+  // ssr: false, // Optional: Disable server-side rendering
+});
 
 // Register GSAP ScrollTrigger only on client-side
 if (typeof window !== "undefined") {
@@ -47,3 +54,4 @@ export default function Home() {
     </>
   );
 }
+
