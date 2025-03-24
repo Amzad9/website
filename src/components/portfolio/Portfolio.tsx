@@ -149,7 +149,7 @@ const Portfolio: React.FC = () => {
           <motion.div variants={imageVariants} className="w-full h-full">
             <Image
               src={project.src}
-              alt={project.alt}
+              alt={"Weblibron "+project.alt}
               width={400}
               height={300}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

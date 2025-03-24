@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
           src="/whatsapp.svg"
           width={60}
           height={60}
-          alt="WhatsApp Contact"
+          alt="Weblibron WhatsApp Contact"
           priority
           className="filter drop-shadow-lg"
         />
