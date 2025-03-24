@@ -102,7 +102,7 @@ const AboutUs = () => {
                   Transforming Ideas into <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">Digital Reality</span>
                 </h2>
                 <p className="text-gray-300 leading-7 font-normal text-lg text-center md:text-left">
-                  We are a team of passionate creators and expert developers at Weblibron, dedicated to crafting exceptional digital experiences. Specializing in UI/UX design, app development, and web development, we blend bold visuals with cutting-edge technology to bring your vision to life
+                 Weblibron is dedicated to crafting exceptional digital experiences through web and app development, UI/UX design, and branding services. Our mission is to empower businesses with custom-built solutions that deliver smooth, engaging, and high-speed user experiences
                 </p>
                 <div className="flex flex-col sm:flex-row flex-wrap gap-5 mt-10">
                   <div className="group relative px-8 py-3 bg-white/5 rounded-xl border border-white/10 hover:border-primary/30 transition-all duration-300 backdrop-blur-sm flex-grow">

@@ -203,7 +203,7 @@ const ShowCase: React.FC = () => {
         <div className="absolute inset-0">
           <Image
             src="/1.jpeg"
-            alt="Portfolio Banner"
+            alt="Weblibron - Digital Solutions"
             fill
             className="object-cover brightness-50"
             priority

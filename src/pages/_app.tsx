@@ -62,10 +62,10 @@ export default function App({ Component, pageProps }: AppProps) {
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
           
           {/* Primary Meta Tags */}
-          <title>Weblibron - Web Solution</title>
-          <meta name="title" content="Weblibron - Web Solution" />
-          <meta name="description" content="Elevate your online presence with Weblibron swift, stunning web solutions. Specializing in web development, app development, and design." />
-          <meta name="keywords" content="Weblibron, web development, app development, design, fast websites, SEO, stunning web solutions" />
+          <title>Weblibron - Premium Digital Solutions for Web and App</title>
+          <meta name="title" content="Premium Digital Solutions for Web and App Development" />
+          <meta name="description" content="Weblibron offers premium digital solutions, including web and app development, UI/UX design, and branding services. Transform your online presence with Weblibron." />
+          <meta name="keywords" content="Weblibron, web development, app development, design, fast websites, SEO, stunning web solutions, branding, website, design, UI design, UX research" />
           
           {/* Open Graph / Facebook */}
           <meta property="og:type" content="website" />
