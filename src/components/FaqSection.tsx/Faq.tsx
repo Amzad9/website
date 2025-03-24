@@ -45,7 +45,7 @@ function Faq() {
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 pt-4"
                             >
-                                {/* <div 
+                                <div 
                                     className="flex items-center justify-between cursor-pointer"
                                     onClick={() => toggleFaq(index)}
                                 >
@@ -55,7 +55,7 @@ function Faq() {
                                             openFaqIndex === index ? 'rotate-180' : ''
                                         }`}
                                     />
-                                </div> */}
+                                </div>
                                 <motion.div
                                     initial={false}
                                     animate={{

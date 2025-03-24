@@ -2,7 +2,7 @@ import Image from "next/image";
 import Logo from "@/assets/whiteLogo.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import styles from "./footer.module.scss";
+import { Linkedin } from "lucide-react";
 
 const SocialMediaList = [
   {
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
                       aria-label={item.label}
                       className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-3 rounded-full hover:bg-primary transition-colors duration-300 flex items-center justify-center backdrop-blur-sm border border-white/5 hover:border-white/10"
                     >
-                      <i className={`${styles[item.icon]} text-xl`}></i>
+                      <Linkedin />
                     </Link>
                   </motion.li>
                 ))}
