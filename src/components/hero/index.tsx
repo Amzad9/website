@@ -50,7 +50,7 @@ const HeroSection = () => {
             </span>
             <span className="block">
               <span className="inline-block">with </span>{" "}
-              <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-primary/90">
+              <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/90 to-blue-500">
                 {" "}Our Insight.
               </span>
             </span>
