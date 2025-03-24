@@ -192,7 +192,7 @@ function ClientTestimonial() {
                                     <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-primary/20 group-hover:ring-primary/40 transition-all duration-300">
                                         <Image
                                             src={testimonial.image}
-                                            alt={testimonial.name}
+                                            alt={"Weblibron" + testimonial.name}
                                             width={48}
                                             height={48}
                                             className="object-cover"
