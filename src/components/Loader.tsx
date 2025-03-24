@@ -10,7 +10,7 @@ const Loader = () => {
         {/* Main container */}
         <div className="relative flex flex-col items-center">
           {/* Logo or brand name */}
-          <motion.div
+          {/* <motion.div
             // initial={{ opacity: 0, y: 20 }}
             // animate={{ opacity: 1, y: 0 }}
             // transition={{ duration: 0.5 }}
@@ -21,7 +21,7 @@ const Loader = () => {
             className="mt-8 text-white text-2xl font-light mb-8 tracking-wider"
           >
             Weblibron
-          </motion.div>
+          </motion.div> */}
 
           {/* Plus shape loader */}
           <div className="relative w-24 h-24">
