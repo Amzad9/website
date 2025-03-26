@@ -27,29 +27,26 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 min-h-screen flex items-center justify-center relative z-20">
         <div className="max-w-4xl mx-auto text-center relative z-30">
           {/* Minimal Badge */}
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.7 }}
+          <div
             className="inline-flex items-center gap-2 bg-white/3 backdrop-blur-sm rounded-full px-4 py-1.5 mb-8 border border-white/5"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
             <span className="text-white/70 text-xs font-light">
               Premium Digital Solutions
             </span>
-          </motion.div>
+          </div>
 
           {/* Optimized Heading for LCP */}
          <h1 className={styles.heading}>
-      <span className={styles.gradientText}>Innovative</span> <br />
-      {" High-Performance "}
-      <span className={styles.gradientTextReverse}>Solutions</span>
-      <br />
-      <span className="inline-block">
-        with{" "}
-        <span className={styles.gradientText}>Our Insight.</span>
-      </span>
-    </h1>
+            <span className={styles.gradientText}>Innovative</span> <br />
+            {" High-Performance "}
+            <span className={styles.gradientTextReverse}>Solutions</span>
+            <br />
+            <span className="inline-block">
+              with{" "}
+              <span className={styles.gradientText}>Our Insight.</span>
+            </span>
+          </h1>
 
           {/* Elegant Videos */}
           <motion.div
@@ -59,7 +56,6 @@ const HeroSection = () => {
             className="flex justify-center gap-8 mb-10"
           >
             <div className="relative group">
-              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-primary/50 to-blue-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-sm"></div>
               <video
                 autoPlay
                 muted
@@ -72,7 +68,6 @@ const HeroSection = () => {
             </div>
 
             <div className="relative group">
-              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-blue-500/50 to-primary/50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-sm"></div>
               <video
                 autoPlay
                 muted
@@ -129,7 +124,7 @@ const HeroSection = () => {
             </Link>
           </motion.div>
 
-          {/* Minimal Line Separator */}
+         
           <motion.div
             initial={{ scaleX: 0, opacity: 0 }}
             animate={{ scaleX: 1, opacity: 1 }}
@@ -137,7 +132,7 @@ const HeroSection = () => {
             className="h-px w-16 bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto my-12"
           ></motion.div>
 
-          {/* Simple Stats */}
+
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
