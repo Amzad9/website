@@ -111,7 +111,6 @@ const AboutUs = () => {
                       <span className="text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">7+</span>
                       <div className="text-left">
                         <p className="text-white font-light">Years Experience</p>
-                        {/* <p className="text-white/70 text-sm font-light">Experience</p> */}
                       </div>
                     </div>
                   </div>
@@ -121,7 +120,6 @@ const AboutUs = () => {
                       <span className="text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-primary">10+</span>
                       <div className="text-left">
                         <p className="text-white font-light">Projects Delivered</p>
-                        {/* <p className="text-white/70 text-sm font-light">Delivered</p> */}
                       </div>
                     </div>
                   </div>
