@@ -61,7 +61,7 @@ function Expertise() {
 
               {/* The heading itself */}
               <div className="flex flex-col items-center justify-center gap-1 md:gap-2 relative">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-white leading-tight">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-white leading-tight">
                   Our
                   <span className="relative inline-block mx-2">
                     {/* 3D Depth Shadow */}
@@ -78,7 +78,7 @@ function Expertise() {
                     <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gradient-to-r from-primary/70 via-blue-400/70 to-primary/70 rounded-full transform origin-left group-hover:scale-x-110 transition-transform duration-500"></span>
                     <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gradient-to-r from-primary via-blue-400 to-primary rounded-full opacity-70 blur-[2px] animate-pulse-slow"></span>
                   </span>
-                </h1>
+                </h2>
               </div>
             </div>
 
