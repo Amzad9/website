@@ -57,7 +57,7 @@ const AboutUs = () => {
               
               {/* The heading itself */}
               <div className="flex flex-row flex-wrap md:flex-row items-center justify-center gap-3 md:gap-4 relative">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-white leading-tight">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-white leading-tight">
                   We Are 
                   <span className="relative inline-block mx-2">
                     {/* 3D Depth Shadow */}
@@ -75,7 +75,7 @@ const AboutUs = () => {
                     <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gradient-to-r from-primary via-blue-400 to-primary rounded-full opacity-70 blur-[2px] animate-pulse-slow"></span>
                   </span>
                  
-                </h1>
+                </h2>
               </div>
             </div>
             
@@ -98,9 +98,9 @@ const AboutUs = () => {
           >
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div className="space-y-8">
-                <h2 className="text-3xl md:text-5xl text-center md:text-left text-white font-light leading-tight">
+                <h3 className="text-3xl md:text-5xl text-center md:text-left text-white font-light leading-tight">
                   Transforming Ideas into <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">Digital Reality</span>
-                </h2>
+                </h3>
                 <p className="text-gray-300 leading-7 font-normal text-lg text-center md:text-left">
                  Weblibron is dedicated to crafting exceptional digital experiences through web and app development, UI/UX design, and branding services. Our mission is to empower businesses with custom-built solutions that deliver smooth, engaging, and high-speed user experiences
                 </p>
@@ -152,9 +152,9 @@ const AboutUs = () => {
                     &quot;Our mission is to empower businesses with custom-built solutions that not only stand out but also deliver smooth, engaging, and high-speed user experiences.&quot;
                   </p>
                   <div className="pt-8 border-t border-gray-700/30">
-                    <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent mb-8">
+                    <h4 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent mb-8">
                       Our Promise
-                    </h3>
+                    </h4>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <div className="text-center p-3 cursor-pointer rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group">
                         <p className="text-xl font-semibold text-primary group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-blue-500 transition-all duration-300">Innovation</p>

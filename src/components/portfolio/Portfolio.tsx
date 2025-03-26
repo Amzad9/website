@@ -364,7 +364,7 @@ const Portfolio: React.FC = () => {
               {/* Content */}
               <div className="relative z-10 flex flex-col items-center text-center space-y-8">
                 <div className="text-6xl mb-4">🎨</div>
-                <h3 className="text-5xl font-light text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500 font-poppins">
+                <h3 className="text-4xl md:text-5xl font-light text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500 font-poppins">
                   Discover Our Full Portfolio
                 </h3>
                 <p className="text-2xl font-light text-gray-300 max-w-md">
