@@ -17,28 +17,61 @@ if (typeof window !== "undefined") {
 }
 // Metadata for SEO with Weblibron branding
 export const metadata = {
-  title: "Weblibron - Premium Digital Solutions for Web and App Development",
+  title: "Weblibron | Web & App Development & SEO Agency",
   description:
-    "Elevate your online presence with Weblibron's swift, stunning web solutions. Specializing in web development, app development, UI/UX design, and branding services.",
+    "Boost your business with Weblibron’s expert web & app development, SEO, UI/UX design, and branding for scalable digital solutions.",
   keywords:
-    "Weblibron, web development, app development, UI/UX design, branding, SEO, digital solutions, high-performance web solutions, Next.js SEO Optimization, Next.js Metadata Best Practices, Next.js SEO Techniques, Next.js SEO Ranking",
+    "Weblibron, web development, app development, UI/UX design, SEO services, branding, digital solutions, responsive web design, fast-loading websites, Next.js SEO best practices, mobile app optimization, technical SEO, scalable web development, conversion-focused design, business growth",
   canonical: "https://weblibron.com",
   openGraph: {
-    title: "Weblibron - Web and App Development",
+    title: "Weblibron | Expert Web & App Development for Business Growth",
     description:
-      "Supercharge your business with Weblibron's high-performance web solutions. Transform your ideas into digital reality with our expert developers and designers.",
+      "Unlock the power of high-performance web & app solutions with Weblibron. Custom-built digital experiences to maximize your success online.",
     url: "https://weblibron.com",
     type: "website",
     images: [
       {
-        url: "https://weblibron.com/favicon.ico",
+        url: "https://weblibron.com/assets/preview.jpg", // Use a high-quality image URL
         width: 1200,
         height: 630,
-        alt: "Weblibron Web Solutions Preview",
+        alt: "Weblibron - High-Performance Web & App Solutions",
       },
     ],
   },
+  twitter: {
+    card: "summary",
+    title: "Weblibron | Next-Gen Web & App Development",
+    description:
+      "Scale your business with Weblibron’s SEO-friendly, mobile-responsive websites and custom app development. Elevate your online presence today.",
+    images: ["https://weblibron.com/assets/preview.jpg"],
+  },
   robots: "index, follow",
+  alternates: {
+    canonical: "https://weblibron.com",
+    languages: {
+      "en-US": "https://weblibron.com/en",
+      "es-ES": "https://weblibron.com/es",
+    },
+  },
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Weblibron",
+    "url": "https://weblibron.com",
+    "logo": "https://weblibron.com/lt-logo.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/company/weblibron",
+      "https://twitter.com/weblibron",
+      "https://www.facebook.com/profile.php?viewas=100000686899395&id=61557790902650",
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+918178614811",
+      "contactType": "customer support",
+      "areaServed": "Global",
+      "availableLanguage": ["English", "Spanish"],
+    },
+  },
 };
 
 export default function Home() {
