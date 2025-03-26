@@ -13,7 +13,7 @@
 
 .gradientText {
   display: inline-block;
-  background: linear-gradient(to right, var(--primary, #daa520), rgba(var(--primary-rgb, 255, 0, 0), 1), #60a5fa);
+  background: linear-gradient(to right,  #daa520,  #60a5fa);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -21,7 +21,7 @@
 
 .gradientTextReverse {
   display: inline-block;
-  background: linear-gradient(to right, #60a5fa, rgba(var(--primary-rgb, 255, 0, 0), 0.9), var(--primary, #daa520));
+  background: linear-gradient(to right,  #daa520,  #60a5fa);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
