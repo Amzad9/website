@@ -105,16 +105,15 @@ const AboutUs = () => {
                  Weblibron is dedicated to crafting exceptional digital experiences through web and app development, UI/UX design, and branding services. Our mission is to empower businesses with custom-built solutions that deliver smooth, engaging, and high-speed user experiences
                 </p>
                 <div className="flex flex-col sm:flex-row flex-wrap gap-5 mt-10">
-                  <div className="group relative px-8 py-3 bg-white/5 rounded-xl border border-white/10 hover:border-primary/30 transition-all duration-300 backdrop-blur-sm flex-grow">
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
-                    <div className="relative flex items-center gap-4">
+                  <div className="group relative px-8 py-4 bg-white/5 rounded-xl border border-white/10 hover:border-primary/30 transition-all duration-300 backdrop-blur-sm flex-grow">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>                    <div className="relative flex items-center gap-4">
                       <span className="text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">7+</span>
                       <div className="text-left">
                         <p className="text-white font-light">Years Experience</p>
                       </div>
                     </div>
                   </div>
-                  <div className="group relative px-8 py-3 bg-white/5 rounded-xl border border-white/10 hover:border-primary/30 transition-all duration-300 backdrop-blur-sm flex-grow">
+                  <div className="group relative px-8 py-4 bg-white/5 rounded-xl border border-white/10 hover:border-primary/30 transition-all duration-300 backdrop-blur-sm flex-grow">
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
                     <div className="relative flex items-center gap-4">
                       <span className="text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-primary">10+</span>
