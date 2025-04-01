@@ -28,9 +28,6 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [logo] = useState(LogoWhite);
-useEffect(() => {
-  console.log("Contact component mounted");
-}, []);
   useEffect(() => {
     const handleStart = () => setIsLoading(true);
     const handleComplete = () => setIsLoading(false);

@@ -1,7 +1,7 @@
 import { Phone, Mail, Map, Send, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import Loader from "../Loader";
 
@@ -39,11 +39,14 @@ const Contact = () => {
     }),
   };
 
+useEffect(() => {
+  console.log("Contact component mounted");
+}, []);
+
 const handleSubmit = async (e: { preventDefault: () => void; }) => {
   e.preventDefault();
   setIsLoading(true);
   setSubmitStatus(null);
-
   try {
     console.log('Submitting form data:', formData); // Debug log
 
