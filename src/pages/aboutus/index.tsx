@@ -17,7 +17,7 @@ const AboutUsPage = () => {
         <meta property="og:url" content="https://weblibron.com/aboutus" />
         <meta property="og:title" content="About Us - Weblibron | Leading Web Development & Design Agency" />
         <meta property="og:description" content="Discover Weblibron story - a team of passionate creators and expert developers dedicated to transforming ideas into exceptional digital experiences. Learn about our mission, vision, and core values." />
-        <meta property="og:image" content="https://weblibron.com/og-image.jpg" />
+        <meta property="og:image" content="https://weblibron.com/preview.jpg" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />

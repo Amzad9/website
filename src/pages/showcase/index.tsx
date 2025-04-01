@@ -19,7 +19,7 @@ const ShowCase = () => {
         <meta property="og:url" content="https://weblibron.com/showcase" />
         <meta property="og:title" content="Weblibron - Portfolio | Web Development & Mobile Apps" />
         <meta property="og:description" content="Explore our portfolio of innovative web and mobile applications. Specializing in React, Next.js, Vue.js, and React Native development with modern UI/UX design." />
-        <meta property="og:image" content="/1.jpeg" />
+        <meta property="og:image" content="/preview.jpg" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />

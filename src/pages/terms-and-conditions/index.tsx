@@ -25,13 +25,13 @@ const TermsAndConditions = () => {
         <meta property="og:url" content="https://weblibron.com/terms" />
         <meta property="og:title" content="Terms and Conditions - Weblibron" />
         <meta property="og:description" content="Read Weblibron terms and conditions to understand our service usage policies." />
-        <meta property="og:image" content="https://weblibron.com/og-image.jpg" />
+        <meta property="og:image" content="https://weblibron.com/preview.jpg" />
         
         {/* Twitter tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Terms and Conditions - Weblibron" />
         <meta name="twitter:description" content="Read Weblibron terms and conditions." />
-        <meta name="twitter:image" content="https://weblibron.com/og-image.jpg" />
+        <meta name="twitter:image" content="https://weblibron.com/preview.jpg" />
         
         <meta name="robots" content="noindex, follow" />
         <link rel="canonical" href="https://weblibron.com/terms" />

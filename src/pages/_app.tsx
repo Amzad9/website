@@ -2,7 +2,6 @@ import dynamic from 'next/dynamic';
 import "@/styles/globals.scss";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import Script from "next/script";
 import LogoWhite from "@/assets/whiteLogo.png";
 import { useRouter } from "next/router";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -28,7 +27,9 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [logo] = useState(LogoWhite);
-
+useEffect(() => {
+  console.log("Contact component mounted");
+}, []);
   useEffect(() => {
     const handleStart = () => setIsLoading(true);
     const handleComplete = () => setIsLoading(false);
@@ -72,14 +73,14 @@ export default function App({ Component, pageProps }: AppProps) {
           <meta property="og:url" content="https://weblibron.com/" />
           <meta property="og:title" content="Weblibron - Web Solution" />
           <meta property="og:description" content="Elevate your online presence with Weblibron swift, stunning web solutions. Specializing in web development, app development, and design." />
-          <meta property="og:image" content="https://weblibron.com/og-image.jpg" />
+          <meta property="og:image" content="https://weblibron.com/preview.jpg" />
           
           {/* Twitter */}
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="https://weblibron.com/" />
           <meta property="twitter:title" content="Weblibron - Web Solution" />
           <meta property="twitter:description" content="Elevate your online presence with Weblibron swift, stunning web solutions." />
-          <meta property="twitter:image" content="https://weblibron.com/og-image.jpg" />
+          <meta property="twitter:image" content="https://weblibron.com/priview.jpg" />
           
           {/* Additional Meta Tags */}
           <meta name="application-name" content="Weblibron" />
@@ -91,27 +92,6 @@ export default function App({ Component, pageProps }: AppProps) {
           <meta name="msapplication-TileColor" content="#000000" />
           <meta name="msapplication-tap-highlight" content="no" />
         </Head>
-
-        {/* Apollo Tracking Script */}
-        <Script
-          id="apollo-tracking"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                var n = Math.random().toString(36).substring(7);
-                var o = document.createElement("script");
-                o.src = "https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=" + n;
-                o.async = true;
-                o.defer = true;
-                o.onload = function() {
-                  window.trackingFunctions.onLoad({ appId: "67d8fae9d38b9d0011ee8a51" });
-                };
-                document.head.appendChild(o);
-              })();
-            `
-          }}
-        />
 
         <SpeedInsights />
         {isLoading && <Loader />}
