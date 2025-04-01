@@ -1,0 +1,47 @@
+/* HeroHeading.module.css */
+.heading {
+  font-size: 2.25rem;
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.025em;
+  color: #fff;
+  margin-bottom: 1.5rem; /* mb-6 */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.1;
+}
+
+.gradientText {
+  display: inline-block;
+  background: linear-gradient(to right,  #daa520,  #60a5fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradientTextReverse {
+  display: inline-block;
+  background: linear-gradient(to right,  #daa520,  #60a5fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  .heading {
+    font-size: 3rem; /* md:text-6xl */
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 4.5rem; /* lg:text-7xl */
+  }
+}
+
+@media (max-width: 640px) {
+  .heading {
+    font-size: 2rem; /* Adjusted for mobile */
+  }
+}

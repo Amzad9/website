@@ -173,6 +173,10 @@ const SolutionPage = () => {
                         fill
                         className="object-cover brightness-50"
                         priority
+                        quality={60}
+                        sizes="100vw"
+                        placeholder="blur"
+                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkMjU1LS0yMi4qQEBALkE6Oz5DRVlLT1NbWl5eYWJhSl9yX2JhYVv/2wBDARUXFx4aHjshITtbQjVCW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1v/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                     />
                     {/* Overlay */}
                       <div className="absolute inset-0 bg-black opacity-90"></div>
@@ -255,11 +259,11 @@ const SolutionPage = () => {
                             </motion.p>
 
                             <div className="flex flex-wrap justify-center gap-4">
-                                <Link className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/20 hover:translate-y-[-2px]" href={'/service'}>
+                                <Link className="px-8 py-2 md:py-4 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/20 hover:translate-y-[-2px]" href={'/service'}>
                                     <span>Explore Services</span>
                                     <ArrowRight className="w-4 h-4" />
                                 </Link>
-                                <Link className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all duration-300 flex items-center gap-2 hover:border-white/20 hover:translate-y-[-2px]" href='#contact'>
+                                <Link className="px-8 py-2 md:py-4 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all duration-300 flex items-center gap-2 hover:border-white/20 hover:translate-y-[-2px]" href='#contact'>
                                     <span>Contact Us</span>
                                 </Link>
                             </div>
@@ -269,7 +273,7 @@ const SolutionPage = () => {
             </section>
 
             {/* Stats Section */}
-            <section className="py-20 bg-black/50">
+            <section className="pt-5 bg-black/50">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {stats.map((stat, index) => (
@@ -291,7 +295,7 @@ const SolutionPage = () => {
             </section>
 
             {/* Services Section */}
-            <div className="space-y-16 py-20">
+            <div className="space-y-16 py-10">
                 {services.map((item, index) => (
                     <motion.section 
                         key={index}
@@ -305,18 +309,21 @@ const SolutionPage = () => {
                         <div className={`absolute top-0 ${item.imagePosition === 'right' ? 'right-0' : 'left-0'} w-64 h-64 rounded-full blur-[100px] opacity-20 bg-gradient-to-r ${item.gradientFrom} ${item.gradientTo} -z-0 group-hover:opacity-40 transition-opacity duration-700`}></div>
 
                         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                            <div className="bg-[#0A0A0A]/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/[0.05] group hover:scale-[1.02] transition-all duration-500 hover:shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+                            <div className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/[0.05] group hover:scale-[1.02] transition-all duration-500 hover:shadow-[0_0_50px_rgba(0,0,0,0.5)]">
                                 <div className="flex flex-col md:flex-row items-center justify-between p-8">
                                     {item.imagePosition === 'left' ? (
                                         <>
                                             <div className="w-full md:w-1/2 text-center mb-8 md:mb-0">
-                                                <div className="relative h-[200px] md:h-[460px] w-full rounded-xl overflow-hidden bg-black/50 p-8">
+                                                <div className="relative max-h-[460px] w-full rounded-xl overflow-hidden bg-black/50 p-0 md:p-8">
                                                     <Image 
                                                         src={item.image} 
                                                         alt={item.title} 
-                                                        width={600}
-                                                        height={460}
-                                                        className="w-full h-full object-cover" 
+                                                        width={400}
+                                                        height={300}
+                                                        className="w-full h-full object-cover rounded-xl"
+                                                        quality={75}
+                                                        loading="lazy"
+                                                        sizes="(max-width: 768px) 100vw, 50vw"
                                                     />
                                                 </div>
                                             </div>
@@ -348,7 +355,7 @@ const SolutionPage = () => {
                                         </>
                                     ) : (
                                         <>
-                                            <div className="w-full md:w-1/2 space-y-6 md:ps-5">
+                                            <div className="w-full order-2 md:order-1  md:w-1/2 space-y-6 md:ps-5">
                                                 <div>
                                                     <h2 className={`text-3xl font-bold mb-2 relative inline-block bg-gradient-to-r ${item.gradientFrom} ${item.gradientTo} bg-clip-text text-transparent group-hover:after:absolute group-hover:after:bottom-0 group-hover:after:left-0 group-hover:after:h-[2px] group-hover:after:w-full group-hover:after:bg-gradient-to-r group-hover:after:from-transparent group-hover:after:via-primary group-hover:after:to-transparent group-hover:after:transition-all group-hover:after:duration-500`}>
                                                         {item.title}
@@ -373,14 +380,17 @@ const SolutionPage = () => {
                                                     <ArrowRight className="w-4 h-4" />
                                                 </div>
                                             </div>
-                                            <div className="w-full md:w-1/2 text-center">
-                                                <div className="relative h-[200px] md:h-[460px] w-full rounded-xl overflow-hidden bg-black/50 p-8">
+                                            <div className="w-full order-1 md:order-2  md:w-1/2 text-center">
+                                                <div className="relative mb-8 md-mb-0 max-h-[460px] w-full rounded-xl overflow-hidden bg-black/50 p-0 md:p-8">
                                                     <Image 
                                                         src={item.image} 
                                                         alt={item.title} 
-                                                        width={600}
-                                                        height={460}
-                                                        className="w-full h-full object-cover" 
+                                                        width={400}
+                                                        height={300}
+                                                        className="w-full h-full object-cover  rounded-xl"
+                                                        quality={75}
+                                                        loading="lazy"
+                                                        sizes="(max-width: 768px) 100vw, 50vw"
                                                     />
                                                 </div>
                                             </div>
@@ -394,7 +404,7 @@ const SolutionPage = () => {
             </div>
 
             {/* Process Section */}
-            <section className="py-20 bg-black/50 relative overflow-hidden">
+            <section className="py-10 bg-black/50 relative overflow-hidden">
                 {/* Animated Background Elements */}
                 <div className="absolute inset-0">
                     <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] opacity-20 animate-pulse"></div>
@@ -681,8 +691,8 @@ const SolutionPage = () => {
                                     onClick={() => toggleFaq(index)}
                                     className="w-full text-left p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-primary/30 transition-all duration-300"
                                 >
-                                    <div className="flex items-center justify-between">
-                                        <h3 className="text-lg font-medium text-white">{faq.question}</h3>
+                                    <div className="flex items-center gap-2 justify-between">
+                                        <h3 className="text-base md:text-lg font-medium text-white">{faq.question}</h3>
                                         <span className={`transform transition-transform duration-300 ${openFaqIndex === index ? 'rotate-180' : ''}`}>
                                             <ChevronDown className="w-5 h-5 text-gray-400" />
                                         </span>
@@ -694,7 +704,7 @@ const SolutionPage = () => {
                                     transition={{ duration: 0.3 }}
                                     className="overflow-hidden"
                                 >
-                                    <div className="p-6 pt-0">
+                                    <div className="p-6">
                                         <p className="text-gray-400">{faq.answer}</p>
                                     </div>
                                 </motion.div>
@@ -709,10 +719,10 @@ const SolutionPage = () => {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Digital Presence?</h2>
                     <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-                        Let's discuss how we can help you achieve your business goals with our cutting-edge solutions.
+                        Let&apos;s discuss how we can help you achieve your business goals with our cutting-edge solutions.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <Link className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/20 hover:translate-y-[-2px]" href={'#contact'}>
+                        <Link className="px-8 py-2 md:py-4 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/20 hover:translate-y-[-2px]" href={'#contact'}>
                             <span>Start Your Project</span>
                             <ArrowRight className="w-4 h-4" />
                         </Link>

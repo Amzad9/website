@@ -1,7 +1,14 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 import { ChevronDown } from 'lucide-react';
+import { useState } from 'react';
+
 function Faq() {
+    const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+    const toggleFaq = (index: number) => {
+        setOpenFaqIndex(openFaqIndex === index ? null : index);
+    };
    const faqs = [
         {
             question: "What technologies do you use?",
@@ -36,13 +43,13 @@ function Faq() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
+                                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 pt-4"
                             >
                                 <div 
                                     className="flex items-center justify-between cursor-pointer"
                                     onClick={() => toggleFaq(index)}
                                 >
-                                    <h3 className="text-white font-bold">{faq.question}</h3>
+                                    <h3 className="text-white text-xl font-bold">{faq.question}</h3>
                                     <ChevronDown 
                                         className={`w-5 h-5 text-gray-400 transition-transform duration-300 ${
                                             openFaqIndex === index ? 'rotate-180' : ''
@@ -59,9 +66,9 @@ function Faq() {
                                         duration: 0.3,
                                         ease: "easeInOut"
                                     }}
-                                    className="overflow-hidden"
+                                    className="overflow-hidden pt-4"
                                 >
-                                    <p className="text-gray-400 mt-4">{faq.answer}</p>
+                                    <p className="text-gray-400 mt-6 pt-8">{faq.answer}</p>
                                 </motion.div>
                             </motion.div>
                         ))}

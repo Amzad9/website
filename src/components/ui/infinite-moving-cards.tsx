@@ -67,7 +67,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-7xl overflow-hidden",
+        "scroller relative z-20 container overflow-hidden",
         className
       )}
     >
@@ -88,8 +88,10 @@ export const InfiniteMovingCards = ({
               src={item.image}
               alt=""
               className="rounded-xl"
-              width={350}
-              height={600}
+              width={200}
+              height={350}
+              quality={75}
+              sizes="200px"
             />
           </div>
         ))}

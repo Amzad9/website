@@ -1,7 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import dynamic from 'next/dynamic';
-import Image from "next/image";
 
 const PrivacyPolicy = () => {
   return (
@@ -190,7 +188,7 @@ const PrivacyPolicy = () => {
           </section>
 
           <section aria-labelledby="children-privacy" className="mb-12">
-            <h2 id="children-privacy" className="text-xl md:text-2xl font-bold mb-4 text-white border-b border-gray-700 pb-2">7. Children's Privacy</h2>
+            <h2 id="children-privacy" className="text-xl md:text-2xl font-bold mb-4 text-white border-b border-gray-700 pb-2">7. Children&apos;s Privacy</h2>
             <p className="text-base text-gray-200">
               Our website and services are not intended for use by children under the
               age of 13. We do not knowingly collect personal information from

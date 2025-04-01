@@ -2,7 +2,7 @@ import Image from "next/image";
 import Logo from "@/assets/whiteLogo.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import styles from "./footer.module.scss";
+import { Linkedin } from "lucide-react";
 
 const SocialMediaList = [
   {
@@ -15,7 +15,7 @@ const SocialMediaList = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative  bg-black text-white pt-16 overflow-hidden">
+    <footer className="relative  bg-black text-white pt-16 overflow-hidden md:px-0 px-4">
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
        
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
           src="/whatsapp.svg"
           width={60}
           height={60}
-          alt="WhatsApp Contact"
+          alt="Weblibron WhatsApp Contact"
           priority
           className="filter drop-shadow-lg"
         />
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
                       aria-label={item.label}
                       className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-3 rounded-full hover:bg-primary transition-colors duration-300 flex items-center justify-center backdrop-blur-sm border border-white/5 hover:border-white/10"
                     >
-                      <i className={`${styles[item.icon]} text-xl`}></i>
+                      <Linkedin />
                     </Link>
                   </motion.li>
                 ))}
@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
                 Quick Links
                 <span className="absolute -bottom-3 left-0 w-16 h-[3px] bg-gradient-to-r from-primary to-primary/50 rounded-full"></span>
                 </h2>
-              <ul className="space-y-4">
+              <ul className="space-y-4 -ms-4">
                 {['Web Development', 'App Development', 'UI/UX Design', 'E-commerce'].map((item) => (
                   <li key={item}>
                     <a
@@ -123,7 +123,7 @@ const Footer: React.FC = () => {
                 Our Solution
                 <span className="absolute -bottom-3 left-0 w-16 h-[3px] bg-gradient-to-r from-primary to-primary/50 rounded-full"></span>
                 </h2>
-              <ul className="space-y-4">
+              <ul className="space-y-4 -ms-4">
                 {['Web Development', 'App Development', 'UI/UX Design', 'E-commerce'].map((item) => (
                   <li key={item}>
                     <a
@@ -172,7 +172,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="/terms"
+                  href="/terms-and-conditions"
                   className="text-gray-300 hover:text-primary transition-colors duration-300 flex items-center gap-3"
                 >
                   Terms & Conditions
@@ -213,7 +213,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Copyright Section with enhanced design */}
-        <div className="relative mt-8 sm:mt-12 py-6 sm:py-8">
+        <div className="relative mt-8 sm:mt-12 py-6 sm:py-6">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
           <p className="text-gray-400 text-center relative text-sm sm:text-base">
             © {new Date().getFullYear()} Weblibron. All rights reserved.

@@ -1,9 +1,8 @@
 import React, { useMemo, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import Link from 'next/link';
-import { ArrowRight, Code2, Smartphone, Palette, Globe, Database, Shield, Zap, BookOpen, Server } from 'lucide-react';
+import { ArrowRight, Smartphone, Palette, Globe, Shield, Server } from 'lucide-react';
 
 interface Project {
   id: number;
@@ -28,8 +27,7 @@ interface Skill {
 }
 
 const ShowCase: React.FC = () => {
-  const [ref, inView] = useInView({ threshold: 0.2 });
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [selectedCategory] = useState<string>("All");
   const [selectedSkillTab, setSelectedSkillTab] = useState<string>("Development");
 
   const projects: Project[] = useMemo(
@@ -74,10 +72,6 @@ const ShowCase: React.FC = () => {
     []
   );
 
-  const categories = useMemo(
-    () => ["All", ...Array.from(new Set(projects.map((p) => p.category)))],
-    [projects]
-  );
 
   const filteredProjects = useMemo(
     () =>
@@ -131,7 +125,6 @@ const ShowCase: React.FC = () => {
         "Node.js",
         "Express",
         "MongoDB",
-        "Prayer Times API",
         "Payment Gateway",
         "Cloud Functions",
         "RESTful APIs",
@@ -209,10 +202,12 @@ const ShowCase: React.FC = () => {
         <div className="absolute inset-0">
           <Image
             src="/1.jpeg"
-            alt="Portfolio Banner"
+            alt="Weblibron - Digital Solutions"
             fill
             className="object-cover brightness-50"
             priority
+            quality={60}
+            sizes="100vw"
           />
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-90"></div>
@@ -305,7 +300,7 @@ const ShowCase: React.FC = () => {
       </section>
 
       {/* Projects Section */}
-      <div id="projects" className="space-y-16 py-20">
+      <div id="projects" className="space-y-16 py-10">
         {filteredProjects.map((project, index) => (
           <motion.section 
             key={project.id}
@@ -319,7 +314,7 @@ const ShowCase: React.FC = () => {
             <div className={`absolute top-0 ${project.imagePosition === 'right' ? 'right-0' : 'left-0'} w-64 h-64 rounded-full blur-[100px] opacity-20 bg-gradient-to-r ${project.gradientFrom} ${project.gradientTo} -z-0 group-hover:opacity-40 transition-opacity duration-700`}></div>
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="bg-[#0A0A0A]/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/[0.05] group hover:scale-[1.02] transition-all duration-500 hover:shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+              <div className="bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden border border-white/[0.05] group hover:scale-[1.02] transition-all duration-500 hover:shadow-[0_0_50px_rgba(0,0,0,0.5)]">
                 <div className="flex flex-col md:flex-row items-center justify-between p-8">
                   {project.imagePosition === 'left' ? (
                     <>
@@ -328,9 +323,14 @@ const ShowCase: React.FC = () => {
                           <Image 
                             src={project.src} 
                             alt={project.alt} 
-                            width={600}
-                            height={460}
-                            className="w-full h-full object-cover" 
+                            width={400}
+                            height={300}
+                            className="w-full h-full object-cover rounded-xl"
+                            quality={60}
+                            loading="lazy"
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                            placeholder="blur"
+                            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkMjU1LS0yMi4qQEBALkE6Oz5DRVlLT1NbWl5eYWJhSl9yX2JhYVv/2wBDARUXFx4aHjshITtbQjVCW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1v/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                           />
                         </div>
                       </div>
@@ -392,9 +392,14 @@ const ShowCase: React.FC = () => {
                           <Image 
                             src={project.src} 
                             alt={project.alt} 
-                            width={600}
-                            height={460}
-                            className="w-full h-full object-cover" 
+                            width={400}
+                            height={300}
+                            className="w-full h-full object-cover"
+                            quality={60}
+                            loading="lazy"
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                            placeholder="blur"
+                            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkMjU1LS0yMi4qQEBALkE6Oz5DRVlLT1NbWl5eYWJhSl9yX2JhYVv/2wBDARUXFx4aHjshITtbQjVCW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1v/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                           />
                         </div>
                       </div>

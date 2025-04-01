@@ -14,10 +14,10 @@ export default {
         'secondary': 'var(--secondary)',
       },
       fontFamily: {
-        'inter': ['Inter', 'sans-serif'], // Add Inter font
-        'poppins': ['Poppins', 'sans-serif'], // Add Poppins font
+        'inter': ['var(--font-inter)'],
+        'poppins': ['var(--font-poppins)'],
       },
- animation: {
+      animation: {
         scroll:
           "scroll var(--animation-duration, 20s) var(--animation-direction, forwards) linear infinite",
       },
