@@ -14,7 +14,7 @@ const PrivacyPolicy = () => {
         <meta property="og:url" content="https://weblibron.com/privacy" />
         <meta property="og:title" content="Privacy Policy - Weblibron" />
         <meta property="og:description" content="Learn about how Weblibron protects your privacy and handles your data. Our comprehensive privacy policy outlines our data collection, usage, and protection practices." />
-        <meta property="og:image" content="https://weblibron.com/og-image.jpg" />
+        <meta property="og:image" content="https://weblibron.com/preview.jpg" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
