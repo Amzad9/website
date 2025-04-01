@@ -12,7 +12,8 @@ import { poppins, inter } from "@/utils/fonts";
 // Dynamically import components with no SSR
 const Header = dynamic(() => import("@/components/header/Header"), { ssr: false });
 const Footer = dynamic(() => import("@/components/footer/Footer"), { ssr: false });
-const Contact = dynamic(() => import("@/components/contact/Contact"), { ssr: false });
+// const Contact = dynamic(() => import("@/components/contact/Contact"), { ssr: false });
+import Contact from "@/components/contact/Contact";
 
 declare global {
   interface Window {
@@ -58,8 +59,7 @@ useEffect(() => {
           <meta name="theme-color" content="#000000" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           {/* Favicon */}
-          <link rel="icon" href="/favicon.ico" />
-          <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
           
           {/* Primary Meta Tags */}
