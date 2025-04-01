@@ -381,9 +381,9 @@ const handleSubmit = async (e: { preventDefault: () => void; }) => {
             {/* Glowing accent in corner */}
             <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-[80px] opacity-20 bg-gradient-to-r from-primary to-blue-400 -z-0 group-hover:opacity-40 transition-opacity duration-700"></div>
 
-            {/* Clean minimal top section */}
-            <div className="p-4 sm:p-6 flex flex-col h-full relative z-10">
-              {/* Form Header */}
+          
+            {/* <div className="p-4 sm:p-6 flex flex-col h-full relative z-10">
+              
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="inline-flex mb-2 bg-gradient-to-r from-primary to-blue-400 bg-clip-text relative">
@@ -402,12 +402,12 @@ const handleSubmit = async (e: { preventDefault: () => void; }) => {
                 </div>
               </div>
 
-              {/* Updated Form Inputs */}
+             
               <form
                 onSubmit={handleSubmit}
                 className="flex flex-col flex-grow space-y-3 sm:space-y-4"
               >
-                {/* Name Input */}
+              
                 <div className="space-y-1">
                   <label className="text-md text-gray-300 ml-1 flex items-center gap-2 font-light">
                     <span className="w-1 h-1 rounded-full bg-primary"></span>
@@ -428,7 +428,7 @@ const handleSubmit = async (e: { preventDefault: () => void; }) => {
                   </div>
                 </div>
 
-                {/* Email Input */}
+               
                 <div className="space-y-1">
                   <label className="text-md text-gray-300 ml-1 flex items-center gap-2 font-light">
                     <span className="w-1 h-1 rounded-full bg-blue-500"></span>
@@ -449,7 +449,7 @@ const handleSubmit = async (e: { preventDefault: () => void; }) => {
                   </div>
                 </div>
 
-                {/* Message Input */}
+               
                 <div className="space-y-1">
                   <label className="text-md text-gray-300 ml-1 flex items-center gap-2 font-light">
                     <span className="w-1 h-1 rounded-full bg-purple-500"></span>
@@ -470,7 +470,6 @@ const handleSubmit = async (e: { preventDefault: () => void; }) => {
                   </div>
                 </div>
 
-                {/* Submit Button with arrow */}
                 <button
                   type="submit"
                   disabled={isLoading}
@@ -484,7 +483,6 @@ const handleSubmit = async (e: { preventDefault: () => void; }) => {
                   </div>
                 </button>
 
-                {/* Status Message */}
                 {submitStatus && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
@@ -499,7 +497,7 @@ const handleSubmit = async (e: { preventDefault: () => void; }) => {
                   </motion.div>
                 )}
               </form>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>
