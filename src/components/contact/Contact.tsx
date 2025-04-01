@@ -39,49 +39,48 @@ const Contact = () => {
     })
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setSubmitStatus(null);
+const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  e.preventDefault();
+  setIsLoading(true);
+  setSubmitStatus(null);
 
-    try {
-      console.log('Submitting form data:', formData); // Debug log
+  try {
+    console.log('Submitting form data:', formData); // Debug log
 
-      const { data, error } = await supabase
-        .from('contact_messages')
-        .insert([
-          {
-            name: formData.name,
-            email: formData.email,
-            message: formData.message,
-            created_at: new Date().toISOString(),
-          },
-        ])
-        .select();
+    const { data, error } = await supabase
+      .from('contact_messages')
+      .insert([
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          created_at: new Date().toISOString(),
+        },
+      ])
+      .select();
 
-      console.log('Supabase response:', { data, error }); // Debug log
+    console.log('Supabase response:', { data, error }); // Debug log
 
-      if (error) {
-        console.error('Supabase error:', error); // Debug log
-        throw error;
-      }
-
-      setSubmitStatus({
-        type: "success",
-        message: "Message sent successfully! We'll get back to you soon.",
-      });
-      setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      console.error('Form submission error:', error); // Debug log
-      setSubmitStatus({
-        type: "error",
-        message: error instanceof Error ? error.message : "Failed to send message. Please try again later.",
-      });
-    } finally {
-      setIsLoading(false);
+    if (error) {
+      console.error('Supabase error:', error); // Debug log
+      throw error;
     }
-  };
 
+    setSubmitStatus({
+      type: "success",
+      message: "Message sent successfully! We'll get back to you soon.",
+    });
+    setFormData({ name: "", email: "", message: "" });
+  } catch (error) {
+    console.error('Form submission error:', error); // Debug log
+    setSubmitStatus({
+      type: "error",
+      message: error instanceof Error ? error.message : "Failed to send message. Please try again later.",
+    });
+  } finally {
+    setIsLoading(false);
+  }
+};
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
