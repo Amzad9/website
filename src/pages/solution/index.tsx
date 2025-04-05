@@ -86,8 +86,8 @@ const SolutionPage = () => {
     ];
 
     const stats = [
-        { number: "500+", label: "Projects Completed", icon: Award },
-        { number: "200+", label: "Happy Clients", icon: Users },
+        { number: "10+", label: "Projects Completed", icon: Award },
+        { number: "10+", label: "Happy Clients", icon: Users },
         { number: "24/7", label: "Support Available", icon: Clock },
     ];
 
