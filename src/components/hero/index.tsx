@@ -8,12 +8,14 @@ const StatisticItem = lazy(() => import("@/components/hero/StatisticItem"));
 const FeatureBadge = lazy(() => import("@/components/hero/FeatureBadge"));
 const LazyVideo = lazy(() => import("@/components/hero/LazyVideo"));
 
+// eslint-disable-next-line react/display-name
 const Divider = React.memo(() => (
   <div
     className={`${styles["animate-fade-in"]} ${styles["delay-4"]} h-px w-16 bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto my-12`}
   ></div>
 ));
 
+// eslint-disable-next-line react/display-name
 const PremiumBadge = React.memo(() => (
   <div className="inline-flex items-center gap-2 bg-white/3 backdrop-blur-sm rounded-full px-4 py-1.5 mb-8 border border-white/5">
     <span className="h-1.5 w-1.5 rounded-full bg-[#DAA520]"></span>
