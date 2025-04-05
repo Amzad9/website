@@ -57,7 +57,7 @@ const AboutUs = () => {
               
               {/* The heading itself */}
               <div className="flex flex-row flex-wrap md:flex-row items-center justify-center gap-3 md:gap-4 relative">
-                <h2 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-white leading-tight">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight text-white leading-tight">
                   We Are 
                   <span className="relative inline-block mx-2">
                     {/* 3D Depth Shadow */}
@@ -140,7 +140,7 @@ const AboutUs = () => {
               </div>
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <div className="relative bg-black/60 p-8 rounded-2xl border border-white/10 hover:border-primary/30 transition-all duration-300 backdrop-blur-sm">
+                <div className="relative bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-primary/30 transition-all duration-300 backdrop-blur-sm">
                   <svg className="w-12 h-12 text-primary mb-6 opacity-80" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
                     <path d="M10.583 17.321C9.553 16.227 9 15 9 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>

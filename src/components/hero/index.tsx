@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen overflow-hidden pt-24 bg-black"
+      className="relative min-h-screen overflow-hidden pt-24 pb-5 bg-black"
     >
       {/* Minimalist Background */}
       <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-3"></div>
@@ -60,7 +60,7 @@ const HeroSection = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Zap className="w-5 h-5 text-primary" />
-              <span className="font-medium">Lightning Fast</span>
+              <span className="font-medium text-sm md:text-md">Lightning Fast</span>
             </motion.div>
             <motion.div 
               className="flex items-center gap-3 text-white bg-white/5 rounded-full px-4 py-2 cursor-pointer hover:bg-white/10 transition-all duration-300"
@@ -68,7 +68,7 @@ const HeroSection = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Shield className="w-5 h-5 text-primary" />
-              <span className="font-medium">Secure & Reliable</span>
+              <span className="font-medium text-sm md:text-md">Secure & Reliable</span>
             </motion.div>
             <motion.div 
               className="flex items-center gap-3 text-white bg-white/5 rounded-full px-4 py-2 cursor-pointer hover:bg-white/10 transition-all duration-300"
@@ -76,7 +76,7 @@ const HeroSection = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Sparkles className="w-5 h-5 text-primary" />
-              <span className="font-medium">Modern Design</span>
+              <span className="font-medium text-sm md:text-md">Modern Design</span>
             </motion.div>
           </motion.div>
           {/* Elegant Videos */}

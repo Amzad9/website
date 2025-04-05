@@ -61,7 +61,7 @@ function Expertise() {
 
               {/* The heading itself */}
               <div className="flex flex-col items-center justify-center gap-1 md:gap-2 relative">
-                <h2 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-white leading-tight">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight text-white leading-tight">
                   Our
                   <span className="relative inline-block mx-2">
                     {/* 3D Depth Shadow */}
