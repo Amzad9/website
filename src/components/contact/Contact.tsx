@@ -51,7 +51,7 @@ const handleSubmit = async (e: { preventDefault: () => void; }) => {
     console.log('Submitting form data:', formData); // Debug log
 
     const { data, error } = await supabase
-      .from('contact')
+      .from('contact_messages')
       .insert([
         {
           name: formData.name,
@@ -180,7 +180,7 @@ const handleSubmit = async (e: { preventDefault: () => void; }) => {
                   </span>
 
                   {/* Main text with animated gradient */}
-                  <span className="text-4xl md:text-6xl lg:text-7xl font-light font-poppins tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary italic bg-[length:200%_auto] animate-gradient-x relative inline-block">
+                  <span className="text-4xl md:text-6xl lg:text-7xl font-light font-poppins tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary  bg-[length:200%_auto] animate-gradient-x relative inline-block">
                     Success Story
                   </span>
 
@@ -309,7 +309,7 @@ const handleSubmit = async (e: { preventDefault: () => void; }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 + 0.5 }}
-                className="bg-[#0A0A0A]/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/[0.05] group min-h-[180px] flex flex-col relative cursor-pointer hover:scale-[1.02] transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/[0.05] group min-h-[180px] flex flex-col relative cursor-pointer hover:scale-[1.02] transition-all duration-300"
               >
                 {/* Glowing accent in corner */}
                 <div
@@ -376,7 +376,7 @@ const handleSubmit = async (e: { preventDefault: () => void; }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.8 }}
-            className="bg-[#0A0A0A]/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/[0.05] group h-full flex flex-col relative hover:scale-[1.02] transition-all duration-300 mt-4 md:mt-0"
+            className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/[0.05] group h-full flex flex-col relative hover:scale-[1.02] transition-all duration-300 mt-4 md:mt-0"
           >
             {/* Glowing accent in corner */}
             <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-[80px] opacity-20 bg-gradient-to-r from-primary to-blue-400 -z-0 group-hover:opacity-40 transition-opacity duration-700"></div>

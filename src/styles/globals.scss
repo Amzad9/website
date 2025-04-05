@@ -9,7 +9,7 @@ $primary: #DAA520;
 $primary-gradient: linear-gradient(to right, $primary, color.adjust($primary, $lightness: -10%));
 
 :root {
-  --black: #000000;
+  --black: #0a0a0a;
   --white: #ffffff;
   --primary: #{$primary};
   --secondary: #043f2e;

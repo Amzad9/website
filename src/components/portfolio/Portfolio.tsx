@@ -164,7 +164,7 @@ const Portfolio: React.FC = () => {
         </motion.div>
 
         {/* Content */}
-        <div className="p-6 relative bg-gradient-to-b from-gray-900 to-black border-t border-white/5">
+        <div className="p-6 relative bg-white/5 border-white/5 rounded-xl">
           {/* Technologies tags */}
           {project.technologies && (
             <div className="flex flex-wrap gap-2 mb-4">
@@ -182,7 +182,7 @@ const Portfolio: React.FC = () => {
           {/* Title */}
           <h3
             id={`project-title-${project.id}`}
-            className="text-2xl font-light mb-3 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-blue-500 transition-all duration-300"
+            className="text-2xl font-normal mb-3 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-blue-500 transition-all duration-300"
           >
             {project.title}
           </h3>
@@ -301,7 +301,7 @@ const Portfolio: React.FC = () => {
                   </span>
 
                   {/* Main text with animated gradient */}
-                  <span className="text-4xl md:text-6xl lg:text-7xl font-light font-poppins tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary italic bg-[length:200%_auto] animate-gradient-x relative inline-block">
+                  <span className="text-4xl md:text-6xl lg:text-7xl font-light font-poppins tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary  bg-[length:200%_auto] animate-gradient-x relative inline-block">
                     Innovation
                   </span>
 
@@ -348,7 +348,7 @@ const Portfolio: React.FC = () => {
           {/* Attractive Browse Button Card with improved design */}
           <motion.div
             variants={itemVariants}
-            className="relative bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden shadow-xl will-change-transform group md:col-span-2"
+            className="relative bg-gradient-to-br from-gray-800 to-black rounded-xl overflow-hidden shadow-xl will-change-transform group md:col-span-2"
             style={{ transformPerspective: 1000 }}
           >
             <Link
