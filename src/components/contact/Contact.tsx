@@ -51,7 +51,7 @@ const handleSubmit = async (e: { preventDefault: () => void; }) => {
     console.log('Submitting form data:', formData); // Debug log
 
     const { data, error } = await supabase
-      .from('contact_messages')
+      .from('contact')
       .insert([
         {
           name: formData.name,
