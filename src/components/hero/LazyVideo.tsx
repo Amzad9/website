@@ -6,7 +6,7 @@ interface LazyVideoProps {
   height: string;
 }
 
-const LazyVideo = ({ src, width, height }: LazyVideoProps) => {
+const LazyVideo = ({ src }: LazyVideoProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isLoaded, setIsLoaded] = useState(false);
   
@@ -30,6 +30,7 @@ const LazyVideo = ({ src, width, height }: LazyVideoProps) => {
       
       return () => {
         if (videoRef.current) {
+          // eslint-disable-next-line react-hooks/exhaustive-deps
           observer.unobserve(videoRef.current);
         }
       };
