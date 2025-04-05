@@ -1,27 +1,32 @@
 import React, { lazy, Suspense } from "react";
 import { ArrowRight, Shield, Sparkles, Zap } from "lucide-react";
-import { cn } from "@/lib/utils";
-import './Hero.css';
+import './Hero.module.css';
 import Link from "next/link";
 
 // Lazy-loaded components
-const AnimatedBackground = lazy(() => import('./AnimatedBackground'));
+// const AnimatedBackground = lazy(() => import('./AnimatedBackground'));
 const StatisticItem = lazy(() => import('./StatisticItem'));
 const FeatureBadge = lazy(() => import('./FeatureBadge'));
 const LazyVideo = lazy(() => import('./LazyVideo'));
 
 // Memoized components to prevent unnecessary re-renders
+// eslint-disable-next-line react/display-name
 const Divider = React.memo(() => (
+<>
   <div className="h-px w-16 bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto my-12 animate-fade-in" style={{ animationDelay: '0.5s' }}></div>
+</>
 ));
 
+// eslint-disable-next-line react/display-name
 const PremiumBadge = React.memo(() => (
+<>
   <div className="inline-flex items-center gap-2 bg-white/3 backdrop-blur-sm rounded-full px-4 py-1.5 mb-8 border border-white/5">
     <span className="h-1.5 w-1.5 rounded-full bg-[#DAA520]"></span>
     <span className="text-white/70 text-xs font-light">
       Premium Digital Solutions
     </span>
   </div>
+</>
 ));
 
 const HeroSection = () => {
@@ -48,7 +53,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen overflow-hidden pt-24 pb-5 bg-black"
+      className="relative min-h-screen overflow-hidden pt-24 pb-5 bg-[#000000]"
     >
       {/* Minimalist Background - Static, no animation */}
       <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-3"></div>

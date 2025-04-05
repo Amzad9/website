@@ -1,47 +1,83 @@
-/* HeroHeading.module.css */
-.heading {
-  font-size: 2.25rem;
-  font-weight: 300;
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: -0.025em;
-  color: #fff;
-  margin-bottom: 1.5rem; /* mb-6 */
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+/* Base animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Heading styles */
+.hero-heading {
+  font-size: 4.5rem;
   line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: -0.05em;
+  animation: fadeIn 0.8s ease-out forwards;
+  color: white;
 }
 
-.gradientText {
-  display: inline-block;
-  background: linear-gradient(to right,  #daa520,  #60a5fa);
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 3rem;
+  }
+}
+
+/* Gradient text effects - using gold and blue colors */
+.gradient-text {
+  background: linear-gradient(to right, #1E6FD9, #DAA520);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  display: inline;
 }
 
-.gradientTextReverse {
-  display: inline-block;
-  background: linear-gradient(to right,  #daa520,  #60a5fa);
+.gradient-text-reverse {
+  background: linear-gradient(to right, #DAA520, #1E6FD9);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  display: inline;
 }
 
-/* Responsive adjustments */
-@media (min-width: 640px) {
-  .heading {
-    font-size: 3rem; /* md:text-6xl */
-  }
+/* Feature badge hover effects */
+.feature-badge {
+  transition: all 0.3s ease;
 }
 
-@media (min-width: 1024px) {
-  .heading {
-    font-size: 4.5rem; /* lg:text-7xl */
-  }
+.feature-badge:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-@media (max-width: 640px) {
-  .heading {
-    font-size: 2rem; /* Adjusted for mobile */
-  }
+.feature-badge:active {
+  transform: scale(0.95);
+}
+
+/* Gold accent color for icons and highlights */
+.gold-accent {
+  color: #DAA520;
+}
+
+.blue-accent {
+  color: #1E6FD9;
+}
+
+/* Button gradients using the gold and blue colors */
+.gold-blue-gradient {
+  background: linear-gradient(to right, #DAA520, #1E6FD9);
+}
+
+.gold-blue-gradient-hover {
+  background: linear-gradient(to right, #DAA520, #1E6FD9);
+  opacity: 0.9;
 }
