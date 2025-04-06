@@ -51,7 +51,7 @@
 
 /* Gradient text effects */
 .gradient-text {
-  background: linear-gradient(to right, #1E6FD9, #DAA520);
+  background: linear-gradient(to right, #1E6FD9, #DAA520, #1E6FD9, #DAA520, #1E6FD9);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
