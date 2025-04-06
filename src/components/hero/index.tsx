@@ -1,11 +1,10 @@
 import React, { lazy, Suspense } from "react";
-import { ArrowRight, Shield, Sparkles, Zap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import styles from "./Hero.module.css";
 import Link from "next/link";
 
 // Lazy-loaded components
 const StatisticItem = lazy(() => import("@/components/hero/StatisticItem"));
-const FeatureBadge = lazy(() => import("@/components/hero/FeatureBadge"));
 const LazyVideo = lazy(() => import("@/components/hero/LazyVideo"));
 
 // eslint-disable-next-line react/display-name
@@ -15,27 +14,11 @@ const Divider = React.memo(() => (
   ></div>
 ));
 
-// eslint-disable-next-line react/display-name
-const PremiumBadge = React.memo(() => (
-  <div className="inline-flex items-center gap-2 bg-white/3 backdrop-blur-sm rounded-full px-4 py-1.5 mb-8 border border-white/5">
-    <span className="h-1.5 w-1.5 rounded-full bg-[#DAA520]"></span>
-    <span className="text-white/70 text-xs font-light">
-      Premium Digital Solutions
-    </span>
-  </div>
-));
-
 const HeroSection = () => {
   const statistics = [
     { value: "98%", label: "Client Retention" },
     { value: "10+", label: "Successful Projects" },
     { value: "24/7", label: "Dedicated Support" },
-  ];
-
-  const features = [
-    { icon: <Zap className="w-5 h-5 text-[#DAA520]" />, label: "Lightning Fast" },
-    { icon: <Shield className="w-5 h-5 text-[#1E6FD9]" />, label: "Secure & Reliable" },
-    { icon: <Sparkles className="w-5 h-5 text-[#DAA520]" />, label: "Modern Design" },
   ];
 
   const videoSources = [
