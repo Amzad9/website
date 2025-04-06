@@ -6,7 +6,6 @@ import Portfolio from "@/components/portfolio/Portfolio";
 import Expertise from "@/components/expertise/Expertise";
 import dynamic from "next/dynamic";
 import Loader from "@/components/Loader";
-import Link from "next/link";
 
 const HeroSection = dynamic(() => import("@/components/hero"), {
   loading: () => <Loader/>,
