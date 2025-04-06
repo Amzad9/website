@@ -78,11 +78,6 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-    <div className="bg-yellow-400 text-center py-1 text-gray-800 text-base font-inter">
-        <p>Get a <span className="font-bold text-red-600">$99 Website Audit</span> Today! 
-            <Link href="#contact" className="ml-2 inline-block bg-blue-600 text-white py-1 px-3 rounded-md text-sm hover:bg-blue-700">Order Now</Link>
-        </p>
-    </div>
       <HeroSection />
       <AboutUs />
       <Expertise />

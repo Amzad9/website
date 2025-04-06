@@ -14,6 +14,7 @@ const Header = dynamic(() => import("@/components/header/Header"), { ssr: false 
 const Footer = dynamic(() => import("@/components/footer/Footer"), { ssr: false });
 // const Contact = dynamic(() => import("@/components/contact/Contact"), { ssr: false });
 import Contact from "@/components/contact/Contact";
+import Link from 'next/link';
 
 declare global {
   interface Window {
@@ -92,6 +93,11 @@ export default function App({ Component, pageProps }: AppProps) {
 
         <SpeedInsights />
         {isLoading && <Loader />}
+ <div className="bg-yellow-400 text-center py-1 text-gray-800 text-base font-inter">
+        <p>Get a <span className="font-bold text-red-600">$99 Website Audit</span> Today! 
+            <Link href="#contact" className="ml-2 inline-block bg-blue-600 text-white py-1 px-3 rounded-md text-sm hover:bg-blue-700">Order Now</Link>
+        </p>
+    </div>
         <Header logo={logo} />
         <Component {...pageProps} />
         <Contact />
