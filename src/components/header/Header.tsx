@@ -35,7 +35,7 @@ const Header = ({ logo }: HeaderProps) => {
   return (
     <div className="container relative z-50" role="banner">
       <nav
-        className={`fixed top-0 md:top-10 left-1/2 w-full max-w-[1216px] z-30 transition-all duration-300 ease-in-out -translate-x-1/2 rounded-0 md:rounded-[30px] px-6 md:px-8 py-4 md:py-3
+        className={`fixed top-10 md:top-10 left-1/2 w-full max-w-[1216px] z-30 transition-all duration-300 ease-in-out -translate-x-1/2 rounded-0 md:rounded-[30px] px-6 md:px-8 py-4 md:py-3
           ${
             scrolled
               ? "shadow-lg bg-black/70 backdrop-blur-xl max-w-[980px]"

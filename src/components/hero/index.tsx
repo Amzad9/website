@@ -54,26 +54,9 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4 min-h-screen flex items-center justify-center relative z-20">
         <div className="max-w-4xl mx-auto text-center relative z-30">
-          <PremiumBadge />
-
           <h1 className={styles["hero-heading"]}>
-            <span className={styles["gradient-text"]}>Innovative</span> <br />
-            {" High-Performance "}
-            <span className={styles["gradient-text-reverse"]}>Solutions</span>
-            <br />
-            <span className="inline-block">
-              with <span className={styles["gradient-text"]}>Our Insight.</span>
-            </span>
+            <span className={styles["gradient-text"]}>Innovative High-Performance Solutions with Our Insight.</span> 
           </h1>
-
-          <div className={`flex flex-wrap justify-center gap-8 mb-12 ${styles["animate-fade-in"]} ${styles["delay-1"]}`}>
-            {features.map((feature, index) => (
-              <Suspense key={index} fallback={<div className="w-36 h-10 bg-white/5 rounded-full animate-pulse"></div>}>
-                <FeatureBadge icon={feature.icon} label={feature.label} />
-              </Suspense>
-            ))}
-          </div>
-
           <div className={`flex justify-center gap-8 mb-10 ${styles["animate-fade-in"]} ${styles["delay-2"]}`}>
             {videoSources.map((video, index) => (
               <Suspense key={index} fallback={<div className="h-16 w-32 rounded-full bg-white/5 animate-pulse"></div>}>
