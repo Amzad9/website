@@ -4,13 +4,12 @@ import React from "react";
 function Expertise() {
   const ourExpertise = [
     { name: "Web Design & Development", color: "#FF6B6B" },
-    { name: "Mobile Apps", color: "#4E95FF" },
+    { name: "Responsive Web Design", color: "#4E95FF" },
     { name: "UI/UX Design", color: "#67E8B7" },
     { name: "SEO (Search Engine Optimization)", color: "#4E95FF" },
-    { name: "API Development and Integration", color: "#FF6B6B" },
-    { name: "Responsive Web Design", color: "#A78BFA" },
-    { name: "Brand Design", color: "#FF6B6B" },
-    { name: "SaaS Design", color: "#FF6B6B" },
+    { name: "Performance Optimization", color: "#FF6B6B" },
+    { name: "Front-End Frameworks", color: "#A78BFA" },
+    { name: "Progressive Web Apps (PWAs)", color: "#FF6B6B" },
   ];
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -89,7 +88,7 @@ function Expertise() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 px-4 md:px-0">
           {ourExpertise.map((skill, index) => (
             <motion.div
               key={skill.name}
