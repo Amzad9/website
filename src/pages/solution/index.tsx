@@ -264,7 +264,7 @@ const SolutionPage = () => {
                                     <ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <Link className="px-8 py-2 md:py-4 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all duration-300 flex items-center gap-2 hover:border-white/20 hover:translate-y-[-2px]" href='#contact'>
-                                    <span>Contact Us</span>
+                                    <span>Get Started</span>
                                 </Link>
                             </div>
                         </motion.div>
