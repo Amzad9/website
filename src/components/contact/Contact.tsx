@@ -274,7 +274,7 @@ const handleSubmit = async (e: { preventDefault: () => void; }) => {
                 icon: <Phone className="w-6 sm:w-7 h-6 sm:h-7 text-white" />,
                 title: "Let's Talk",
                 subtitle: "24/7 Available",
-                details: ["+91 8178614811", "+91 8840002768"],
+                details: ["+91 8840002768"],
                 gradientFrom: "from-[#FF6B6B]",
                 gradientTo: "to-[#FF3E6A]",
                 textColor: "text-[#FF6B6B]",

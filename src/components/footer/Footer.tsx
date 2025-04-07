@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
 
       {/* WhatsApp Button - Using better accessibility and animation */}
       <Link
-        href="https://wa.me/918178614811?text=Thank%20you%20for%20reaching%20out.%20%F0%9F%9A%80%20We%20specialize%20in%20Web%20Development%2C%20App%20Development%2C%20and%20Design%20to%20help%20businesses%20grow%20online"
+        href="https://wa.me/918979504853?text=Thank%20you%20for%20reaching%20out.%20%F0%9F%9A%80%20We%20specialize%20in%20Web%20Development%2C%20App%20Development%2C%20and%20Design%20to%20help%20businesses%20grow%20online"
         className="fixed z-50 bottom-10 right-8 transform hover:scale-110 transition-transform duration-300 shadow-lg rounded-full hover:shadow-2xl"
         target="_blank"
         rel="noopener noreferrer"
