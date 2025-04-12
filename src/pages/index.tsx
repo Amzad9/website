@@ -6,6 +6,8 @@ import Portfolio from "@/components/portfolio/Portfolio";
 import Expertise from "@/components/expertise/Expertise";
 import dynamic from "next/dynamic";
 import Loader from "@/components/Loader";
+import { TestimonialsSection } from "@/components/Testimonials/TestimonialsSection";
+import ClientTestimonial from "@/components/clients/ClientTestimonial";
 
 const HeroSection = dynamic(() => import("@/components/hero"), {
   loading: () => <Loader/>,
@@ -82,6 +84,7 @@ export default function Home() {
       <Expertise />
       <Services />
       <Portfolio />
+      <ClientTestimonial />
     </>
   );
 }

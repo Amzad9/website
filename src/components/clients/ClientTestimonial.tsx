@@ -188,15 +188,16 @@ function ClientTestimonial() {
                                 <p className="text-gray-300 mb-6 italic">&quot;{testimonial.quote}&quot;</p>
 
                                 {/* Client Info */}
-                                <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-primary/20 group-hover:ring-primary/40 transition-all duration-300">
-                                        <Image
+                                <div className="flex items-center gap-3">
+                                    <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-primary/20 group-hover:ring-primary/40 transition-all duration-300 flex justify-center items-center bg-gradient-to-br from-primary/10 to-blue-500/10 shadow-lg shadow-primary/20">
+                                        <h6 className="text-[24px] text-white font-poppins font-medium">{testimonial.name.charAt(0)}</h6>
+                                        {/* <Image
                                             src={testimonial.image}
                                             alt={"Weblibron" + testimonial.name}
                                             width={48}
                                             height={48}
                                             className="object-cover"
-                                        />
+                                        /> */}
                                     </div>
                                     <div>
                                         <h3 className="text-white font-medium group-hover:text-primary transition-colors duration-300">{testimonial.name}</h3>
