@@ -2,7 +2,6 @@ import dynamic from 'next/dynamic';
 import "@/styles/globals.scss";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import LogoWhite from "@/assets/whiteLogo.png";
 import { useRouter } from "next/router";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useEffect, useState } from "react";
@@ -28,7 +27,6 @@ declare global {
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
-  const [logo] = useState(LogoWhite);
   useEffect(() => {
     const handleStart = () => setIsLoading(true);
     const handleComplete = () => setIsLoading(false);
@@ -71,16 +69,15 @@ export default function App({ Component, pageProps }: AppProps) {
           <meta property="og:url" content="https://weblibron.com/" />
           <meta property="og:title" content="Weblibron - Web Solution" />
           <meta property="og:description" content="Elevate your online presence with Weblibron swift, stunning web solutions. Specializing in web development, app development, and design." />
-          <meta property="og:image" content="https://weblibron.com/preview.jpg" />
+          <meta property="og:image" content="https://pugizycvhnhatbnyhauv.supabase.co/storage/v1/object/public/weblibron//preview.jpg" />
           
           {/* Twitter */}
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="https://weblibron.com/" />
           <meta property="twitter:title" content="Weblibron - Web Solution" />
           <meta property="twitter:description" content="Elevate your online presence with Weblibron swift, stunning web solutions." />
-          <meta property="twitter:image" content="https://weblibron.com/priview.jpg" />
+          <meta property="twitter:image" content="https://pugizycvhnhatbnyhauv.supabase.co/storage/v1/object/public/weblibron//preview.jpg" />
           
-          {/* Additional Meta Tags */}
           <meta name="application-name" content="Weblibron" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -93,12 +90,12 @@ export default function App({ Component, pageProps }: AppProps) {
 
         <SpeedInsights />
         {isLoading && <Loader />}
- <div className="bg-yellow-400 text-center py-1 text-gray-800 text-base font-inter">
-        <p>Get a <span className="font-bold text-red-600">$99 Website Audit</span> Today! 
-            <Link href="#contact" className="ml-2 inline-block bg-blue-600 text-white py-1 px-3 rounded-md text-sm hover:bg-blue-700">Order Now</Link>
-        </p>
-    </div>
-        <Header logo={logo} />
+        <div className="bg-yellow-400 text-center py-1 text-gray-800 text-base font-inter">
+            <p>Get a <span className="font-bold text-red-600">$99 Website Audit</span> Today! 
+                <Link href="#contact" className="ml-2 inline-block bg-blue-600 text-white py-1 px-3 rounded-md text-sm hover:bg-blue-700">Order Now</Link>
+            </p>
+        </div>
+        <Header />
         <Component {...pageProps} />
         <Contact />
         <Footer />

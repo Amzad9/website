@@ -2,14 +2,11 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Sidebar from "./Sidebar";
-import { StaticImageData } from "next/image";
 import { Menu } from "lucide-react";
 
-interface HeaderProps {
-  logo: string | StaticImageData;
-}
 
-const Header = ({ logo }: HeaderProps) => {
+
+const Header = () => {
   const [isOpenNavbar, setIsOpenNavbar] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -45,9 +42,8 @@ const Header = ({ logo }: HeaderProps) => {
         <div className="flex justify-between items-center">
           <Link href="/" className="logo" aria-label="Weblibron Home">
             <Image
-              src={logo}
+              src="https://pugizycvhnhatbnyhauv.supabase.co/storage/v1/object/public/weblibron//whiteLogo.png"
               alt="Weblibron Logo"
-              className="h-auto"
               width={140}
               height={28}
               priority
