@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Logo from "@/assets/whiteLogo.png";
 import Link from "next/link";
 import { Linkedin } from "lucide-react";
 
@@ -57,9 +56,10 @@ const Footer = () => {
               aria-label="Weblibron Home"
             >
               <Image 
-                src={Logo} 
+                src="https://pugizycvhnhatbnyhauv.supabase.co/storage/v1/object/public/weblibron//whiteLogo.png" 
                 alt="weblibron logo" 
                 width={150} 
+                height={50}
                 className="filter brightness-110"
                 priority={false}
               />
