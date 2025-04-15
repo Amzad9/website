@@ -30,17 +30,17 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-screen overflow-hidden pt-24 pb-5 bg-[#000000]">
       <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-3"></div>
 
-      <div className="absolute inset-0 pointer-events-none">
+      {/* <div className="absolute inset-0 pointer-events-none">
         <div className={`${styles["animate-fade-in"]} ${styles["delay-1"]} absolute top-1/4 left-1/4 w-96 h-96 bg-[#1E6FD9]/5 rounded-full blur-3xl`}></div>
         <div className={`${styles["animate-fade-in"]} ${styles["delay-1"]} absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#DAA520]/5 rounded-full blur-3xl`}></div>
-      </div>
+      </div> */}
 
       <div className="container mx-auto px-4 min-h-screen flex items-center justify-center relative z-20">
         <div className="max-w-4xl mx-auto text-center relative z-30">
-          <h1 className={styles["hero-heading"]}>
-            <span className={styles["gradient-text"]}>Innovative High-Performance Solutions with Our Insight.</span> 
-          </h1>
-          <div className={`flex justify-center gap-8 mb-10 ${styles["animate-fade-in"]} ${styles["delay-2"]}`}>
+            <h1 className={`${styles["hero-heading"]} ${styles["gradient-text"]} `}>
+            Innovative High-Performance Solutions with Our Insight.
+            </h1>
+          <div className={`flex justify-center gap-8 my-10 ${styles["animate-fade-in"]} ${styles["delay-2"]}`}>
             {videoSources.map((video, index) => (
               <Suspense key={index} fallback={<div className="h-16 w-32 rounded-full bg-white/5 animate-pulse"></div>}>
                 <LazyVideo src={video.src} width={video.width} height={video.height} />
@@ -86,7 +86,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none"></div>
+      {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none"></div> */}
     </section>
   );
 };
