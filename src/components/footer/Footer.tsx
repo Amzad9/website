@@ -56,7 +56,7 @@ const Footer = () => {
               aria-label="Weblibron Home"
             >
               <Image 
-                src="https://pugizycvhnhatbnyhauv.supabase.co/storage/v1/object/public/weblibron//whiteLogo.png" 
+                src="/whiteLogo.png" 
                 alt="weblibron logo" 
                 width={150} 
                 height={50}

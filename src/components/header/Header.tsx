@@ -40,16 +40,16 @@ const Header = () => {
           }`}
       >
         <div className="flex justify-between items-center">
-          <Link href="/" className="logo" aria-label="Weblibron Home">
+            <Link href="/" className="logo" aria-label="Weblibron Home">
             <Image
-              src="https://pugizycvhnhatbnyhauv.supabase.co/storage/v1/object/public/weblibron//whiteLogo.png"
+              src="/whiteLogo.png"
               alt="Weblibron Logo"
               width={140}
               height={28}
               priority
               loading="eager"
             />
-          </Link>
+            </Link>
 
           {/* Navigation Menu */}
           <nav
