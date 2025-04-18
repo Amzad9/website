@@ -234,10 +234,10 @@ export default function Services() {
       color: "from-amber-500 to-orange-400",
       caseStudy: "E-commerce Redesign",
     },
-    {
-      title: "Digital Marketing",
+     {
+      title: "SEO Optimization",
       description:
-        "Strategic marketing solutions that increase visibility, drive traffic, and boost conversions.",
+        "Boost your online visibility and drive organic traffic with our expert SEO strategies.",
       icon: (
         <svg
           width="32"
@@ -248,68 +248,38 @@ export default function Services() {
         >
           <defs>
             <linearGradient
-              id="marketingGradient"
+              id="seoGradient"
               x1="0%"
               y1="0%"
               x2="100%"
               y2="100%"
             >
-              <stop offset="0%" stopColor="#059669" />
+              <stop offset="0%" stopColor="#10B981" />
               <stop offset="100%" stopColor="#34D399" />
             </linearGradient>
           </defs>
           <path
-            d="M16 8.00001L18 10M18 10L20 12M18 10L16 12M18 10L20 8.00001"
-            stroke="url(#marketingGradient)"
-            strokeWidth="2"
-            strokeLinecap="round"
+            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z"
+            fill="url(#seoGradient)"
           />
           <path
-            d="M4 21.4V5.6C4 5.26863 4.26863 5 4.6 5H19.4C19.7314 5 20 5.26863 20 5.6V8"
-            stroke="url(#marketingGradient)"
-            strokeWidth="2"
-            strokeLinecap="round"
+            d="M12 7C10.34 7 9 8.34 9 10C9 11.66 10.34 13 12 13C13.66 13 15 11.66 15 10C15 8.34 13.66 7 12 7ZM12 11C11.45 11 11 10.55 11 10C11 9.45 11.45 9 12 9C12.55 9 13 9.45 13 10C13 10.55 12.55 11 12 11Z"
+            fill="url(#seoGradient)"
           />
           <path
-            d="M4 10H8.5"
-            stroke="url(#marketingGradient)"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <path
-            d="M4 14H12"
-            stroke="url(#marketingGradient)"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <path
-            d="M14 21V15.5"
-            stroke="url(#marketingGradient)"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <path
-            d="M10 21V17.5"
-            stroke="url(#marketingGradient)"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <path
-            d="M6 21V19.5"
-            stroke="url(#marketingGradient)"
-            strokeWidth="2"
-            strokeLinecap="round"
+            d="M12 14C10.34 14 8.67 14.67 7.5 15.5C7.18 15.72 7 16.1 7 16.5C7 17.33 7.67 18 8.5 18H15.5C16.33 18 17 17.33 17 16.5C17 16.1 16.82 15.72 16.5 15.5C15.33 14.67 13.66 14 12 14ZM9.08 16C9.92 15.58 10.94 15.33 12 15.33C13.06 15.33 14.08 15.58 14.92 16H9.08Z"
+            fill="url(#seoGradient)"
           />
         </svg>
       ),
       features: [
-        "SEO & SEM",
-        "Social media marketing",
-        "Content strategy",
-        "Analytics & reporting",
+        "Keyword research",
+        "On-page optimization",
+        "Technical SEO",
+        "Backlink building",
       ],
-      color: "from-emerald-600 to-emerald-400",
-      caseStudy: "SaaS Growth Campaign",
+      color: "from-green-500 to-green-400",
+      caseStudy: "E-commerce SEO Strategy",
     },
   ];
 
@@ -350,7 +320,7 @@ export default function Services() {
             <div className="inline-flex items-center gap-2 sm:gap-4 mb-6 sm:mb-8">
               <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-r from-transparent to-primary"></div>
               <span className="px-3 sm:px-5 py-1.5 sm:py-2 rounded-full bg-white/5 text-primary font-light tracking-wider text-xs sm:text-sm uppercase border border-white/10 shadow-lg shadow-primary/10">
-                Professional Services
+                Our Services
               </span>
               <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-l from-transparent to-primary"></div>
             </div>
@@ -359,7 +329,7 @@ export default function Services() {
             <div className="relative py-4 md:py-8">
               {/* Multiple layered glows for depth */}
               <div className="absolute -inset-x-4 -inset-y-8 bg-gradient-to-r from-primary/10 via-blue-500/5 to-primary/10 rounded-full blur-3xl"></div>
-              <div className="absolute -inset-x-4 -inset-y-12 bg-gradient-to-br from-transparent via-blue-800/5 to-primary/5 rounded-full blur-2xl animate-pulse-slow opacity-70"></div>
+              <div className="absolute -inset-x-4 -inset-y-12 bg-gradient-to-br from-transparent via-blue-800 to-primary/5 rounded-full blur-2xl animate-pulse-slow opacity-70"></div>
 
               {/* Decorative elements */}
               <div className="absolute -top-4 left-1/4 w-2 h-2 bg-primary rounded-full opacity-80 animate-float"></div>

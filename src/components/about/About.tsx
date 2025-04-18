@@ -49,7 +49,7 @@ const AboutUs = () => {
             <div className="relative py-4 md:py-8">
               {/* Multiple layered glows for depth */}
               <div className="absolute -inset-x-4 -inset-y-8 bg-gradient-to-r from-primary/10 via-blue-500/5 to-primary/10 rounded-full blur-3xl"></div>
-              <div className="absolute -inset-x-4 -inset-y-12 bg-gradient-to-br from-transparent via-red-500/5 to-primary/5 rounded-full blur-2xl animate-pulse-slow opacity-70"></div>
+              <div className="absolute -inset-x-4 -inset-y-12 bg-gradient-to-br from-transparent via-sky-800 to-primary/5 rounded-full blur-2xl animate-pulse-slow opacity-70"></div>
               
               {/* Decorative elements */}
               <div className="absolute -top-4 left-1/4 w-2 h-2 bg-primary rounded-full opacity-80 animate-float"></div>

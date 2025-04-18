@@ -1,54 +1,50 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import { ArrowRight } from "lucide-react";
 import styles from "./Hero.module.css";
 import Link from "next/link";
 
 // Lazy-loaded components
-const StatisticItem = lazy(() => import("@/components/hero/StatisticItem"));
-const LazyVideo = lazy(() => import("@/components/hero/LazyVideo"));
+// const StatisticItem = lazy(() => import("@/components/hero/StatisticItem"));
+// const LazyVideo = lazy(() => import("@/components/hero/LazyVideo"));
 
 // eslint-disable-next-line react/display-name
-const Divider = React.memo(() => (
-  <div
-    className={`${styles["animate-fade-in"]} ${styles["delay-4"]} h-px w-16 bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto my-12`}
-  ></div>
-));
+// const Divider = React.memo(() => (
+//   <div
+//     className={`${styles["animate-fade-in"]} ${styles["delay-4"]} h-px w-16 bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto my-12`}
+//   ></div>
+// ));
 
 const HeroSection = () => {
-  const statistics = [
-    { value: "98%", label: "Client Retention" },
-    { value: "10+", label: "Successful Projects" },
-    { value: "24/7", label: "Dedicated Support" },
-  ];
+  // const statistics = [
+  //   { value: "98%", label: "Client Retention" },
+  //   { value: "10+", label: "Successful Projects" },
+  //   { value: "24/7", label: "Dedicated Support" },
+  // ];
 
-  const videoSources = [
-    { src: "/main.mp4", width: "32", height: "16" },
-    { src: "/swift.mp4", width: "32", height: "16" },
-  ];
+  // const videoSources = [
+  //   { src: "/main.mp4", width: "32", height: "16" },
+  //   { src: "/swift.mp4", width: "32", height: "16" },
+  // ];
 
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden pt-24 pb-5 bg-[#000000]">
+    <section id="home" className="relative min-h-screen overflow-hidden pt-8 pb-5 bg-[#000000]">
       <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-3"></div>
 
-      {/* <div className="absolute inset-0 pointer-events-none">
-        <div className={`${styles["animate-fade-in"]} ${styles["delay-1"]} absolute top-1/4 left-1/4 w-96 h-96 bg-[#1E6FD9]/5 rounded-full blur-3xl`}></div>
-        <div className={`${styles["animate-fade-in"]} ${styles["delay-1"]} absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#DAA520]/5 rounded-full blur-3xl`}></div>
-      </div> */}
 
       <div className="container mx-auto px-4 min-h-screen flex items-center justify-center relative z-20">
         <div className="max-w-4xl mx-auto text-center relative z-30">
             <h1 className={`${styles["hero-heading"]} ${styles["gradient-text"]} `}>
             Innovative High-Performance Solutions with Our Insight.
             </h1>
-          <div className={`flex justify-center gap-8 my-10 ${styles["animate-fade-in"]} ${styles["delay-2"]}`}>
+          {/* <div className={`flex justify-center gap-8 my-10 ${styles["animate-fade-in"]} ${styles["delay-2"]}`}>
             {videoSources.map((video, index) => (
               <Suspense key={index} fallback={<div className="h-16 w-32 rounded-full bg-white/5 animate-pulse"></div>}>
                 <LazyVideo src={video.src} width={video.width} height={video.height} />
               </Suspense>
             ))}
-          </div>
+          </div> */}
 
-          <p className={`text-lg md:text-xl text-white/80 mb-10 leading-relaxed max-w-xxl mx-auto ${styles["animate-fade-in"]} ${styles["delay-2"]}`}>
+          <p className={`text-lg md:text-xl mt-4 text-white/80 mb-10 leading-relaxed max-w-xxl mx-auto ${styles["animate-fade-in"]} ${styles["delay-2"]}`}>
             Partner with us to elevate your brand, reach more customers, and achieve measurable results with tailored digital strategies designed for your unique business needs.
           </p>
 
@@ -71,8 +67,8 @@ const HeroSection = () => {
             </Link>
           </div>
 
-          <Divider />
-
+          {/* <Divider /> */}
+{/* 
           <div className={`flex justify-center gap-8 ${styles["animate-fade-in"]} ${styles["delay-5"]}`}>
             {statistics.map((stat, index) => (
               <React.Fragment key={index}>
@@ -82,7 +78,7 @@ const HeroSection = () => {
                 </Suspense>
               </React.Fragment>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 

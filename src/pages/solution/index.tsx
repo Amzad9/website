@@ -160,7 +160,8 @@ const SolutionPage = () => {
                 description="Transform your business with our comprehensive digital solutions. Expert web development, mobile apps, UI/UX design, and e-commerce services in Bangladesh. Get innovative solutions for your digital needs."
                 keywords="web development, mobile apps, UI/UX design, e-commerce solutions, digital agency, Bangladesh, React, Next.js, Node.js, React Native, Flutter, custom web development, responsive design, progressive web apps, native mobile apps, cross-platform development, UI/UX design services, e-commerce development, digital transformation, Bangladesh web development, professional web development, affordable web development, best web development company in Bangladesh"
                 ogImage="/p2.png"
-                canonicalUrl="https://yourwebsite.com/solution"
+                canonicalUrl="https://www.weblibron.com/solution"
+                icon="/favicon.ico"
             />
 
             {/* Hero Banner Section */}
@@ -175,8 +176,7 @@ const SolutionPage = () => {
                         priority
                         quality={60}
                         sizes="100vw"
-                        placeholder="blur"
-                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkMjU1LS0yMi4qQEBALkE6Oz5DRVlLT1NbWl5eYWJhSl9yX2JhYVv/2wBDARUXFx4aHjshITtbQjVCW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1v/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                       
                     />
                     {/* Overlay */}
                       <div className="absolute inset-0 bg-black opacity-90"></div>
