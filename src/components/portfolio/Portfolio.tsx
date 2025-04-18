@@ -7,13 +7,9 @@ import Image from "next/image";
 
 // Define project interface
 interface Project {
-  url: string;
   id: number;
   src: string;
   alt: string;
-  title: string;
-  description: string;
-  technologies?: string[];
 }
 
 const Portfolio: React.FC = () => {
@@ -28,47 +24,31 @@ const Portfolio: React.FC = () => {
         id: 1,
         src: "/p1.png",
         alt: "Mobile App Design Interface",
-        title: "Mobile App Design",
-        description:
-          "Modern fitness tracking app with intuitive user interface and seamless experience",
-        url: "https://www.figma.com/design/18EsoTdBNiupd8YqHtu1rn/Mizaan?node-id=0-1&p=f&t=nWWwFNjxeSsMFCP7-0",
-        technologies: [
-          "React Native",
-          "Typescript",
-          "Figma",
-          "Node Js",
-          "MongoDB",
-        ],
       },
       {
         id: 2,
-        src: "/p5.jpeg",
+        src: "/portfolio/web1.jpeg",
         alt: "Website Design Interface",
-        title: "Website Design",
-        description:
-          "Professional website design with modern aesthetics and responsive layout",
-        url: "https://www.figma.com/design/eS6sjVE0zUGVAHamxB5MyS/Untitled?node-id=0-1&p=f&t=vyLjEkfMgqqTAZYZ-0",
-        technologies: ["Figma", "HTML/CSS", "Next Js", "Tailwind CSS"],
       },
       {
         id: 3,
         src: "/p2.png",
         alt: "Hospital Mobile App Design",
-        title: "Mobile App Design Hospital",
-        description:
-          "Healthcare management app focusing on patient care and medical services",
-        url: "https://www.figma.com/design/yrwieRkdbTcBMFSoQNgxJz/Referral-Labs?node-id=12-2&p=f&t=l5Lldb0z4ivtTY8V-0",
-        technologies: ["React Native", "MongoDB", "Node.js", "Typescript"],
+      },
+ {
+        id: 4,
+        src: "/portfolio/web3.jpeg",
+        alt: "Website Design Interface",
       },
       {
-        id: 4,
+        id: 5,
         src: "/p5.png",
         alt: "Grocery Mobile App Design",
-        title: "Grocery Mobile App Design",
-        description:
-          "Grocery shopping app with seamless ordering and delivery experience",
-        url: "https://www.figma.com/design/nHmjOBQpL5V64wv9Kx7LRs/Tharkarre?node-id=0-1&p=f&t=8QPgzQawja3U3U71-0",
-        technologies: ["React Native", "MongoDB", "Node.js", "Typescript"],
+      },
+{
+        id: 6,
+        src: "/portfolio/web2.jpeg",
+        alt: "Website Design Interface",
       },
     ],
     []
@@ -140,12 +120,12 @@ const Portfolio: React.FC = () => {
       aria-labelledby={`project-title-${project.id}`}
     >
       <Link
-        href={project.url}
+        href="/showcase"
         target="_blank"
         rel="noopener noreferrer"
         className="block h-full bg-gradient-to-b from-gray-900 to-black"
       >
-        <motion.div className="relative h-64 overflow-hidden">
+        <motion.div className="relative h-[300px] overflow-hidden">
           <motion.div variants={imageVariants} className="w-full h-full">
             <Image
               src={project.src}
@@ -156,53 +136,39 @@ const Portfolio: React.FC = () => {
               quality={60}
               loading="lazy"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              placeholder="blur"
-              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkMjU1LS0yMi4qQEBALkE6Oz5DRVlLT1NbWl5eYWJhSl9yX2JhYVv/2wBDARUXFx4aHjshITtbQjVCW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1v/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
             />
           </motion.div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-10"></div>
         </motion.div>
 
         {/* Content */}
-        <div className="p-6 relative bg-white/5 border-white/5 rounded-xl">
+        {/* <div className="p-6 relative bg-white/5 border-white/5 rounded-xl"> */}
           {/* Technologies tags */}
-          {project.technologies && (
-            <div className="flex flex-wrap gap-2 mb-4">
-              {project.technologies.map((tech, i) => (
-                <span
-                  key={i}
-                  className="text-xs px-2 py-1 rounded-full bg-white/5 text-gray-300 border border-white/10 font-light"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          )}
+        
 
           {/* Title */}
-          <h3
+          {/* <h3
             id={`project-title-${project.id}`}
             className="text-2xl font-normal mb-3 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-blue-500 transition-all duration-300"
           >
             {project.title}
-          </h3>
+          </h3> */}
 
           {/* Description */}
-          <p className="text-base text-gray-300 mb-5">{project.description}</p>
+          {/* <p className="text-base text-gray-300 mb-5">{project.description}</p> */}
 
           {/* View Button */}
-          <div className="flex items-center justify-between mt-auto">
+          {/* <div className="flex items-center justify-between mt-auto">
             <span className="text-primary group-hover:text-blue-400 transition-colors duration-300 font-light flex items-center gap-1">
               View Project
               <ExternalLink className="w-4 h-4 inline-block transform group-hover:translate-x-1 transition-transform duration-300" />
             </span>
 
-            {/* Visual indicator */}
             <div className="h-8 w-8 rounded-full flex items-center justify-center bg-white/5 group-hover:bg-primary/20 transition-colors duration-300">
               <div className="h-2 w-2 rounded-full bg-primary transform scale-100 group-hover:scale-150 transition-transform duration-300"></div>
             </div>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </Link>
     </motion.div>
   );
@@ -210,7 +176,7 @@ const Portfolio: React.FC = () => {
   return (
     <section
       id="showcase"
-      className="min-h-screen bg-black relative z-20 py-5 text-white overflow-hidden"
+      className="container mx-auto min-h-screen bg-black relative z-20 py-5 px-5 text-white overflow-hidden"
       aria-label="Portfolio Showcase"
     >
       {/* Background Effects */}
@@ -339,38 +305,42 @@ const Portfolio: React.FC = () => {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 mb-16">
+       
+      </motion.div>
+ <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {/* First row: 3 portfolios */}
-          {projects.slice(0, 4).map((project, index) => (
+          {projects.slice(0, 6).map((project, index) => (
             <ProjectItem key={project.id} project={project} index={index} />
           ))}
 
-          {/* Attractive Browse Button Card with improved design */}
+      
+        </div>
+    {/* Attractive Browse Button Card with improved design */}
           <motion.div
             variants={itemVariants}
-            className="relative bg-gradient-to-br from-gray-800 to-black rounded-xl overflow-hidden shadow-xl will-change-transform group md:col-span-2"
+            className="relative rounded-xl overflow-hidden shadow-xl will-change-transform group md:col-span-1"
             style={{ transformPerspective: 1000 }}
           >
             <Link
               href="/showcase"
-              className="h-full w-full flex flex-col items-center justify-center py-16 md:px-16 px-5 relative"
+              className="h-full w-full flex flex-col items-center justify-center pt-0 md:px-16 px-5 relative"
             >
-              {/* Background Effects */}
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-blue-500/5 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+            
+              {/* <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-blue-500/5 opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
               <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
               <div className="absolute top-10 left-10 w-32 h-32 bg-primary/20 rounded-full blur-2xl animate-pulse"></div>
-              <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
+              <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl animate-pulse"></div> */}
 
               {/* Content */}
               <div className="relative z-10 flex flex-col items-center text-center space-y-8">
-                <div className="text-6xl mb-4">🎨</div>
+                {/* <div className="text-6xl mb-4">🎨</div>
                 <h3 className="text-4xl md:text-5xl font-light text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500 font-poppins">
                   Discover Our Full Portfolio
                 </h3>
                 <p className="text-2xl font-light text-gray-300 max-w-md">
                   Explore our complete collection of innovative designs and
                   successful projects
-                </p>
+                </p> */}
                 <span className="mt-6 px-10 py-2 rounded-full border-2 border-white/10 bg-black/40 backdrop-blur-sm text-white hover:text-primary hover:border-primary transition-all duration-300 font-light flex items-center gap-2 group-hover:border-primary/50">
                   View All Projects
                   <ExternalLink className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
@@ -378,8 +348,6 @@ const Portfolio: React.FC = () => {
               </div>
             </Link>
           </motion.div>
-        </div>
-      </motion.div>
     </section>
   );
 };

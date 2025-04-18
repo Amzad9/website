@@ -13,7 +13,8 @@ const ShowCase = () => {
         <title>Weblibron - Portfolio | Web Development & Mobile Apps</title>
         <meta name="title" content="Weblibron - Portfolio | Web Development & Mobile Apps" />
         <meta name="description" content="Explore our portfolio of innovative web and mobile applications. Specializing in React, Next.js, Vue.js, and React Native development with modern UI/UX design." />
-        
+                  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://weblibron.com/showcase" />

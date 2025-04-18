@@ -117,6 +117,7 @@ function Web() {
                 keywords="web development services, mobile app development, UI/UX design, e-commerce solutions, digital services, Bangladesh, professional web development, custom website development, responsive web design, mobile app development company, UI/UX design agency, e-commerce development services, affordable web development, best web development company in Bangladesh, professional digital agency, Bangladesh IT company, web development cost in Bangladesh, mobile app development cost, UI/UX design cost, e-commerce website cost"
                 ogImage="/p5.png"
                 canonicalUrl="https://weblibron.com/service"
+                icon='/favicon.ico'
             />
 
             {/* Hero Banner Section */}
@@ -131,8 +132,6 @@ function Web() {
                         priority
                         quality={60}
                         sizes="100vw"
-                        placeholder="blur"
-                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkMjU1LS0yMi4qQEBALkE6Oz5DRVlLT1NbWl5eYWJhSl9yX2JhYVv/2wBDARUXFx4aHjshITtbQjVCW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1tbW1v/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                     />
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-black opacity-90"></div>
@@ -153,8 +152,8 @@ function Web() {
                             {/* Enhanced 3D Main Heading */}
                             <div className="relative py-4 md:py-8">
                                 {/* Multiple layered glows for depth */}
-                                <div className="absolute -inset-x-4 -inset-y-8 bg-gradient-to-r from-primary/10 via-blue-500/5 to-primary/10 rounded-full blur-3xl"></div>
-                                <div className="absolute -inset-x-4 -inset-y-12 bg-gradient-to-br from-transparent via-blue-800/5 to-primary/5 rounded-full blur-2xl animate-pulse-slow opacity-70"></div>
+                                <div className="absolute -inset-x-4 -inset-y-8 bg-gradient-to-r from-primary/10 via-green-800 to-primary/10 rounded-full blur-3xl"></div>
+                                <div className="absolute -inset-x-4 -inset-y-12 bg-gradient-to-br from-transparent via-green-800 to-primary/5 rounded-full blur-2xl animate-pulse-slow opacity-70"></div>
                                 
                                 {/* Decorative elements */}
                                 <div className="absolute -top-4 left-1/4 w-2 h-2 bg-primary rounded-full opacity-80 animate-float"></div>
@@ -172,7 +171,7 @@ function Web() {
                                         className="relative group"
                                     >
                                         <span className="text-4xl md:text-6xl lg:text-7xl font-light text-gray-100 font-poppins tracking-tight relative inline-block">
-                                            Digital
+                                            Our
                                             <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></span>
                                         </span>
                                     </motion.div>
@@ -192,7 +191,7 @@ function Web() {
                                             </span>
                                             
                                             {/* Main text with animated gradient */}
-                                            <span className="text-4xl md:text-6xl lg:text-7xl font-light font-poppins tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary italic bg-[length:200%_auto] animate-gradient-x relative inline-block">
+                                            <span className="text-4xl md:text-6xl lg:text-7xl font-light font-poppins tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary  bg-[length:200%_auto] animate-gradient-x relative inline-block">
                                                 Services
                                             </span>
                                             
@@ -214,11 +213,11 @@ function Web() {
                             </motion.p>
 
                             <div className="flex flex-wrap justify-center gap-4">
-                                <Link className="px-8 py-2 md:py-4 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/20 hover:translate-y-[-2px]" href={'/solution'}>
+                                <Link className="px-8 py-2 md:py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/20 hover:translate-y-[-2px]" href={'/solution'}>
                                     <span>Explore Solution</span>
                                     <ArrowRight className="w-4 h-4" />
                                 </Link>
-                                <Link className="px-8 py-2 md:py-4 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all duration-300 flex items-center gap-2 hover:border-white/20 hover:translate-y-[-2px]" href='#contact'>
+                                <Link className="px-8 py-2 md:py-3 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all duration-300 flex items-center gap-2 hover:border-white/20 hover:translate-y-[-2px]" href='#contact'>
                                     <span>Get Started</span>
                                 </Link>
                             </div>

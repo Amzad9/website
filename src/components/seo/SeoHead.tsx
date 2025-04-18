@@ -6,9 +6,10 @@ interface SeoHeadProps {
     keywords: string;
     ogImage?: string;
     canonicalUrl?: string;
+    icon: string;
 }
 
-const SeoHead = ({ title, description, keywords, ogImage = '/og-image.jpg', canonicalUrl }: SeoHeadProps) => {
+const SeoHead = ({ title, description, keywords,icon, ogImage = '/og-image.jpg', canonicalUrl }: SeoHeadProps) => {
     const siteUrl = 'https://yourwebsite.com'; // Replace with your actual website URL
 
     return (
@@ -19,7 +20,8 @@ const SeoHead = ({ title, description, keywords, ogImage = '/og-image.jpg', cano
             <meta name="keywords" content={keywords} />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta charSet="utf-8" />
-            
+            <link rel="icon" type="image/png" sizes="32x32" href={icon} />
+
             {/* Open Graph Meta Tags */}
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />

@@ -43,7 +43,7 @@ function Expertise() {
             <div className="inline-flex items-center gap-2 sm:gap-4 mb-6 sm:mb-8">
               <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-r from-transparent to-primary"></div>
               <span className="px-3 sm:px-5 py-1.5 sm:py-2 rounded-full bg-white/5 text-primary font-light tracking-wider text-xs sm:text-sm uppercase border border-white/10 shadow-lg shadow-primary/10">
-                Professional Services
+                Our Expertise
               </span>
               <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-l from-transparent to-primary"></div>
             </div>
