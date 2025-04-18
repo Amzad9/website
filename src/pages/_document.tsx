@@ -26,16 +26,7 @@ export default function Document() {
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="theme-color" content="#000000" />
         <meta charSet="utf-8" />
-       {/* Google tag (gtag.js) */}
-       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-BBZNPC4VZ6"></Script>
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-BBZNPC4VZ6');
-          `}
-        </Script>
+
         {/* Google Tag Manager */}
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
