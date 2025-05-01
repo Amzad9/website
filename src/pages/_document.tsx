@@ -30,10 +30,10 @@ export default function Document() {
         {/* Google Tag Manager */}
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-KQ9CGZHC');`}
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQ9CGZHC');`}
         </Script>
       </Head>
       <body className="antialiased">
@@ -41,10 +41,7 @@ export default function Document() {
         <noscript
           dangerouslySetInnerHTML={{
         __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ9CGZHC"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe>
-        <div style="display:none;visibility:hidden">
-          <img src="https://www.googletagmanager.com/gtm.js?id=GTM-KQ9CGZHC" alt="" />
-        </div>`
+height="0" width="0" style="display:none;visibility:hidden"></iframe>`
           }}
         />
         <Main />
